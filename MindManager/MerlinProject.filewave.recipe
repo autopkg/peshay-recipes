@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Mindjet MindManager</string>
+		<string>MerlinProject</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.0</string>
