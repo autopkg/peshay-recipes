@@ -16,8 +16,6 @@
         <string>%version%</string>
         <key>fw_destination_root</key>
         <string>/Applications/%NAME%.app</string>
-        <key>fw_fileset_name</key>
-        <string>%NAME% - %version%</string>
         <key>fw_fileset_group</key>
         <string></string>
 	</dict>
