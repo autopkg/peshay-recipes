@@ -7,7 +7,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of ScreenFlow, creates a fileset, and copies it into your FileWave Server.</string>
 	<key>Identifier</key>
-	<string>com.github.peshay.filewave.MindManager</string>
+	<string>com.github.peshay.filewave.ScreenFlow</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
