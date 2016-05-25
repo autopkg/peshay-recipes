@@ -15,7 +15,7 @@
 # limitations under the License.
 
 import re
-import urllib2, json
+import urllib2
 
 from autopkglib import Processor, ProcessorError
 
@@ -27,7 +27,7 @@ BASE_URL = "http://www.xmind.net/download/mac/"
 
 
 class XMindURLProvider(Processor):
-    """Provides a download URL for the latest Xmind release."""
+    """Provides a download URL for the latest XMind release."""
     input_variables = {
         "base_url": {
             "required": False,
@@ -58,11 +58,12 @@ class XMindURLProvider(Processor):
     def main(self):
         """Find and return a download URL"""
         base_url = self.env.get("base_url", BASE_URL)
+        self.env["object"] = self.get_xmind_url(base_url)
         substring_version = 'The latest release is XMind 7 ' +\
                             '\(v([0-9].[0-9].[0-9])\)'
         substring_url = 'href="(http://www.xmind.net/xmind/downloads/.*.dmg)">'
-        latest = re.search(substring_version, base_url)
-        download = re.search(substring_url, base_url)
+        latest = re.search(substring_version, self.env["object"])
+        download = re.search(substring_url, self.env["object"])
         self.env["object"] = self.get_xmind_url(base_url)
         self.env["url"] = download.group(1)
         self.env["version"] = latest.group(1)
@@ -70,5 +71,5 @@ class XMindURLProvider(Processor):
 
 
 if __name__ == "__main__":
-	processor = XMindURLProvider()
-	processor.execute_shell()
+    processor = XMindURLProvider()
+    processor.execute_shell()
