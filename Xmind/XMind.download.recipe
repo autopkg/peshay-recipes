@@ -26,8 +26,6 @@
             <dict>
                 <key>url</key>
                 <string>%url%</string>
-                <key>filename</key>
-                <string>%filename%</string>
             </dict>
         </dict>
         <dict>

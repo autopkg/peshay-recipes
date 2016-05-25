@@ -38,9 +38,12 @@ class XMindURLProvider(Processor):
         "url": {
             "description": "URL to the latest XMind release.",
         },
+        "filename": {
+            "description": "filename of the latest XMind dmg.",
+        },
         "version": {
             "description": "Version of the latest XMind release.",
-        },
+        }
     }
     description = __doc__
 
@@ -58,13 +61,16 @@ class XMindURLProvider(Processor):
         self.env["object"] = self.get_xmind_url(base_url)
         substring_version = 'The latest release is XMind 7 ' +\
                             '\(v([0-9].[0-9].[0-9])\)'
-        substring_url = 'href="(http://www.xmind.net/xmind/downloads/.*.dmg)">'
+        substring_url = 'href="(http://www.xmind.net/xmind/downloads/(.*.dmg))">'
         latest = re.search(substring_version, self.env["object"])
         download = re.search(substring_url, self.env["object"])
         self.env["object"] = self.get_xmind_url(base_url)
         self.env["url"] = download.group(1)
+        self.env["filename"] = download.group(2)
         self.env["version"] = latest.group(1)
+        self.output("Found Version %s" % self.env["version"])
         self.output("Found URL %s" % self.env["url"])
+        self.output("Use filename %s" % self.env["filename"])
 
 
 if __name__ == "__main__":
