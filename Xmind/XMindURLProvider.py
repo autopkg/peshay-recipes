@@ -38,9 +38,6 @@ class XMindURLProvider(Processor):
         "url": {
             "description": "URL to the latest XMind release.",
         },
-        "date": {
-            "description": "Release date of the latest XMind release.",
-        },
         "version": {
             "description": "Version of the latest XMind release.",
         },
