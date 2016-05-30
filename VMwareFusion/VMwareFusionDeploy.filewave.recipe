@@ -20,6 +20,8 @@
         <string>%version%</string>
         <key>fw_fileset_group</key>
         <string></string>
+        <key>fw_fileset_name</key>
+        <string>%NAME% - %SERIAL% - %version%</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
@@ -37,7 +39,7 @@
 				<key>fw_destination_root</key>
 				<string>%fw_destination_root%</string>
 				<key>fw_fileset_name</key>
-				<string>%NAME% - %SERIAL% - %version%</string>
+				<string>%fw_fileset_name%</string>
 				<key>fw_import_source</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%-%version%.mpkg</string>
                 <key>fw_fileset_group</key>
