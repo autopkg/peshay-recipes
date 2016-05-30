@@ -10,8 +10,10 @@
 	<dict>
 		<key>NAME</key>
 		<string>VMwareFusionDeploy</string>
+        <key>SERIAL</key>
+        <string>XXXXX-XXXXX-XXXXX-XXXXX-XXXXX</string>
         <key>LICENSE_KEY</key>
-		<string># key = XXXXX-XXXXX-XXXXX-XXXXX-XXXXX</string>
+		<string># key = %SERIAL%</string>
         <key>fw_app_bundle_id</key>
         <string>com.github.peshay.filewave.VMwareFusionDeploy</string>
         <key>fw_app_version</key>
@@ -35,7 +37,7 @@
 				<key>fw_destination_root</key>
 				<string>%fw_destination_root%</string>
 				<key>fw_fileset_name</key>
-				<string>%NAME% - %version%</string>
+				<string>%NAME% - %SERIAL% - %version%</string>
 				<key>fw_import_source</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%-%version%.mpkg</string>
                 <key>fw_fileset_group</key>
