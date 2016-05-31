@@ -16,12 +16,8 @@
 		<string># key = %SERIAL%</string>
         <key>fw_app_bundle_id</key>
         <string>com.github.peshay.filewave.VMwareFusionDeploy</string>
-        <key>fw_app_version</key>
-        <string>%version%</string>
         <key>fw_fileset_group</key>
         <string></string>
-        <key>in_fileset_name</key>
-        <string>%NAME% - %SERIAL% - %version%</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
@@ -35,11 +31,9 @@
 				<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
-				<string>%fw_app_version%</string>
-				<key>fw_destination_root</key>
-				<string>%fw_destination_root%</string>
+				<string>%version%</string>
 				<key>fw_fileset_name</key>
-				<string>%in_fileset_name%</string>
+				<string>%NAME% - %SERIAL% - %version%</string>
 				<key>fw_import_source</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%-%version%.mpkg</string>
                 <key>fw_fileset_group</key>
