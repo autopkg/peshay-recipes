@@ -14,8 +14,6 @@
         <string>en-US</string>
         <key>fw_app_bundle_id</key>
         <string>com.github.peshay.filewave.Firefox</string>
-        <key>fw_app_version</key>
-        <string>%version%</string>
         <key>fw_destination_root</key>
         <string>/Applications/%NAME%.app</string>
         <key>fw_fileset_group</key>
@@ -67,7 +65,7 @@
 				<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
-				<string>%fw_app_version%</string>
+				<string>%version%</string>
 				<key>fw_destination_root</key>
 				<string>%fw_destination_root%</string>
 				<key>fw_fileset_name</key>
