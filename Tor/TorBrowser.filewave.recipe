@@ -60,7 +60,7 @@
 				<key>fw_fileset_name</key>
 				<string>%NAME% %LANGUAGE% - %version%</string>
 				<key>fw_import_source</key>
-				<string>%pkgroot%/Applications/TorBrowser.app</string>
+                <string>%pkgroot%/Applications/%NAME%.app</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
