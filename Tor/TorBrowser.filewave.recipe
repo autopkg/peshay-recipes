@@ -58,7 +58,7 @@
 				<key>fw_destination_root</key>
 				<string>%fw_destination_root%</string>
 				<key>fw_fileset_name</key>
-				<string>%NAME% - %version%</string>
+				<string>%NAME% %LANGUAGE% - %version%</string>
 				<key>fw_import_source</key>
 				<string>%pkgroot%/Applications/TorBrowser.app</string>
 			</dict>
