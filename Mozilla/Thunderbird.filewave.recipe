@@ -16,8 +16,6 @@
         <string>com.github.peshay.filewave.Thunderbird</string>
         <key>fw_destination_root</key>
         <string>/Applications/%NAME%.app</string>
-        <key>fw_fileset_group</key>
-        <string></string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
@@ -72,8 +70,6 @@
 				<string>%NAME% %LOCALE% - %version%</string>
 				<key>fw_import_source</key>
 				<string>%pkgroot%/Applications/%app_name%</string>
-                <key>fw_fileset_group</key>
-                <string>%fw_fileset_group%</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
