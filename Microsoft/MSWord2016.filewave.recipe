@@ -47,7 +47,7 @@ used by other processors in a child recipe.
 				<key>fw_fileset_name</key>
 				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
-				<string>%pathname%/%NAME%-%version%.pkg</string>
+				<string>%pathname%</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.johncclayton.filewave.FWTool/FileWaveImporter</string>
