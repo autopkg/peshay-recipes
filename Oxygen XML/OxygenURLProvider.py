@@ -90,6 +90,8 @@ class OxygenURLProvider(Processor):
             download_url = "http://mirror.oxygenxml.com/InstData/WebAuthor/All/oxygenxml-web-author-all-platforms.zip"
         elif prod == 'WebHelp':
             download_url = "https://www.oxygenxml.com/InstData/Editor/Webhelp/oxygen-webhelp.zip"
+        elif prod == 'Editor':
+            download_url = "http://mirror.oxygenxml.com/InstData/Editor/MacOSX/VM/oxygen.tar.gz"
         else:
             download_url = ("http://mirror.oxygenxml.com/InstData/%s/MacOSX/VM/oxygen%s.tar.gz" % (prod, prod))
 
