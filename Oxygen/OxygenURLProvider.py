@@ -15,12 +15,10 @@
 # limitations under the License.
 """See docstring for OxygenURLProvider class"""
 # suppress 'missing class member env'
-#pylint: disable=e1101
+# pylint: disable=e1101
 
 import urllib2
-import plistlib
-from distutils.version import LooseVersion
-from operator import itemgetter
+import re
 
 from autopkglib import Processor, ProcessorError
 
@@ -34,6 +32,8 @@ URLS = {"Editor": "https://www.oxygenxml.com/xml_editor/download_oxygenxml_edito
 
 import ssl
 from functools import wraps
+
+
 def sslwrap(func):
     """http://stackoverflow.com/a/24175862"""
     @wraps(func)
@@ -44,6 +44,7 @@ def sslwrap(func):
     return wraps_sslwrap
 
 ssl.wrap_socket = sslwrap(ssl.wrap_socket)
+
 
 class OxygenURLProvider(Processor):
     """Provides a version and dmg download for the Oxygen product given."""
@@ -71,11 +72,6 @@ class OxygenURLProvider(Processor):
     }
 
     def main(self):
-        '''Find the download URL'''
-        def compare_version(this, that):
-            '''compare LooseVersions'''
-            return cmp(LooseVersion(this), LooseVersion(that))
-
         valid_prods = URLS.keys()
         prod = self.env.get("product_name")
         if prod not in valid_prods:
