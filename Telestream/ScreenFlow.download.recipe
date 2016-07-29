@@ -7,7 +7,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of ScreenFlow.</string>
 	<key>Identifier</key>
-	<string>com.github.peshay.download.ScreenFlow</string>
+	<string>com.github.peshay.download:x.ScreenFlow</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
