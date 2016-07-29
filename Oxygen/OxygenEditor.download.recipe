@@ -16,6 +16,7 @@
     <key>Process</key>
     <array>
         <dict>
+            <key>Arguments</key>
             <dict>
                 <key>product_name</key>
                 <string>Editor</string>
