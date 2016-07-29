@@ -45,7 +45,6 @@ def sslwrap(func):
 
 ssl.wrap_socket = sslwrap(ssl.wrap_socket)
 
-
 class OxygenURLProvider(Processor):
     """Provides a version and dmg download for the Oxygen product given."""
     description = __doc__
@@ -85,6 +84,7 @@ class OxygenURLProvider(Processor):
             raise ProcessorError(
                 "Unexpected error retrieving product manifest: '%s'" % err)
 
+        print (self.env["object"])
         substring_version = 'Version: \([0-9]*\)'
         substring_buildid = 'Build id: <a href="/history.html#\([0-9]{10}\)'
         download_url = ("http://mirror.oxygenxml.com/InstData/Author/MacOSX/VM/oxygen%s.tar.gz" % prod)
