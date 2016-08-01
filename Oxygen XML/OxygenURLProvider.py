@@ -84,7 +84,7 @@ class OxygenURLProvider(Processor):
             raise ProcessorError(
                 "Unexpected error retrieving product manifest: '%s'" % err)
 
-        substring_version = '<li>Version: ([0-9]+)'
+        substring_version = '<li>Version: ([0-9]+[.]?[0-9]*)'
         substring_buildid = 'Build id: <a href="/build_history.html#[0-9]{10}">([0-9]{10})</a>'
         if prod == 'web-author':
             download_url = "http://mirror.oxygenxml.com/InstData/WebAuthor/All/oxygenxml-web-author-all-platforms.zip"
