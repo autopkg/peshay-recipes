@@ -13,7 +13,7 @@
         <key>fw_app_bundle_id</key>
         <string>com.github.peshay.filewave.Eclipse</string>
         <key>fw_destination_root</key>
-        <string>/Applications/%NAME%</string>
+        <string>/Applications/%NAME%.app</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
