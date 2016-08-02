@@ -3,22 +3,22 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of Oxygen XML Author, creates a fileset, and copies it into your FileWave Server.</string>
+	<string>Downloads the latest version of Oxygen XML Web Help, creates a fileset, and copies it into your FileWave Server.</string>
 	<key>Identifier</key>
-	<string>com.github.peshay.filewave.OxygenAuthor</string>
+	<string>com.github.peshay.filewave.OxygenWebHelp</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>oxygenAuthor</string>
+		<string>oxygen-webhelp</string>
         <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.OxygenAuthor</string>
+        <string>com.github.peshay.filewave.OxygenWebHelp</string>
         <key>fw_destination_root</key>
         <string>/Applications/%NAME%</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.peshay.download.OxygenAuthor</string>
+	<string>com.github.peshay.download.OxygenWebHelp</string>
 	<key>Process</key>
 	<array>
         <dict>
@@ -35,9 +35,9 @@
 				<key>fw_destination_root</key>
 				<string>%fw_destination_root%</string>
 				<key>fw_fileset_name</key>
-				<string>%NAME% - %version% - %buildid%</string>
+                <string>%NAME% - %version% - %platform_name%</string>
 				<key>fw_import_source</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%</string>
+				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.johncclayton.filewave.FWTool/FileWaveImporter</string>

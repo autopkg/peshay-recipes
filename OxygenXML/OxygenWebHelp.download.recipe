@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads latest Oxygen Web Author.</string>
+    <string>Downloads latest Oxygen Web Help.</string>
     <key>Identifier</key>
-    <string>com.github.peshay.download.OxygenWebAuthor</string>
+    <string>com.github.peshay.download.OxygenWebHelp</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>OxygenWebAuthor</string>
+        <string>OxygenWebHelp</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.0</string>
@@ -19,7 +19,9 @@
             <key>Arguments</key>
             <dict>
                 <key>product_name</key>
-                <string>web-author</string>
+                <string>WebHelp</string>
+                <key>platform_name</key>
+                <string>All</string>
             </dict>
             <key>Processor</key>
             <string>OxygenURLProvider</string>

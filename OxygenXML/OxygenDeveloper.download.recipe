@@ -10,6 +10,8 @@
     <dict>
         <key>NAME</key>
         <string>OxygenDeveloper</string>
+        <key>platform_name</key>
+        <string>All</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.0</string>
@@ -20,6 +22,8 @@
             <dict>
                 <key>product_name</key>
                 <string>Developer</string>
+                <key>platform_name</key>
+                <string>%platform_name%</string>
             </dict>
             <key>Processor</key>
             <string>OxygenURLProvider</string>
