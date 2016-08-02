@@ -35,7 +35,7 @@
 				<key>fw_destination_root</key>
 				<string>%fw_destination_root%</string>
 				<key>fw_fileset_name</key>
-				<string>%NAME% - %version% - %buildid%</string>
+                <string>%NAME% - %version% - %platform_name%</string>
 				<key>fw_import_source</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%</string>
 			</dict>
