@@ -5,15 +5,17 @@
 	<key>Description</key>
 	<string>Downloads the latest version of Oxygen XML Developer, creates a fileset, and copies it into your FileWave Server.</string>
 	<key>Identifier</key>
-	<string>com.github.peshay.filewave.OxygenDeveloper</string>
+	<string>com.github.peshay.filewave.OxygenDeveloper.Eclipse</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
 		<string>oxygenDeveloper</string>
         <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.OxygenDeveloper</string>
+        <string>com.github.peshay.filewave.OxygenDeveloper.Eclipse</string>
         <key>fw_destination_root</key>
-        <string>/Applications/%NAME%</string>
+        <string>/Applications/Eclipse.app/Contents/Eclipse/dropins/%NAME%</string>
+        <key>platform_name</key>
+        <string>Eclipse</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>

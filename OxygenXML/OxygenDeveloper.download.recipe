@@ -3,13 +3,15 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads latest Oxygen Author.</string>
+    <string>Downloads latest Oxygen Developer.</string>
     <key>Identifier</key>
-    <string>com.github.peshay.download.OxygenAuthor</string>
+    <string>com.github.peshay.download.OxygenDeveloper</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>OxygenAuthor</string>
+        <string>OxygenDeveloper</string>
+        <key>platform_name</key>
+        <string>All</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.0</string>
@@ -19,7 +21,9 @@
             <key>Arguments</key>
             <dict>
                 <key>product_name</key>
-                <string>Author</string>
+                <string>Developer</string>
+                <key>platform_name</key>
+                <string>%platform_name%</string>
             </dict>
             <key>Processor</key>
             <string>OxygenURLProvider</string>
