@@ -18,7 +18,7 @@
         <string>com.github.peshay.filewave.VMwareFusionDeploy</string>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>0.2.0</string>
+	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.patgmac.pkg.VMwareFusionDeploy</string>
 	<key>Process</key>
