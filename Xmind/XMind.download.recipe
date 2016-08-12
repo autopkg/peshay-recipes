@@ -12,12 +12,16 @@
         <string>XMind</string>
     </dict>
     <key>MinimumVersion</key>
-    <string>0.2.0</string>
+    <string>0.6.1</string>
     <key>Process</key>
     <array>
         <dict>
             <key>Processor</key>
             <string>XMindURLProvider</string>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
         </dict>
         <dict>
             <key>Processor</key>
@@ -27,10 +31,6 @@
                 <key>url</key>
                 <string>%url%</string>
             </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>EndOfCheckPhase</string>
         </dict>
     </array>
 </dict>
