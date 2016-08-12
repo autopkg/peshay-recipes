@@ -12,28 +12,9 @@
         <string>Mindjet MindManager</string>
         <key>DOWNLOAD_URL</key>
         <string>http://www.mindjet.com/mm-mac-dmg</string>
-        <key>pkginfo</key>
-        <dict>
-            <key>catalogs</key>
-            <array>
-                <string>testing</string>
-            </array>
-            <key>category</key>
-            <string>Productivity</string>
-            <key>developer</key>
-            <string>MindJet</string>
-            <key>description</key>
-            <string>MindManager provides ways to visualize information via the creation of mind maps, while also providing tools to facilitate team communication, collaboration, and project management. </string>
-            <key>display_name</key>
-            <string>MindManager for Mac</string>
-            <key>name</key>
-            <string>%NAME%</string>
-            <key>unattended_install</key>
-            <true/>
-        </dict>
     </dict>
     <key>MinimumVersion</key>
-    <string>0.2.0</string>
+    <string>0.6.1</string>
     <key>Process</key>
     <array>
         <dict>
@@ -47,15 +28,6 @@
                 <string>%NAME%.dmg</string>
             </dict>
         </dict>
-        <dict>
-			<key>Arguments</key>
-			<dict>
-				<key>dmg_path</key>
-				<string>%pathname%</string>
-			</dict>
-			<key>Processor</key>
-			<string>AppDmgVersioner</string>
-		</dict>
         <dict>
             <key>Processor</key>
             <string>EndOfCheckPhase</string>

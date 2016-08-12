@@ -16,7 +16,7 @@
         <string>/Applications/%NAME%.app</string>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>0.2.0</string>
+	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.keeleysam.recipes.Opera.download</string>
 	<key>Process</key>
@@ -50,7 +50,7 @@
 				<key>destination_path</key>
 				<string>%pkgroot%/Applications/%NAME%.app</string>
 				<key>source_path</key>
-				<string>%pathname%/%NAME%.app</string>
+				<string>%pathname%/%app_name%</string>
 			</dict>
 			<key>Processor</key>
 			<string>Copier</string>
