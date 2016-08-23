@@ -27,6 +27,17 @@
         </dict>
         <dict>
             <key>Processor</key>
+            <string>CodeSignatureVerifier</string>
+            <key>Arguments</key>
+            <dict>
+                <key>input_path</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%.app</string>
+                <key>requirement</key>
+                <string>identifier "org.eclipse.platform.ide" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = JCDTMS22B4</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
             <string>Versioner</string>
             <key>Arguments</key>
             <dict>
@@ -34,31 +45,6 @@
                 <string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%.app/Contents/Info.plist</string>
             </dict>
         </dict>
-        <dict>
-			<key>Arguments</key>
-			<dict>
-				<key>pkgdirs</key>
-				<dict>
-					<key>Applications</key>
-					<string>0775</string>
-				</dict>
-				<key>pkgroot</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/Applications</string>
-			</dict>
-			<key>Processor</key>
-			<string>PkgRootCreator</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>destination_path</key>
-				<string>%pkgroot%/%NAME%.app</string>
-				<key>source_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%.app</string>
-			</dict>
-			<key>Processor</key>
-			<string>Copier</string>
-		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
@@ -71,7 +57,7 @@
 				<key>fw_fileset_name</key>
 				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
-				<string>%pkgroot%/%NAME%.app</string>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%.app</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.johncclayton.filewave.FWTool/FileWaveImporter</string>

@@ -16,12 +16,12 @@
         <string>/Applications/%NAME%.app</string>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>0.2.0</string>
+	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.peshay.download.MindManager</string>
 	<key>Process</key>
 	<array>
-		<dict>
+        <dict>
 			<key>Arguments</key>
 			<dict>
 				<key>pkgdirs</key>
@@ -39,9 +39,9 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%pkgroot%/Applications/%NAME%.app</string>
+				<string>%pkgroot%/Applications/%app_name%</string>
 				<key>source_path</key>
-				<string>%pathname%/%NAME%.app</string>
+				<string>%pathname%/%app_name%</string>
 			</dict>
 			<key>Processor</key>
 			<string>Copier</string>
@@ -58,7 +58,7 @@
 				<key>fw_fileset_name</key>
 				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
-				<string>%pkgroot%/Applications/%NAME%.app</string>
+                <string>%pkgroot%/Applications/%app_name%</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>

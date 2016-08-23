@@ -18,12 +18,12 @@
         <string>/Applications/%NAME%.app</string>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>0.2.0</string>
+	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.autopkg.download.firefox-rc-en_US</string>
 	<key>Process</key>
 	<array>
-		<dict>
+        <dict>
 			<key>Arguments</key>
 			<dict>
 				<key>dmg_path</key>
@@ -32,7 +32,7 @@
 			<key>Processor</key>
 			<string>AppDmgVersioner</string>
 		</dict>
-		<dict>
+        <dict>
 			<key>Arguments</key>
 			<dict>
 				<key>pkgdirs</key>
@@ -69,7 +69,7 @@
 				<key>fw_fileset_name</key>
 				<string>%NAME% %LOCALE% - %version%</string>
 				<key>fw_import_source</key>
-				<string>%pkgroot%/Applications/%app_name%</string>
+                <string>%pkgroot%/Applications/%app_name%</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>

@@ -7,7 +7,7 @@
 	<key>Identifier</key>
 	<string>com.github.peshay.filewave.BalsamiqMockups</string>
 	<key>MinimumVersion</key>
-	<string>0.6.0</string>
+	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.thenikola.download.BalsamicMockups</string>
     <key>Input</key>
@@ -30,7 +30,18 @@
 			<key>Processor</key>
 			<string>AppDmgVersioner</string>
 		</dict>
-		<dict>
+        <dict>
+            <key>Processor</key>
+            <string>CodeSignatureVerifier</string>
+            <key>Arguments</key>
+            <dict>
+                <key>input_path</key>
+                <string>%pathname%/%app_name%</string>
+                <key>requirement</key>
+                <string>identifier "BalsamiqMockups3.EDE15CF69E11F7F7D45B5430C7D37CC6C3545E3C.1" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "3DPKD72KQ7"</string>
+            </dict>
+        </dict>
+        <dict>
 			<key>Arguments</key>
 			<dict>
 				<key>pkgdirs</key>
@@ -48,9 +59,9 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%pkgroot%/Applications/%NAME%.app</string>
+				<string>%pkgroot%/Applications/%app_name%</string>
 				<key>source_path</key>
-				<string>%pathname%/%NAME%.app</string>
+				<string>%pathname%/%app_name%</string>
 			</dict>
 			<key>Processor</key>
 			<string>Copier</string>
@@ -67,7 +78,7 @@
 				<key>fw_fileset_name</key>
                 <string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/Applications/%NAME%.app</string>
+				<string>%pkgroot%/Applications/%app_name%</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
