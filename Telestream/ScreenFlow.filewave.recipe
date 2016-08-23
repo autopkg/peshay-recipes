@@ -13,14 +13,14 @@
 		<key>NAME</key>
 		<string>ScreenFlow</string>
 		<key>fw_app_bundle_id</key>
-		<string>%bundleid%</string>
+		<string>com.github.peshay.filewave.ScreenFlow</string>
 		<key>fw_destination_root</key>
 		<string>/Applications/%NAME%.app</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.peshay.download.ScreenFlow</string>
+	<string>com.rderewianko.download.ScreenFlow</string>
 	<key>Process</key>
 	<array>
 		<dict>
