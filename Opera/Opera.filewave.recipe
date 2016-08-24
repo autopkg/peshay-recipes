@@ -25,6 +25,24 @@
             <key>Processor</key>
             <string>Unarchiver</string>
         </dict>
+        <dict>
+			<key>Processor</key>
+			<string>PlistReader</string>
+			<key>Arguments</key>
+			<dict>
+				<key>info_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%.app</string>
+				<key>plist_keys</key>
+				<dict>
+					<key>CFBundleShortVersionString</key>
+					<string>version</string>
+					<key>CFBundleIdentifier</key>
+					<string>bundleid</string>
+					<key>CFBundleName</key>
+					<string>app_name</string>
+				</dict>
+			</dict>
+		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
