@@ -10,6 +10,8 @@
 	<dict>
 		<key>url</key>
 		<string>http://www.oracle.com/technetwork/java/javase/downloads/index.html</string>
+        <key>ORACLE_LICENSE_COOKIE</key>
+        <string>oraclelicense=accept-securebackup-cookie</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
@@ -59,6 +61,11 @@
 			<string>URLDownloader</string>
             <key>Arguments</key>
             <dict>
+                <key>request_headers</key>
+                <dict>
+                        <key>Cookie</key>
+                        <string>%ORACLE_LICENSE_COOKIE%</string>
+                </dict>
                 <key>url</key>
 				<string>%url%</string>
             </dict>
