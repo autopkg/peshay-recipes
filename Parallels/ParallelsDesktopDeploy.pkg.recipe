@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest ParallelsDesktop disk image and puts it together with a Deploy pkg including the License key.</string>
+	<key>Identifier</key>
+	<string>com.github.peshay.pkg.ParallelsDesktopDeploy</string>
+	<key>Input</key>
+	<dict>
+        <key>MAJOR_VERSION</key>
+		<string>11</string>
+        <key>deploy_tool_url</key>
+        <string>http://download.parallels.com/desktop/tools/pd-autodeploy.zip</string>
+        <key>LICENSE_KEY</key>
+        <string>XXXXXX-XXXXXX-XXXXXX-XXXXXX-XXXXXX</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.6.1</string>
+	<key>ParentRecipe</key>
+	<string>com.github.homebysix.download.ParallelsDesktop</string>
+	<key>Process</key>
+	<array>
+        <dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkgdirs</key>
+				<dict>
+					<key>Image</key>
+					<string>0775</string>
+				</dict>
+				<key>pkgroot</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
+			</dict>
+			<key>Processor</key>
+			<string>PkgRootCreator</string>
+		</dict>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>destination_path</key>
+                <string>%pkgroot%/Image</string>
+                <key>source_path</key>
+                <string>%pathname%</string>
+            </dict>
+            <key>Processor</key>
+            <string>Copier</string>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>URLDownloader</string>
+            <key>Arguments</key>
+            <dict>
+                <key>filename</key>
+                <string>pd-autodeploy.zip</string>
+                <key>url</key>
+                <string>%deploy_tool_url%</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>Unarchiver</string>
+            <key>Arguments</key>
+            <dict>
+                <key>archive_path</key>
+                <string>%pathname%</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>FileFinder</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pattern</key>
+                <string>%pkgroot%/Image/*/Parallels Desktop Autodeploy.pkg</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>destination_path</key>
+                <string>%found_filename%/Parallels/</string>
+                <key>source_path</key>
+                <string>%pkgroot%/Image/ParallelsDesktop-%MAJOR_VERSION%.dmg</string>
+            </dict>
+            <key>Processor</key>
+            <string>Copier</string>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>FileCreator</string>
+            <key>Arguments</key>
+			<dict>
+				<key>file_content</key>
+                <string>license_key="%LICENSE_KEY%"
+vm_register_mode="Private"
+vm_reset_hwid="no"
+vm_deploy_mode="Copy"
+cep_participation="off"
+show_developers_menu="no"</string>
+                <key>file_path</key>
+                <string>%found_filename%/Parallels/deploy.cfg</string>
+            </dict>
+        </dict>
+	</array>
+</dict>
+</plist>
