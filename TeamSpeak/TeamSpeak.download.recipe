@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads latest version of TeamSpeak.</string>
+    <key>Identifier</key>
+    <string>com.github.peshay.download.TeamSpeak</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>TeamSpeak</string>
+        
+<!--SELECT YOUR OS VERSION AND INPUT BELOW
+	"macosx" for MAC OS X
+	"win32" for WINDOWS 32 BIT EXE
+	"win64" for WINDOWS 64 BIT EXE
+	"linux_x86" for LINUX 32 BIT
+	"linux_amd64" for LINUX 64 BIT
+-->
+
+        <key>os</key>
+        <string>macosx</string><!-- <<<<<< INPUT HERE <<<<<< -->
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.6.1</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Processor</key>
+            <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>https://www.teamspeak.com/downloads</string>
+                <key>re_pattern</key>
+                <string>value="(?P&lt;match&gt;[^"]*-%os%-[^"]*)"</string>
+                <key>re_flags</key>
+                <array>
+                    <string>IGNORECASE</string>
+                </array>
+            </dict>
+        </dict>
+        <dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+			<key>Arguments</key>
+			<dict>
+                <key>url</key>
+                <string>%match%</string>
+			</dict>
+		</dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
+        </dict>
+        <dict>
+        	<key>Processor</key>
+            <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>https://www.teamspeak.com/downloads</string>
+                <key>re_pattern</key>
+                <string>class="version">([0-9]+.[0-9]+.[0-9]+.[0-9]+)</string>
+                <key>result_output_var_name</key>
+                <string>version</string>
+            </dict>
+        </dict>
+    </array>
+</dict>
+</plist>

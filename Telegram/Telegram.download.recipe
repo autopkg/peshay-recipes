@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads latest version of Telegram.</string>
+    <key>Identifier</key>
+    <string>com.github.peshay.download.Telegram</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>Telegram</string>
+        <key>os</key>
+        <string>mac</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.6.1</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Processor</key>
+            <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>http://filehippo.com/en/download_telegram/tech/</string>
+                <key>re_pattern</key>
+                <string>Telegram ([0-9]+.[0-9]+.[0-9]+)</string>
+                <key>result_output_var_name</key>
+                <string>version</string>
+            </dict>
+        </dict>
+        
+<!-- COPY THE LINK OF DESIRED OS
+	
+	FOR MAC OS X - https://updates.tdesktop.com/tmac/tsetup.%version%.dmg
+
+	FOR WINDOWS  - https://updates.tdesktop.com/tsetup/tsetup.%version%.exe
+	
+	FOR LINUX 32 BIT - https://updates.tdesktop.com/tlinux32/tsetup32.%version%.tar.xz
+	
+	FOR LINUX 64 BIT - https://updates.tdesktop.com/tlinux/tsetup.%version%.tar.xz
+
+-->
+
+		<dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+			<key>Arguments</key>
+			<dict>
+                <key>url</key>
+                <string>https://updates.tdesktop.com/tmac/tsetup.%version%.dmg</string><!-- PASTE HERE -->
+			</dict>
+		</dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
+        </dict>
+    </array>
+</dict>
+</plist>

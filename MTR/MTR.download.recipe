@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest version of MTR.</string> 
+	<key>Identifier</key>
+	<string>com.github.peshay.download.MTR</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>MTR</string>
+	</dict>
+	<key>MinimumVersion</key>
+    <string>0.6.1</string>
+	<key>Process</key>
+	<array>
+		<dict>
+            <key>Processor</key>
+            <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>http://rudix.org/packages/mtr.html</string>
+                <key>re_pattern</key>
+                <string>https://raw.githubusercontent.com/rudix-mac/packages/master/[^"]*/mtr-([0-9]+.[0-9]+)-[^"]*.pkg"</string>
+                <key>re_flags</key>
+                <array>
+                    <string>IGNORECASE</string>
+                </array>
+                <key>result_output_var_name</key>
+                <string>version</string>
+            </dict>
+        </dict>
+		<dict>
+            <key>Processor</key>
+            <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>http://rudix.org/packages/mtr.html</string>
+                <key>re_pattern</key>
+                <string>href="(https://raw.githubusercontent.com/rudix-mac/packages/master/[^"]*/mtr-%version%-[0-9]+.pkg)"</string>
+                <key>re_flags</key>
+                <array>
+                    <string>IGNORECASE</string>
+                </array>
+                <key>result_output_var_name</key>
+                <string>url</string>
+            </dict>
+        </dict>
+		<dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+			<key>Arguments</key>
+			<dict>
+                <key>url</key>
+                <string>%url%</string>
+                <key>filename</key>
+                <string>%NAME%.pkg</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+	</array>
+</dict>
+</plist>
