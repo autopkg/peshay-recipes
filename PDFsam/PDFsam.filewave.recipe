@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads latest version of PDFsam and imports into FileWave.</string>
+	<key>Identifier</key>
+	<string>com.github.peshay.filewave.PDFsam</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>PDFsam</string>
+        <key>fw_app_bundle_id</key>
+        <string>com.github.peshay.filewave.PDFsam</string>
+        <key>fw_destination_root</key>
+        <string>/Applications/%NAME%.app</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.6.1</string>
+	<key>ParentRecipe</key>
+	<string>com.github.andrewvalentine.download.pdfsam</string>
+	<key>Process</key>
+	<array>
+		<dict>
+        	<key>Processor</key>
+            <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>https://github.com/torakiki/pdfsam/releases</string>
+                <key>re_pattern</key>
+                <string>span class="css-truncate-target">v([0-9]+.[0-9]+.[0-9]+).RELEASE</string>
+                <key>result_output_var_name</key>
+                <string>version</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>pkgroot</key>
+                <string>%RECIPE_CACHE_DIR%/Applications</string>
+                <key>pkgdirs</key>
+                <dict>
+                    <key>Applications</key>
+                    <string>0775</string>
+                </dict>
+            </dict>
+            <key>Processor</key>
+            <string>PkgRootCreator</string>
+        </dict>
+        <dict>
+            <key>Arguments</key>
+            <dict>
+                <key>destination_path</key>
+                <string>%pkgroot%/%NAME%.app</string>
+                <key>source_path</key>
+                <string>%pathname%/*.app</string>
+            </dict>
+            <key>Processor</key>
+            <string>Copier</string>
+        </dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+                <key>fw_app_bundle_id</key>
+				<string>%fw_app_bundle_id%</string>
+				<key>fw_app_version</key>
+				<string>%version%</string>
+				<key>fw_destination_root</key>
+				<string>%fw_destination_root%</string>
+				<key>fw_fileset_name</key>
+				<string>%NAME% - %version%</string>
+				<key>fw_import_source</key>
+                <string>%pkgroot%/%NAME%.app</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
+		</dict>
+	</array>
+</dict>
+</plist>

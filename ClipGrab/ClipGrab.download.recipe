@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads latest version of ClipGrab.</string>
+    <key>Identifier</key>
+    <string>com.github.peshay.download.ClipGrab</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>ClipGrab</string>
+        <key>os</key>
+        
+<!--SELECT YOUR OS VERSION AND INPUT BELOW
+	"dmg" for MAC OS X
+	"exe" for WINDOWS EXE
+	"bz2" for LINUX
+-->
+        
+        <string>dmg</string><!-- <<<<<< INPUT HERE <<<<<< -->
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.6.1</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Processor</key>
+            <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>https://clipgrab.org</string>
+                <key>re_pattern</key>
+                <string>https://download.clipgrab.org/(ClipGrab-[^"]*.%os%)"</string>
+                <key>re_flags</key>
+                <array>
+                    <string>IGNORECASE</string>
+                </array>
+                <key>result_output_var_name</key>
+                <string>url</string>
+            </dict>
+        </dict>
+		<dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+			<key>Arguments</key>
+			<dict>
+                <key>url</key>
+                <string>https://download.clipgrab.org/%url%</string>
+			</dict>
+		</dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
+        </dict>
+    </array>
+</dict>
+</plist>

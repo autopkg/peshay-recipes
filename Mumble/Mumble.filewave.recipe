@@ -3,24 +3,35 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads latest version of LibreOffice and imports into FileWave.</string>
+	<string>Downloads latest version of Mumble and imports into FileWave.</string>
 	<key>Identifier</key>
-	<string>com.github.peshay.filewave.LibreOffice</string>
+	<string>com.github.peshay.filewave.Mumble</string>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>io.github.hjuutilainen.download.LibreOffice</string>
+	<string>com.github.triti.download.Mumble</string>
     <key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>LibreOffice</string>
+		<string>Mumble</string>
         <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.LibreOffice</string>
+        <string>com.github.peshay.filewave.Mumble</string>
         <key>fw_destination_root</key>
         <string>/Applications/%NAME%.app</string>
 	</dict>
 	<key>Process</key>
 	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%.app</string>
+				<key>source_path</key>
+				<string>%pathname%/%NAME%.app</string>
+			</dict>
+			<key>Processor</key>
+			<string>Copier</string>
+		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>

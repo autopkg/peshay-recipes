@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest version of BitcoinCore.</string> 
+	<key>Identifier</key>
+	<string>com.github.peshay.download.BitcoinCore</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>BitcoinCore</string>
+	
+<!--SELECT YOUR OS VERSION AND INPUT BELOW
+	"macdmg" for MAC OS X
+	"mactar" for MAC OS X TARBALL
+	"win32exe" for WINDOWS 32 BIT EXE
+	"win64exe" for WINDOWS 64 BIT EXE
+	"win32zip" for WINDOWS 32 BIT ZIP
+	"win64zip" for WINDOWS 64 BIT ZIP
+	"lin32" for LINUX 32 BIT
+	"lin64" for LINUX 64 BIT
+	"lin32arm" for ARM 32 BIT
+	"lin64arm" for ARM 64 BIT
+-->
+
+		<key>os</key>
+		<string>macdmg</string><!-- <<<<<< INPUT HERE <<<<<< -->
+	</dict>
+	<key>MinimumVersion</key>
+    <string>0.6.1</string>
+	<key>Process</key>
+	<array>
+		<dict>
+            <key>Processor</key>
+            <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>https://bitcoin.org/en/download</string>
+                <key>re_pattern</key>
+                <string>href="(?P&lt;match&gt;[^"]*)" class="dl" id="%os%"</string>
+                <key>re_flags</key>
+                <array>
+                    <string>IGNORECASE</string>
+                </array>
+            </dict>
+        </dict>
+		<dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+			<key>Arguments</key>
+			<dict>
+                <key>url</key>
+                <string>https://bitcoin.org%match%</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+	</array>
+</dict>
+</plist>

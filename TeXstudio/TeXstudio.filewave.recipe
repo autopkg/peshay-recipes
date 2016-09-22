@@ -3,19 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads latest version of LibreOffice and imports into FileWave.</string>
+	<string>Downloads latest version of TeXstudio and imports into FileWave.</string>
 	<key>Identifier</key>
-	<string>com.github.peshay.filewave.LibreOffice</string>
+	<string>com.github.peshay.filewave.TeXstudio</string>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>io.github.hjuutilainen.download.LibreOffice</string>
+	<string>io.github.hjuutilainen.download.TeXstudio</string>
     <key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>LibreOffice</string>
+		<string>TeXstudio</string>
         <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.LibreOffice</string>
+        <string>com.github.peshay.filewave.TeXstudio</string>
         <key>fw_destination_root</key>
         <string>/Applications/%NAME%.app</string>
 	</dict>
@@ -33,7 +33,7 @@
 				<key>fw_fileset_name</key>
                 <string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%.app</string>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%.app</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
