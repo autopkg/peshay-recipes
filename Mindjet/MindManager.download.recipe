@@ -29,10 +29,6 @@
             </dict>
         </dict>
         <dict>
-            <key>Processor</key>
-            <string>EndOfCheckPhase</string>
-        </dict>
-        <dict>
 			<key>Arguments</key>
 			<dict>
 				<key>dmg_path</key>
@@ -51,6 +47,10 @@
                 <key>requirement</key>
                 <string>identifier "com.mindjet.mindmanager.10" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = QV4F3N25N4</string>
             </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
         </dict>
     </array>
 </dict>
