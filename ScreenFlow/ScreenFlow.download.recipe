@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest version of ScreenFlow.</string> 
+	<key>Identifier</key>
+	<string>com.github.peshay.download.ScreenFlow</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>ScreenFlow</string>
+		<key>ver</key>
+<!--SELECT DESIRED VERSION AND INPUT BELOW (2-4-6)-->
+		
+		<string>6</string><!-- <<<<<< INPUT HERE <<<<<< -->
+	</dict>
+	<key>MinimumVersion</key>
+    <string>0.6.1</string>
+	<key>Process</key>
+	<array>
+		<dict>
+            <key>Processor</key>
+            <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>https://www.telestream.net/updater/screenflow/appcast.xml</string>
+                <key>re_pattern</key>
+                <string>enclosure url="(https://www.telestream.net/download-files/screenflow/%ver%-[0-9]+/[^"]*)" sparkle:dsaSignature="[^"]*" sparkle:shortVersionString="%ver%.[^"]*"</string>
+                <key>re_flags</key>
+                <array>
+                    <string>IGNORECASE</string>
+                </array>
+            </dict>
+        </dict>
+        <dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+			<key>Arguments</key>
+			<dict>
+                <key>url</key>
+                <string>%match%</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>dmg_path</key>
+				<string>%pathname%</string>
+			</dict>
+			<key>Processor</key>
+			<string>AppDmgVersioner</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkgdirs</key>
+				<dict>
+					<key>Applications</key>
+					<string>0775</string>
+				</dict>
+				<key>pkgroot</key>
+				<string>%RECIPE_CACHE_DIR%/Applications</string>
+			</dict>
+			<key>Processor</key>
+			<string>PkgRootCreator</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>destination_path</key>
+				<string>%pkgroot%/%app_name%</string>
+				<key>source_path</key>
+				<string>%pathname%/%app_name%</string>
+			</dict>
+			<key>Processor</key>
+			<string>Copier</string>
+		</dict>
+	</array>
+</dict>
+</plist>
