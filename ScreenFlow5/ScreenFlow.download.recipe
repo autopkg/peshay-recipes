@@ -10,20 +10,50 @@
 	<dict>
 		<key>NAME</key>
 		<string>ScreenFlow5</string>
-		<key>url</key>
-		<string>https://www.telestream.net/download-files/screenflow/5-0/ScreenFlow-5.0.7.dmg</string>
 	</dict>
 	<key>MinimumVersion</key>
     <string>0.6.1</string>
 	<key>Process</key>
 	<array>
 		<dict>
+            <key>Processor</key>
+            <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>https://www.telestream.net/screenflow/versions.htm</string>
+                <key>re_pattern</key>
+                <string>aria-controls="[^"]*"> Version (5.[0-9]+.[0-9]+) </string>
+                <key>re_flags</key>
+                <array>
+                    <string>IGNORECASE</string>
+                </array>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>https://www.telestream.net/screenflow/versions.htm</string>
+                <key>re_pattern</key>
+                <string>aria-controls="[^"]*"> Version 5.([0-9]+)[^"]* </string>
+                <key>re_flags</key>
+                <array>
+                    <string>IGNORECASE</string>
+                </array>
+                <key>result_output_var_name</key>
+                <string>v2</string>
+            </dict>
+        </dict>
+		<dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
 			<key>Arguments</key>
 			<dict>
                 <key>url</key>
-                <string>%url%</string>
+                <string>https://www.telestream.net/download-files/screenflow/5-%v2%/ScreenFlow-%match%.dmg</string>
 			</dict>
 		</dict>
 		<dict>

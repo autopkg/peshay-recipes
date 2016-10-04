@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>ScreenFlow5</string>
+		<string>ScreenFlow</string>
         <key>fw_app_bundle_id</key>
         <string>com.github.peshay.filewave.ScreenFlow5</string>
         <key>fw_destination_root</key>
