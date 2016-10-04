@@ -34,7 +34,7 @@
     <string>0.6.1</string>
     <key>Process</key>
     <array>
-        <dict>
+    	<dict>
             <key>Processor</key>
             <string>URLDownloader</string>
             <key>Arguments</key>

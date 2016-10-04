@@ -10,9 +10,7 @@
 	<dict>
 		<key>NAME</key>
 		<string>Mindjet MindManager</string>
-		<key>DISABLE_CODE_SIGNATURE_VERIFICATION</key>
-        <string>true</string>
-        <key>fw_app_bundle_id</key>
+		<key>fw_app_bundle_id</key>
         <string>com.github.peshay.filewave.MindManager</string>
         <key>fw_destination_root</key>
         <string>/Applications/%NAME%.app</string>
@@ -26,8 +24,19 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>dmg_path</key>
+				<key>source</key>
 				<string>%pathname%</string>
+				<key>target</key>
+				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%.dmg</string>
+			</dict>
+			<key>Processor</key>
+			<string>FileMover</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>dmg_path</key>
+				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%.dmg</string>
 			</dict>
 			<key>Processor</key>
 			<string>AppDmgVersioner</string>
@@ -52,7 +61,7 @@
 				<key>destination_path</key>
 				<string>%pkgroot%/Applications/%app_name%</string>
 				<key>source_path</key>
-				<string>%pathname%/%app_name%</string>
+				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%.dmg/%app_name%</string>
 			</dict>
 			<key>Processor</key>
 			<string>Copier</string>
