@@ -10,8 +10,25 @@
     <dict>
         <key>NAME</key>
         <string>Mindjet MindManager</string>
+        <key>OS</key>
+        
+<!-- "win-exe" for WINDOWS
+	 "mac-dmg" for MAC OS-X
+-->     
+        
+        <string>mac-dmg</string>
+        <key>LANG</key>
+        
+<!-- "-en" for ENGLISH
+	 "-de" for GERMAN
+	 "-fr" for FRENCH
+	 "-ja" for JAPANESE
+	 LEAVE BLANK FOR MAC OS-X
+-->
+        
+        <string></string>  
         <key>DOWNLOAD_URL</key>
-        <string>http://www.mindjet.com/mm-mac-dmg</string>
+        <string>http://www.mindjet.com/mm-%OS%%LANG%</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.6.1</string>
@@ -24,11 +41,11 @@
             <dict>
                 <key>url</key>
                 <string>%DOWNLOAD_URL%</string>
-                <key>filename</key>
-                <string>%NAME%.dmg</string>
             </dict>
         </dict>
         <dict>
+<<<<<<< HEAD
+=======
 			<key>Arguments</key>
 			<dict>
 				<key>dmg_path</key>
@@ -49,6 +66,7 @@
             </dict>
         </dict>
         <dict>
+>>>>>>> 558d85597494410cd9da046aa6f671e3f46e9a3e
             <key>Processor</key>
             <string>EndOfCheckPhase</string>
         </dict>
