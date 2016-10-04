@@ -10,8 +10,25 @@
     <dict>
         <key>NAME</key>
         <string>Mindjet MindManager</string>
+        <key>OS</key>
+        
+<!-- "win-exe" for WINDOWS
+	 "mac-dmg" for MAC OS-X
+-->     
+        
+        <string>mac-dmg</string>
+        <key>LANG</key>
+        
+<!-- "-en" for ENGLISH
+	 "-de" for GERMAN
+	 "-fr" for FRENCH
+	 "-ja" for JAPANESE
+	 LEAVE BLANK FOR MAC OS-X
+-->
+        
+        <string></string>  
         <key>DOWNLOAD_URL</key>
-        <string>http://www.mindjet.com/mm-mac-dmg</string>
+        <string>http://www.mindjet.com/mm-%OS%%LANG%</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.6.1</string>
@@ -24,33 +41,11 @@
             <dict>
                 <key>url</key>
                 <string>%DOWNLOAD_URL%</string>
-                <key>filename</key>
-                <string>%NAME%.dmg</string>
             </dict>
         </dict>
         <dict>
             <key>Processor</key>
             <string>EndOfCheckPhase</string>
-        </dict>
-        <dict>
-			<key>Arguments</key>
-			<dict>
-				<key>dmg_path</key>
-				<string>%pathname%</string>
-			</dict>
-			<key>Processor</key>
-			<string>AppDmgVersioner</string>
-		</dict>
-        <dict>
-            <key>Processor</key>
-            <string>CodeSignatureVerifier</string>
-            <key>Arguments</key>
-            <dict>
-                <key>input_path</key>
-                <string>%pathname%/%app_name%</string>
-                <key>requirement</key>
-                <string>identifier "com.mindjet.mindmanager.10" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = QV4F3N25N4</string>
-            </dict>
         </dict>
     </array>
 </dict>

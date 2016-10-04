@@ -3,45 +3,27 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of ScreenFlow.</string> 
+	<string>Downloads the latest version of ScreenFlow5.</string> 
 	<key>Identifier</key>
-	<string>com.github.peshay.download.ScreenFlow</string>
+	<string>com.github.peshay.download.ScreenFlow5</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>ScreenFlow</string>
-		<key>ver</key>
-		
-<!--SELECT DESIRED VERSION (2-4-6) AND INPUT BELOW-->
-		
-		<string>6</string><!-- <<<<<< INPUT HERE <<<<<< -->
+		<string>ScreenFlow5</string>
+		<key>url</key>
+		<string>https://www.telestream.net/download-files/screenflow/5-0/ScreenFlow-5.0.7.dmg</string>
 	</dict>
 	<key>MinimumVersion</key>
     <string>0.6.1</string>
 	<key>Process</key>
 	<array>
 		<dict>
-            <key>Processor</key>
-            <string>URLTextSearcher</string>
-            <key>Arguments</key>
-            <dict>
-                <key>url</key>
-                <string>https://www.telestream.net/updater/screenflow/appcast.xml</string>
-                <key>re_pattern</key>
-                <string>enclosure url="(https://www.telestream.net/download-files/screenflow/%ver%-[0-9]+/[^"]*)" sparkle:dsaSignature="[^"]*" sparkle:shortVersionString="%ver%.[^"]*"</string>
-                <key>re_flags</key>
-                <array>
-                    <string>IGNORECASE</string>
-                </array>
-            </dict>
-        </dict>
-        <dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
 			<key>Arguments</key>
 			<dict>
                 <key>url</key>
-                <string>%match%</string>
+                <string>%url%</string>
 			</dict>
 		</dict>
 		<dict>
@@ -59,7 +41,7 @@
 				<key>input_path</key>
 				<string>%pathname%/%app_name%</string>
 				<key>requirement</key>
-				<string>anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = WSG985FR47</string>
+				<string>identifier "net.telestream.screenflow5" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = WSG985FR47</string>
 			</dict>
 			<key>Processor</key>
 			<string>CodeSignatureVerifier</string>
