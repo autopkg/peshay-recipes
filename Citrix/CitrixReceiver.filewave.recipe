@@ -30,7 +30,7 @@
 			<key>Processor</key>
 			<string>AppDmgVersioner</string>
 		</dict>
-        <dict>
+		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>pkgdirs</key>
@@ -48,9 +48,9 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%pkgroot%/Applications/%app_name%</string>
+				<string>%pkgroot%/Applications/%NAME%.pkg</string>
 				<key>source_path</key>
-				<string>%pathname%/%app_name%</string>
+				<string>%input_path%</string>
 			</dict>
 			<key>Processor</key>
 			<string>Copier</string>
@@ -67,7 +67,7 @@
 				<key>fw_fileset_name</key>
                 <string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
-				<string>%pkgroot%/Applications/%app_name%</string>
+				<string>%pkgroot%/Applications/%NAME%.pkg</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
