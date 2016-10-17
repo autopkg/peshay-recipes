@@ -15,7 +15,7 @@
 		<key>NAME</key>
 		<string>CitrixReceiver</string>
         <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.BalsamiqMockups</string>
+        <string>com.github.peshay.filewave.CitrixReceiver</string>
         <key>fw_destination_root</key>
         <string>/Applications/%NAME%.app</string>
 	</dict>
