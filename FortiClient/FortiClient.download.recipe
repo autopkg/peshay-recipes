@@ -19,7 +19,7 @@
         <key>os</key>
         <string>dmg</string><!-- <<<<<< INPUT HERE <<<<<< -->
         <key>DOWNLOAD_URL</key>
-        <string>http://fortinetweb.s3.amazonaws.com/forticlient/downloads/FortiClientOnlineInstaller.%os%</string>
+        <string>https://fortinetweb.s3.amazonaws.com/forticlient/downloads/FortiClientOnlineInstaller.%os%</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.6.1</string>
