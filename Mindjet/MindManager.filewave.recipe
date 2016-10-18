@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads latest version of MindManager and imports into FileWave.</string>
+	<string>Downloads latest version of MindManager for Mac OS X and imports into FileWave.</string>
 	<key>Identifier</key>
 	<string>com.github.peshay.filewave.MindManager</string>
 	<key>Input</key>
@@ -24,19 +24,8 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>source</key>
-				<string>%pathname%</string>
-				<key>target</key>
-				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%.dmg</string>
-			</dict>
-			<key>Processor</key>
-			<string>FileMover</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
 				<key>dmg_path</key>
-				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%.dmg</string>
+				<string>%pathname%</string>
 			</dict>
 			<key>Processor</key>
 			<string>AppDmgVersioner</string>
@@ -61,7 +50,7 @@
 				<key>destination_path</key>
 				<string>%pkgroot%/Applications/%app_name%</string>
 				<key>source_path</key>
-				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%.dmg/%app_name%</string>
+				<string>%pathname%/%app_name%</string>
 			</dict>
 			<key>Processor</key>
 			<string>Copier</string>

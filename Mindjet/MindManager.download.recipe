@@ -3,44 +3,38 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads latest version of Mindjet MindManager.</string>
+    <string>Downloads latest version of Mindjet MindManager for Mac OS X.</string>
     <key>Identifier</key>
     <string>com.github.peshay.download.MindManager</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>Mindjet MindManager</string>
-        <key>OS</key>
-        
-<!-- "win-exe" for WINDOWS
-	 "mac-dmg" for MAC OS-X
--->     
-        
-        <string>mac-dmg</string>
-        <key>LANG</key>
-        
-<!-- "-en" for ENGLISH
-	 "-de" for GERMAN
-	 "-fr" for FRENCH
-	 "-ja" for JAPANESE
-	 LEAVE BLANK FOR MAC OS-X
--->
-        
-        <string></string>  
-        <key>DOWNLOAD_URL</key>
-        <string>http://www.mindjet.com/mm-%OS%%LANG%</string>
+        <string>Mindjet MindManager</string> 
     </dict>
     <key>MinimumVersion</key>
     <string>0.6.1</string>
     <key>Process</key>
     <array>
     	<dict>
+        	<key>Processor</key>
+            <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>http://www.mindjet.ae/support/product-resources/channel-download-library</string>
+                <key>re_pattern</key>
+                <string>MindManager for Mac \(Build ([^"]*)\)</string>
+                <key>result_output_var_name</key>
+                <string>version</string>
+            </dict>
+        </dict>
+    	<dict>
             <key>Processor</key>
             <string>URLDownloader</string>
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>%DOWNLOAD_URL%</string>
+                <string>http://download.mindjet.com/Mindjet_MindManager_Mac_%version%.dmg</string>
             </dict>
         </dict>
         <dict>
