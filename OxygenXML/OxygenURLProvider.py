@@ -116,6 +116,8 @@ class OxygenURLProvider(Processor):
                 download_url = ("http://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen-64bit.exe" % (prod, plat))
             elif plat == 'Linux64':
                 download_url = ("https://www.oxygenxml.com/InstData/%s/%s/VM/oxygen-64bit.sh" % (prod, plat))
+            elif plat == 'MacOSX':
+                download_url = ("https://www.oxygenxml.com/InstData/%s/%s/VM/oxygen.dmg" % (prod, plat))
             else:
                 download_url = ("http://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen.tar.gz" % (prod, plat))
         else:
@@ -123,6 +125,8 @@ class OxygenURLProvider(Processor):
                 download_url = ("http://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen%s-64bit.exe" % (prod, plat, prod))
             elif plat == 'Linux64':
                 download_url = ("https://www.oxygenxml.com/InstData/%s/%s/VM/oxygen%s-64bit.sh" % (prod, plat, prod))
+            elif plat == 'MacOSX':
+                download_url = ("https://www.oxygenxml.com/InstData/%s/%s/VM/oxygen%s.dmg" % (prod, plat, prod))
             else:
                 download_url = ("http://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen%s.tar.gz" % (prod, plat, prod))
 
