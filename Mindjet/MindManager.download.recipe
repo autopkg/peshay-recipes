@@ -21,9 +21,9 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>http://www.mindjet.ae/support/product-resources/channel-download-library</string>
+                <string>https://www.mindjet.com/support-info/download-library</string>
                 <key>re_pattern</key>
-                <string>MindManager for Mac \(Build ([^"]*)\)</string>
+                <string>Build ([^"]*)\) .*"https://www.mindjet.com/mm-mac-dmg</string>
                 <key>result_output_var_name</key>
                 <string>version</string>
             </dict>
