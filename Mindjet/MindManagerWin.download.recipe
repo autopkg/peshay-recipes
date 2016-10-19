@@ -3,13 +3,21 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads latest version of Mindjet MindManager for Mac OS X.</string>
+    <string>Downloads latest version of Mindjet MindManager for Windows.</string>
     <key>Identifier</key>
-    <string>com.github.peshay.download.MindManager</string>
+    <string>com.github.peshay.download.MindManagerWin</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>Mindjet MindManager</string> 
+        <string>Mindjet MindManager Windows</string>
+        <key>locale</key>
+        
+    <!--
+    	"en" for WINDOWS (English)
+    	"ru" for WINDOWS (Russian)
+    -->    	 
+    	 
+    	<string>ru</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.6.1</string>
@@ -23,7 +31,7 @@
                 <key>url</key>
                 <string>https://www.mindjet.com/support-info/download-library</string>
                 <key>re_pattern</key>
-                <string>Build ([^"]*)\) .*"https://www.mindjet.com/mm-mac-dmg</string>
+                <string>Build ([^"]*)\) .*"https://www.mindjet.com/mm-win-exe-%locale%</string>
                 <key>result_output_var_name</key>
                 <string>version</string>
             </dict>
@@ -34,7 +42,7 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>http://download.mindjet.com/Mindjet_MindManager_Mac_%version%.dmg</string>
+                <string>http://download.mindjet.com/MindManager_%version%.exe</string>
             </dict>
         </dict>
         <dict>
