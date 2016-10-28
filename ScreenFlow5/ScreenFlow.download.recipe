@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of ScreenFlow5.</string> 
+	<string>Downloads the latest version of ScreenFlow5.</string>
 	<key>Identifier</key>
 	<string>com.github.peshay.download.ScreenFlow5</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>ScreenFlow5</string>
+		<string>ScreenFlow</string>
 	</dict>
 	<key>MinimumVersion</key>
     <string>0.6.1</string>
