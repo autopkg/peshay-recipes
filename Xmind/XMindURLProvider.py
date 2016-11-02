@@ -23,7 +23,7 @@ from autopkglib import Processor, ProcessorError
 __all__ = ["XMindUrlProvider"]
 
 
-BASE_URL = "http://www.xmind.net/download/mac/"
+BASE_URL = "https://www.xmind.net/download/mac/"
 
 
 class XMindURLProvider(Processor):
@@ -59,9 +59,9 @@ class XMindURLProvider(Processor):
         """Find and return a download URL"""
         base_url = self.env.get("base_url", BASE_URL)
         self.env["object"] = self.get_xmind_url(base_url)
-        substring_version = 'The latest release is XMind .* ' +\
-                            '\(v([0-9]*.[0-9]*.[0-9]*)\)'
-        substring_url = 'href="(http://www.xmind.net/xmind/downloads/(.*.dmg))">'
+        substring_version = 'The latest release is XMind ([0-9]*).* ' #+\
+                            #'\(v([0-9]*.[0-9]*.[0-9]*)\)'
+        substring_url = 'href="(https://www.xmind.net/xmind/downloads/(.*.dmg))">'
         latest = re.search(substring_version, self.env["object"])
         download = re.search(substring_url, self.env["object"])
         self.env["object"] = self.get_xmind_url(base_url)
