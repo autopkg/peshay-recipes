@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads latest version of OnyX and imports into FileWave.</string>
+	<key>Identifier</key>
+	<string>com.github.peshay.filewave.OnyX</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>OnyX</string>
+        <key>fw_app_bundle_id</key>
+        <string>com.github.peshay.filewave.OnyX</string>
+        <key>fw_destination_root</key>
+        <string>/Applications/%NAME%.app</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.6.1</string>
+	<key>ParentRecipe</key>
+	
+<!-- REPLACE THE VERSION WITH YOUR OS BELOW (DEFAULT FOR 10.12 MAC OS SIERRA)
+	"109" for macOS 10.9 MAVERICKS
+	"1010" for macOS 10.10 YOSEMITE
+	"1011" for macOS 10.11 EL CAPITAN
+	"1012" for macOS 10.12 SIERRA
+-->
+
+	<!-- REPLACE ON THIS STRING --><string>com.github.tallfunnyjew.download.Onyx1012</string><!-- REPLACE ON THIS STRING -->
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>dmg_path</key>
+				<string>%pathname%</string>
+			</dict>
+			<key>Processor</key>
+			<string>AppDmgVersioner</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>info_path</key>
+				<string>%pathname%/%app_name%/Contents/Info.plist</string>
+				<key>plist_keys</key>
+                <dict>
+                    <key>LSMinimumSystemVersion</key>
+                    <string>OS</string>
+                </dict>
+			</dict>
+			<key>Processor</key>
+			<string>PlistReader</string>
+		</dict>
+        <dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkgdirs</key>
+				<dict>
+					<key>Applications</key>
+					<string>0775</string>
+				</dict>
+				<key>pkgroot</key>
+				<string>%RECIPE_CACHE_DIR%/Applications</string>
+			</dict>
+			<key>Processor</key>
+			<string>PkgRootCreator</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>destination_path</key>
+				<string>%pkgroot%/%NAME%-macOS%OS%.app</string>
+				<key>source_path</key>
+				<string>%pathname%/%app_name%</string>
+			</dict>
+			<key>Processor</key>
+			<string>Copier</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+                <key>fw_app_bundle_id</key>
+				<string>%fw_app_bundle_id%.%OS%</string>
+				<key>fw_app_version</key>
+				<string>%version%</string>
+				<key>fw_destination_root</key>
+				<string>%fw_destination_root%</string>
+				<key>fw_fileset_name</key>
+				<string>%NAME% - %version% (macOS %OS%)</string>
+				<key>fw_import_source</key>
+                <string>%pkgroot%/%NAME%-macOS%OS%.app</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
+		</dict>
+	</array>
+</dict>
+</plist>
