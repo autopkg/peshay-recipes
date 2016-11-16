@@ -40,9 +40,9 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>http://forticlient.com</string>
+                <string>http://docs.fortinet.com/forticlient/release-information#</string>
                 <key>re_pattern</key>
-                <string>Get FortiClient ([0-9]+.[0-9]+) for Mac OSX</string>
+                <string>:"FortiClient ([^"]*) \(Mac OS X\) Release Notes","slug</string>
                 <key>result_output_var_name</key>
                 <string>version</string>
             </dict>
