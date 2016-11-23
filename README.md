@@ -1,2 +1,2 @@
 # autopkg-recipes
-Autopkg recipes with FileWave intgegration
+Autopkg recipes with FileWave integration
