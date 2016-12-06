@@ -8,19 +8,36 @@
 	<string>com.github.peshay.filewave.TorMessenger</string>
 	<key>Input</key>
 	<dict>
+		<key>LANGUAGE</key>
+		<string>en-US</string>
 		<key>NAME</key>
 		<string>TorMessenger</string>
-        <key>LANGUAGE</key>
-        <string>en-US</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.TorMessenger</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.TorMessenger</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.app</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
 	<key>ParentRecipe</key>
 	<string>com.github.homebysix.download.TorMessenger</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.homebysix.download.TorMessenger</key>
+			<dict>
+				<key>git_hash</key>
+				<string>00025ae3581a7b0aa903e1d80da820907fcf05ae</string>
+				<key>path</key>
+				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/Tor/TorMessenger.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>b028ba22ec9c509504905aafdd1300b428b168b97d958e9974a9d81b246bf1cb</string>
+			</dict>
+		</dict>
+	</dict>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -51,7 +68,7 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-                <key>fw_app_bundle_id</key>
+				<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
 				<string>%version%</string>

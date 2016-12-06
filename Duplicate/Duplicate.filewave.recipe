@@ -6,32 +6,49 @@
 	<string>Downloads latest version of Duplicate and imports into FileWave.</string>
 	<key>Identifier</key>
 	<string>com.github.peshay.filewave.Duplicate</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Duplicate</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.Duplicate</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.app</string>
+	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.peshay.download.Duplicate</string>
-    <key>Input</key>
+	<key>ParentRecipeTrustInfo</key>
 	<dict>
-		<key>NAME</key>
-		<string>Duplicate</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.Duplicate</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.peshay.download.Duplicate</key>
+			<dict>
+				<key>git_hash</key>
+				<string>9106aba72c5efd58ddb6cc82361d8f84f61ffed5</string>
+				<key>path</key>
+				<string>/Users/ahu/git/peshay/peshay-recipes/Duplicate/Duplicate.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>a038c63825cff747c080c6a9fd09248f3583e672e9e3151bda931a2c74054c3e</string>
+			</dict>
+		</dict>
 	</dict>
 	<key>Process</key>
 	<array>
 		<dict>
 			<key>Arguments</key>
 			<dict>
-                <key>fw_app_bundle_id</key>
+				<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
 				<string>%version%</string>
 				<key>fw_destination_root</key>
 				<string>%fw_destination_root%</string>
 				<key>fw_fileset_name</key>
-                <string>%NAME% - %version%</string>
+				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%.app</string>
 			</dict>

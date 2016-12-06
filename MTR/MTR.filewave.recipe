@@ -10,15 +10,32 @@
 	<dict>
 		<key>NAME</key>
 		<string>MTR</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.MTR</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.pkg</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.MTR</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.pkg</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.peshay.download.MTR</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.peshay.download.MTR</key>
+			<dict>
+				<key>git_hash</key>
+				<string>675b5dfa397f5402d9d400ed8bfc6ee7f1f421f1</string>
+				<key>path</key>
+				<string>/Users/ahu/git/peshay/peshay-recipes/MTR/MTR.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>a79c5124260f61c3824dd1b57603a0ed8ec32fe6b281758d4b86214be84dcdb6</string>
+			</dict>
+		</dict>
+	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

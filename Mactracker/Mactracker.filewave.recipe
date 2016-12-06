@@ -6,41 +6,58 @@
 	<string>Downloads latest version of Mactracker and imports into FileWave.</string>
 	<key>Identifier</key>
 	<string>com.github.peshay.filewave.Mactracker</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Mactracker</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.Mactracker</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.app</string>
+	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.arubdesu.download.Mactracker</string>
-    <key>Input</key>
+	<key>ParentRecipeTrustInfo</key>
 	<dict>
-		<key>NAME</key>
-		<string>Mactracker</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.Mactracker</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.arubdesu.download.Mactracker</key>
+			<dict>
+				<key>git_hash</key>
+				<string>53f63ff6eb38b9efe4bf80bfa0d3a20e916453a7</string>
+				<key>path</key>
+				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.arubdesu-recipes/Mactracker/Mactracker.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>259c72edcab21d12979ba8737fb77619b6889952f6e7b9df9a011317fd8e5cad</string>
+			</dict>
+		</dict>
 	</dict>
 	<key>Process</key>
 	<array>
 		<dict>
-            <key>Processor</key>
-            <string>SparkleUpdateInfoProvider</string>
-            <key>Arguments</key>
-            <dict>
-                <key>version</key>
-                <string>version</string>
-            </dict>
-        </dict>
+			<key>Arguments</key>
+			<dict>
+				<key>version</key>
+				<string>version</string>
+			</dict>
+			<key>Processor</key>
+			<string>SparkleUpdateInfoProvider</string>
+		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
-                <key>fw_app_bundle_id</key>
+				<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
 				<string>%version%</string>
 				<key>fw_destination_root</key>
 				<string>%fw_destination_root%</string>
 				<key>fw_fileset_name</key>
-                <string>%NAME% - %version%</string>
+				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%.app</string>
 			</dict>

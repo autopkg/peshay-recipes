@@ -10,51 +10,78 @@
 	<dict>
 		<key>NAME</key>
 		<string>Deluge</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.Deluge</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.Deluge</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.app</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.thenikola.download.Deluge</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict>
+			<key>DelugeURLProvider</key>
+			<dict>
+				<key>git_hash</key>
+				<string>9c354131a31642c787c084db5ae17869a0ed0b46</string>
+				<key>path</key>
+				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.thenikola-recipes/Deluge/DelugeURLProvider.py</string>
+				<key>sha256_hash</key>
+				<string>298a9ef7e024b592451d88bdbd8f842a8c62a54f409aab74228e5c7660af3437</string>
+			</dict>
+		</dict>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.thenikola.download.Deluge</key>
+			<dict>
+				<key>git_hash</key>
+				<string>8e54095560680be843af4efa788c214b2ea84598</string>
+				<key>path</key>
+				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.thenikola-recipes/Deluge/Deluge.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>51b02f777052730a8e948edc5093d5e8096df329ab907443ea5407d9bac13457</string>
+			</dict>
+		</dict>
+	</dict>
 	<key>Process</key>
 	<array>
-	  	<dict>
-            <key>Arguments</key>
-            <dict>
-                <key>pkgroot</key>
-                <string>%RECIPE_CACHE_DIR%/Applications</string>
-                <key>pkgdirs</key>
-                <dict>
-                    <key>Applications</key>
-                    <string>0775</string>
-                </dict>
-            </dict>
-            <key>Processor</key>
-            <string>PkgRootCreator</string>
-        </dict>
-        <dict>
-            <key>Arguments</key>
-            <dict>
-                <key>destination_path</key>
-                <string>%pkgroot%/%NAME%.app</string>
-                <key>source_path</key>
-                <string>%pathname%/*.app</string>
-            </dict>
-            <key>Processor</key>
-            <string>Copier</string>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>Versioner</string>
-            <key>Arguments</key>
-            <dict>
-                <key>input_plist_path</key>
-                <string>%pkgroot%/%NAME%.app/Contents/Info.plist</string>
-            </dict>
-        </dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkgdirs</key>
+				<dict>
+					<key>Applications</key>
+					<string>0775</string>
+				</dict>
+				<key>pkgroot</key>
+				<string>%RECIPE_CACHE_DIR%/Applications</string>
+			</dict>
+			<key>Processor</key>
+			<string>PkgRootCreator</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>destination_path</key>
+				<string>%pkgroot%/%NAME%.app</string>
+				<key>source_path</key>
+				<string>%pathname%/*.app</string>
+			</dict>
+			<key>Processor</key>
+			<string>Copier</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>input_plist_path</key>
+				<string>%pkgroot%/%NAME%.app/Contents/Info.plist</string>
+			</dict>
+			<key>Processor</key>
+			<string>Versioner</string>
+		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>

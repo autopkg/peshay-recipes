@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-    <string>Downloads the latest Word 2016 multilingual update pkg,
+	<string>Downloads the latest Word 2016 multilingual update pkg,
 and appends the version to the end of the filename.
 
 LOCALE_ID sets the locale for a descriptive text that will be
@@ -20,27 +20,54 @@ used by other processors in a child recipe.
 </string>
 	<key>Identifier</key>
 	<string>com.github.peshay.filewave.MSWord2016</string>
-    <key>Input</key>
-    <dict>
-        <key>LOCALE_ID</key>
-        <string>1033</string>
-        <key>NAME</key>
-        <string>MSWord2016</string>
-        <key>VERSION</key>
-        <string>latest</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.MSWord2016</string>
-    </dict>
+	<key>Input</key>
+	<dict>
+		<key>LOCALE_ID</key>
+		<string>1033</string>
+		<key>NAME</key>
+		<string>MSWord2016</string>
+		<key>VERSION</key>
+		<string>latest</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.MSWord2016</string>
+	</dict>
 	<key>MinimumVersion</key>
 	<string>0.5.0</string>
-    <key>ParentRecipe</key>
-    <string>com.github.autopkg.download.MSWord2016</string>
+	<key>ParentRecipe</key>
+	<string>com.github.autopkg.download.MSWord2016</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict>
+			<key>MSOffice2016URLandUpdateInfoProvider</key>
+			<dict>
+				<key>git_hash</key>
+				<string>788b44632d67de45878dfc2b670ef83a69ad404b</string>
+				<key>path</key>
+				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/MSOfficeUpdates/MSOffice2016URLandUpdateInfoProvider.py</string>
+				<key>sha256_hash</key>
+				<string>67d0e13ccce7f888677c25c140b0d30d22aa0215c94737203a2c4d17e5e7db1d</string>
+			</dict>
+		</dict>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.autopkg.download.MSWord2016</key>
+			<dict>
+				<key>git_hash</key>
+				<string>d49d9febcf853d0809eb99c54cee83ca1ffac997</string>
+				<key>path</key>
+				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/MSOfficeUpdates/MSWord2016.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>8d1d9f32b56d4cc8b434d1fcbdb5db1b64ea0cbcc462a4926cc71370c7ecf043</string>
+			</dict>
+		</dict>
+	</dict>
 	<key>Process</key>
 	<array>
 		<dict>
 			<key>Arguments</key>
 			<dict>
-                <key>fw_app_bundle_id</key>
+				<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
 				<string>%version%</string>

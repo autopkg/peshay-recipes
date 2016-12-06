@@ -10,65 +10,82 @@
 	<dict>
 		<key>NAME</key>
 		<string>TeamViewer</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.TeamViewer</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.TeamViewer</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.app</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>io.github.hjuutilainen.download.TeamViewer</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>io.github.hjuutilainen.download.TeamViewer</key>
+			<dict>
+				<key>git_hash</key>
+				<string>45d9a591c62e730a305afd7ce0d0e05bc6938e65</string>
+				<key>path</key>
+				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.hjuutilainen-recipes/TeamViewer/TeamViewer.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>e289e3bfed3537e63044e3de17e33321f65899babf999c0ca67fbb8780e5a82d</string>
+			</dict>
+		</dict>
+	</dict>
 	<key>Process</key>
 	<array>
-        <dict>
-                <key>Arguments</key>
-                <dict>
-                        <key>flat_pkg_path</key>
-                        <string>%pathname%/*.pkg</string>
-                        <key>destination_path</key>
-                        <string>%RECIPE_CACHE_DIR%/unpack</string>
-                </dict>
-                <key>Processor</key>
-                <string>FlatPkgUnpacker</string>
-        </dict>
-        <dict>
-                <key>Arguments</key>
-                <dict>
-                        <key>pkgroot</key>
-                        <string>%RECIPE_CACHE_DIR%/payload/root/Applications</string>
-                        <key>pkgdirs</key>
-                        <dict/>
-                </dict>
-                <key>Processor</key>
-                <string>PkgRootCreator</string>
-        </dict>
-        <dict>
-                <key>Comment</key>
-                <string>TeamViewer 9 installs in /Applications/TeamViewer.app so extract accordingly</string>
-                <key>Arguments</key>
-                <dict>
-                        <key>pkg_payload_path</key>
-                        <string>%RECIPE_CACHE_DIR%/unpack/TeamViewerApp.pkg/Payload</string>
-                        <key>destination_path</key>
-                        <string>%RECIPE_CACHE_DIR%/payload/root/Applications</string>
-                </dict>
-                <key>Processor</key>
-                <string>PkgPayloadUnpacker</string>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>Versioner</string>
-            <key>Arguments</key>
-            <dict>
-                    <key>input_plist_path</key>
-                    <string>%RECIPE_CACHE_DIR%/payload/root/Applications/%NAME%.app/Contents/Info.plist</string>
-            </dict>
-        </dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
-                <key>fw_app_bundle_id</key>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/unpack</string>
+				<key>flat_pkg_path</key>
+				<string>%pathname%/*.pkg</string>
+			</dict>
+			<key>Processor</key>
+			<string>FlatPkgUnpacker</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>pkgdirs</key>
+				<dict/>
+				<key>pkgroot</key>
+				<string>%RECIPE_CACHE_DIR%/payload/root/Applications</string>
+			</dict>
+			<key>Processor</key>
+			<string>PkgRootCreator</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/payload/root/Applications</string>
+				<key>pkg_payload_path</key>
+				<string>%RECIPE_CACHE_DIR%/unpack/TeamViewerApp.pkg/Payload</string>
+			</dict>
+			<key>Comment</key>
+			<string>TeamViewer 9 installs in /Applications/TeamViewer.app so extract accordingly</string>
+			<key>Processor</key>
+			<string>PkgPayloadUnpacker</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>input_plist_path</key>
+				<string>%RECIPE_CACHE_DIR%/payload/root/Applications/%NAME%.app/Contents/Info.plist</string>
+			</dict>
+			<key>Processor</key>
+			<string>Versioner</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
 				<string>%version%</string>

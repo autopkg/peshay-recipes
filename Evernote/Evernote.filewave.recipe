@@ -12,14 +12,31 @@
 		<key>NAME</key>
 		<string>Evernote</string>
 		<key>fw_app_bundle_id</key>
-        <string>com.evernote.Evernote</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+		<string>com.evernote.Evernote</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.app</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.5.0</string>
 	<key>ParentRecipe</key>
 	<string>com.github.autopkg.download.Evernote</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.autopkg.download.Evernote</key>
+			<dict>
+				<key>git_hash</key>
+				<string>ebcbf5b5b3e600b329bf15d412217fd5ecbb4ff8</string>
+				<key>path</key>
+				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/Evernote/Evernote.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>0a4c58e9f0ff617bcefddf22e6dba8c5d50758ce952a9888264c47094f0dbf76</string>
+			</dict>
+		</dict>
+	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

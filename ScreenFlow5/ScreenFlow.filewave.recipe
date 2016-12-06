@@ -10,28 +10,45 @@
 	<dict>
 		<key>NAME</key>
 		<string>ScreenFlow</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.ScreenFlow5</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.ScreenFlow5</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.app</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.peshay.download.ScreenFlow5</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.peshay.download.ScreenFlow5</key>
+			<dict>
+				<key>git_hash</key>
+				<string>2cb86fa25302130244d72dfccda8283fe27bd952</string>
+				<key>path</key>
+				<string>/Users/ahu/git/peshay/peshay-recipes/ScreenFlow5/ScreenFlow.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>b4bfbaf13a520f4f3faf309145535cd7eb39ebe1945b3995b56fd9ff638df652</string>
+			</dict>
+		</dict>
+	</dict>
 	<key>Process</key>
 	<array>
 		<dict>
 			<key>Arguments</key>
 			<dict>
-                <key>fw_app_bundle_id</key>
+				<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
 				<string>%version%</string>
 				<key>fw_destination_root</key>
 				<string>%fw_destination_root%</string>
 				<key>fw_fileset_name</key>
-                <string>%NAME% - %version%</string>
+				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
 				<string>%pkgroot%/%app_name%</string>
 			</dict>

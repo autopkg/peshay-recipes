@@ -21,6 +21,23 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.rderewianko.download.ScreenFlow</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.rderewianko.download.ScreenFlow</key>
+			<dict>
+				<key>git_hash</key>
+				<string>a7b01315f4a70b0f6b5f87095c409401e5d49570</string>
+				<key>path</key>
+				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.rderewianko-recipes/ScreenFlow/ScreenFlow.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>b0915752c8dc2ab5e94072f29fa825a0f88d387ecb53801ea3e6e549bc6cc9d4</string>
+			</dict>
+		</dict>
+	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

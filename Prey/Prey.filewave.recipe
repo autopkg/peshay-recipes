@@ -10,21 +10,38 @@
 	<dict>
 		<key>NAME</key>
 		<string>Prey</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.Prey</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.pkg</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.Prey</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.pkg</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.hansen-m.download.Prey</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.hansen-m.download.Prey</key>
+			<dict>
+				<key>git_hash</key>
+				<string>0326d1c53a87beaca631b09dc96cd1bdf4ee37ba</string>
+				<key>path</key>
+				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.hansen-m-recipes/PreyProject/Prey.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>e9d8615f4358c1e143a0bcfb89325eff84dd0ebccb87e31a720e8f8ce45454a2</string>
+			</dict>
+		</dict>
+	</dict>
 	<key>Process</key>
 	<array>
 		<dict>
 			<key>Arguments</key>
 			<dict>
-                <key>fw_app_bundle_id</key>
+				<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
 				<string>%version%</string>
@@ -33,7 +50,7 @@
 				<key>fw_fileset_name</key>
 				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
-                <string>%pathname%</string>
+				<string>%pathname%</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>

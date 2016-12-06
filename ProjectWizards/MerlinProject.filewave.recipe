@@ -10,23 +10,40 @@
 	<dict>
 		<key>NAME</key>
 		<string>Merlin Project</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.MerlinProject</string>
-        <key>fw_app_version</key>
-        <string>%version%</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.MerlinProject</string>
+		<key>fw_app_version</key>
+		<string>%version%</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.app</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.homebysix.download.MerlinProject</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.homebysix.download.MerlinProject</key>
+			<dict>
+				<key>git_hash</key>
+				<string>abb8a7a1dd6f0dfa3e23de17829e083126474304</string>
+				<key>path</key>
+				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/MerlinProject/MerlinProject.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>164a231bc2ac0a937ec1a985d70caf98e15afa670545f58a0ce3e4232b181301</string>
+			</dict>
+		</dict>
+	</dict>
 	<key>Process</key>
 	<array>
 		<dict>
 			<key>Arguments</key>
 			<dict>
-                <key>fw_app_bundle_id</key>
+				<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
 				<string>%version%</string>

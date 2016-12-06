@@ -6,32 +6,49 @@
 	<string>Downloads latest version of Platypus and imports into FileWave.</string>
 	<key>Identifier</key>
 	<string>com.github.peshay.filewave.Platypus</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Platypus</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.Platypus</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.app</string>
+	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.peshay.download.Platypus</string>
-    <key>Input</key>
+	<key>ParentRecipeTrustInfo</key>
 	<dict>
-		<key>NAME</key>
-		<string>Platypus</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.Platypus</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.peshay.download.Platypus</key>
+			<dict>
+				<key>git_hash</key>
+				<string>d4c036ce186ba54fb6d405a3daad5b58528b1c0c</string>
+				<key>path</key>
+				<string>/Users/ahu/git/peshay/peshay-recipes/Platypus/Platypus.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>cbb79f07267992b987a1abdbd548cae407cccdad94ebc3fa0aa97a52246aafa5</string>
+			</dict>
+		</dict>
 	</dict>
 	<key>Process</key>
 	<array>
 		<dict>
 			<key>Arguments</key>
 			<dict>
-                <key>fw_app_bundle_id</key>
+				<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
 				<string>%version%</string>
 				<key>fw_destination_root</key>
 				<string>%fw_destination_root%</string>
 				<key>fw_fileset_name</key>
-                <string>%NAME% - %version%</string>
+				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%-%version%/%NAME%.app</string>
 			</dict>

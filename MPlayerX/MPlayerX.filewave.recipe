@@ -10,15 +10,32 @@
 	<dict>
 		<key>NAME</key>
 		<string>MPlayerX</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.MPlayerX</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.MPlayerX</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.app</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
 	<key>ParentRecipe</key>
 	<string>io.github.hjuutilainen.download.MPlayerX</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>io.github.hjuutilainen.download.MPlayerX</key>
+			<dict>
+				<key>git_hash</key>
+				<string>df077177c63205aea254ed3a2cad428fcf02fb73</string>
+				<key>path</key>
+				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.hjuutilainen-recipes/MPlayerX/MPlayerX.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>bb4a30c6f0f0b46f06ff7e2a519a38e62592ddaedd8668650747539e592d337e</string>
+			</dict>
+		</dict>
+	</dict>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -30,12 +47,12 @@
 				<string>%version%</string>
 				<key>fw_destination_root</key>
 				<string>%fw_destination_root%</string>
+				<key>fw_fileset_group</key>
+				<string>%fw_fileset_group%</string>
 				<key>fw_fileset_name</key>
 				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%.app</string>
-                <key>fw_fileset_group</key>
-                <string>%fw_fileset_group%</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>

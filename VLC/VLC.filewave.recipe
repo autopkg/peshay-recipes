@@ -10,18 +10,35 @@
 	<dict>
 		<key>NAME</key>
 		<string>VLC</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.VLC</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.VLC</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.app</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.autopkg.download.VLC</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.autopkg.download.VLC</key>
+			<dict>
+				<key>git_hash</key>
+				<string>e9fd841d100d01a4c30c6ecd4b7cc5f2eb42021e</string>
+				<key>path</key>
+				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/VLC/VLC.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>fa7b7123ffe1d932eef69d7d97f8e02c40dfcd0fff46d249439fd5e0dd90783e</string>
+			</dict>
+		</dict>
+	</dict>
 	<key>Process</key>
 	<array>
-        <dict>
+		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>dmg_path</key>
@@ -58,7 +75,7 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-                <key>fw_app_bundle_id</key>
+				<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
 				<string>%version%</string>

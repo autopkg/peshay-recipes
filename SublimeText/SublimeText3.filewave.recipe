@@ -10,46 +10,63 @@
 	<dict>
 		<key>NAME</key>
 		<string>Sublime Text</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.SublimeText3</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.SublimeText3</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.app</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.keeleysam.recipes.SublimeText.SublimeText3.download</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.keeleysam.recipes.SublimeText.SublimeText3.download</key>
+			<dict>
+				<key>git_hash</key>
+				<string>9ea4ad1be9603bc312c439c6810a9e07c374e9fc</string>
+				<key>path</key>
+				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.keeleysam-recipes/SublimeText/SublimeText3.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>5bd3875dc38bce30bcfc921627db5f0e8bb375509ec6ff360e5ce319152aa0d8</string>
+			</dict>
+		</dict>
+	</dict>
 	<key>Process</key>
 	<array>
-        <dict>
-            <key>Arguments</key>
-            <dict>
-                <key>pkgdirs</key>
-                <dict>
-                    <key>Applications</key>
-                    <string>0775</string>
-                </dict>
-                <key>pkgroot</key>
-                <string>%RECIPE_CACHE_DIR%/Applications</string>
-            </dict>
-            <key>Processor</key>
-            <string>PkgRootCreator</string>
-        </dict>
-        <dict>
-            <key>Arguments</key>
-            <dict>
-                <key>destination_path</key>
-                <string>%pkgroot%/%NAME%.app</string>
-                <key>source_path</key>
-                <string>%pathname%/%NAME%.app</string>
-            </dict>
-            <key>Processor</key>
-            <string>Copier</string>
-        </dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
-                <key>fw_app_bundle_id</key>
+				<key>pkgdirs</key>
+				<dict>
+					<key>Applications</key>
+					<string>0775</string>
+				</dict>
+				<key>pkgroot</key>
+				<string>%RECIPE_CACHE_DIR%/Applications</string>
+			</dict>
+			<key>Processor</key>
+			<string>PkgRootCreator</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>destination_path</key>
+				<string>%pkgroot%/%NAME%.app</string>
+				<key>source_path</key>
+				<string>%pathname%/%NAME%.app</string>
+			</dict>
+			<key>Processor</key>
+			<string>Copier</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
 				<string>%version%</string>

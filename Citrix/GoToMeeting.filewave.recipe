@@ -10,15 +10,42 @@
 	<dict>
 		<key>NAME</key>
 		<string>GoToMeeting</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.GoToMeeting</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.GoToMeeting</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.app</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.0</string>
 	<key>ParentRecipe</key>
 	<string>com.github.homebysix.download.GoToMeeting</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict>
+			<key>GoToMeetingURLProvider</key>
+			<dict>
+				<key>git_hash</key>
+				<string>c30130676a3b971c1014c6522215729524522bdf</string>
+				<key>path</key>
+				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/GoToMeeting/GoToMeetingURLProvider.py</string>
+				<key>sha256_hash</key>
+				<string>6080b4540185fcd9ddeb310ecf11f6594d268e9ad72e0256a0c2eac39e084c23</string>
+			</dict>
+		</dict>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.homebysix.download.GoToMeeting</key>
+			<dict>
+				<key>git_hash</key>
+				<string>ff9759f87c3663b8782f180e1c0dab2289ee15d0</string>
+				<key>path</key>
+				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/GoToMeeting/GoToMeeting.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>1dede3025d3cde616a45c14db1550dd9280e3b3b51466dfcebee4f96674f70ad</string>
+			</dict>
+		</dict>
+	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

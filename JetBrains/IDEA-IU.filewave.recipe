@@ -10,18 +10,45 @@
 	<dict>
 		<key>NAME</key>
 		<string>IDEA-IU</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.IDEA-IU</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.IDEA-IU</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.app</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.mosen.download.IDEA-IU</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict>
+			<key>JetbrainsURLProvider</key>
+			<dict>
+				<key>git_hash</key>
+				<string>179e97c49478895a3a4e1d1a9fceba65cb21fe19</string>
+				<key>path</key>
+				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.mosen-recipes/JetBrains/JetbrainsURLProvider.py</string>
+				<key>sha256_hash</key>
+				<string>8c41e8d687a594f782541555fd0a0ac19e55e7557d6c4cc28cb856b883ed0482</string>
+			</dict>
+		</dict>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.mosen.download.IDEA-IU</key>
+			<dict>
+				<key>git_hash</key>
+				<string>509ff1a462729f44f8cf9f57ec73b091e48e03a1</string>
+				<key>path</key>
+				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.mosen-recipes/JetBrains/IDEA-IU.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>81c596ce9176cdec56b0fcd34406603bd36884395532e57e21d30fe7a0a6c2c6</string>
+			</dict>
+		</dict>
+	</dict>
 	<key>Process</key>
 	<array>
-        <dict>
+		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>pkgdirs</key>

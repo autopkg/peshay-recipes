@@ -10,15 +10,32 @@
 	<dict>
 		<key>NAME</key>
 		<string>UNetbootin</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.UNetbootin</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.UNetbootin</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.app</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.peshay.download.UNetbootin</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.peshay.download.UNetbootin</key>
+			<dict>
+				<key>git_hash</key>
+				<string>25ae11ad92939cc3d979fd5204fbce2f6c91ab5c</string>
+				<key>path</key>
+				<string>/Users/ahu/git/peshay/peshay-recipes/UNetbootin/UNetbootin.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>c8b2836d8ec7d5110ccb8da3c0e43073f7fb6f06edaa8d1618dca557f1d5fe42</string>
+			</dict>
+		</dict>
+	</dict>
 	<key>Process</key>
 	<array>
 		<dict>
