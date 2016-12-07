@@ -10,21 +10,38 @@
 	<dict>
 		<key>NAME</key>
 		<string>GasMask</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.GasMask</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.GasMask</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.app</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.homebysix.download.GasMask</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.homebysix.download.GasMask</key>
+			<dict>
+				<key>git_hash</key>
+				<string>3d61141f85d0090f9c21ffa03a7417b644abbb5f</string>
+				<key>path</key>
+				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/GasMask/GasMask.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>915594b3d393298e1169c1514899ea5f2f9749ce6b9d58818f0e7aa6f56ef305</string>
+			</dict>
+		</dict>
+	</dict>
 	<key>Process</key>
 	<array>
 		<dict>
 			<key>Arguments</key>
 			<dict>
-                <key>fw_app_bundle_id</key>
+				<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
 				<string>%version%</string>
@@ -33,7 +50,7 @@
 				<key>fw_fileset_name</key>
 				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/Applications/Gas Mask.app</string>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/Applications/Gas Mask.app</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>

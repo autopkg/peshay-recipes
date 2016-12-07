@@ -10,27 +10,54 @@
 	<dict>
 		<key>NAME</key>
 		<string>oxygenDeveloper</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.OxygenDeveloper.Eclipse</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/Eclipse.app/Contents/Eclipse/dropins/%NAME%</string>
-        <key>platform_name</key>
-        <string>Eclipse</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.OxygenDeveloper.Eclipse</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/Eclipse.app/Contents/Eclipse/dropins/%NAME%</string>
+		<key>platform_name</key>
+		<string>Eclipse</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.peshay.download.OxygenDeveloper</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict>
+			<key>OxygenURLProvider</key>
+			<dict>
+				<key>git_hash</key>
+				<string>28b7662a16460a78fa11d2e7ed0019db0882e2e3</string>
+				<key>path</key>
+				<string>/Users/ahu/git/peshay/peshay-recipes/OxygenXML/OxygenURLProvider.py</string>
+				<key>sha256_hash</key>
+				<string>8a2606a47013352753ee2439ab5258e31509a2736c2364566c54117e7dfe0bcf</string>
+			</dict>
+		</dict>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.peshay.download.OxygenDeveloper</key>
+			<dict>
+				<key>git_hash</key>
+				<string>05e3100546e75a8df2b0683c58061e0aa2ef393d</string>
+				<key>path</key>
+				<string>/Users/ahu/git/peshay/peshay-recipes/OxygenXML/OxygenDeveloper.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>3b8a977546f9002c8422da7d61ba8ad1bd5c46f0dcd53cb2d8cfda411e6df498</string>
+			</dict>
+		</dict>
+	</dict>
 	<key>Process</key>
 	<array>
-        <dict>
-            <key>Processor</key>
-            <string>Unarchiver</string>
-        </dict>
+		<dict>
+			<key>Processor</key>
+			<string>Unarchiver</string>
+		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
-                <key>fw_app_bundle_id</key>
+				<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
 				<string>%version%</string>

@@ -6,32 +6,49 @@
 	<string>Downloads latest version of Usage and imports into FileWave.</string>
 	<key>Identifier</key>
 	<string>com.github.peshay.filewave.Usage</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Usage</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.Usage</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.app</string>
+	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.peshay.download.Usage</string>
-    <key>Input</key>
+	<key>ParentRecipeTrustInfo</key>
 	<dict>
-		<key>NAME</key>
-		<string>Usage</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.Usage</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.peshay.download.Usage</key>
+			<dict>
+				<key>git_hash</key>
+				<string>675b5dfa397f5402d9d400ed8bfc6ee7f1f421f1</string>
+				<key>path</key>
+				<string>/Users/ahu/git/peshay/peshay-recipes/Usage/Usage.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>468820e3605909903aeefd47507992d9ad1d48b084991ff749d517ac5a775e3a</string>
+			</dict>
+		</dict>
 	</dict>
 	<key>Process</key>
 	<array>
 		<dict>
 			<key>Arguments</key>
 			<dict>
-                <key>fw_app_bundle_id</key>
+				<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
 				<string>%version%</string>
 				<key>fw_destination_root</key>
 				<string>%fw_destination_root%</string>
 				<key>fw_fileset_name</key>
-                <string>%NAME% - %version%</string>
+				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%.app</string>
 			</dict>

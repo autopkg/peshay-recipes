@@ -6,22 +6,49 @@
 	<string>Downloads latest version of Balsamiq Mockups and imports into FileWave.</string>
 	<key>Identifier</key>
 	<string>com.github.peshay.filewave.BalsamiqMockups</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Balsamiq Mockups 3</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.BalsamiqMockups</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.app</string>
+	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.thenikola.download.BalsamicMockups</string>
-    <key>Input</key>
+	<key>ParentRecipeTrustInfo</key>
 	<dict>
-		<key>NAME</key>
-		<string>Balsamiq Mockups 3</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.BalsamiqMockups</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+		<key>non_core_processors</key>
+		<dict>
+			<key>BalsamiqMockupsURLProvider</key>
+			<dict>
+				<key>git_hash</key>
+				<string>4d57695fa7098dc5a13b722cb5614bbdd18f8b46</string>
+				<key>path</key>
+				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.thenikola-recipes/BalsamiqMockups/BalsamiqMockupsURLProvider.py</string>
+				<key>sha256_hash</key>
+				<string>0562514a6105038016aaf8cf42e559b6f73f568062ba3e4c35b6cf3d738164b9</string>
+			</dict>
+		</dict>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.thenikola.download.BalsamicMockups</key>
+			<dict>
+				<key>git_hash</key>
+				<string>8e54095560680be843af4efa788c214b2ea84598</string>
+				<key>path</key>
+				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.thenikola-recipes/BalsamiqMockups/BalsamiqMockups.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>edbacd6604e3882bdecb84a742657d54ba704ea96063e836d49a4de4af9c0dbe</string>
+			</dict>
+		</dict>
 	</dict>
 	<key>Process</key>
 	<array>
-        <dict>
+		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>pkgdirs</key>
@@ -49,14 +76,14 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-                <key>fw_app_bundle_id</key>
+				<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
 				<string>%version%</string>
 				<key>fw_destination_root</key>
 				<string>%fw_destination_root%</string>
 				<key>fw_fileset_name</key>
-                <string>%NAME% - %version%</string>
+				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
 				<string>%pkgroot%/Applications/%app_name%</string>
 			</dict>

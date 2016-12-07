@@ -6,45 +6,62 @@
 	<string>Downloads latest version of PostgresApp and imports into FileWave.</string>
 	<key>Identifier</key>
 	<string>com.github.peshay.filewave.PostgresApp</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>PostgresApp</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.PostgresApp</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.app</string>
+	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.jleggat.PostgresApp.download</string>
-    <key>Input</key>
+	<key>ParentRecipeTrustInfo</key>
 	<dict>
-		<key>NAME</key>
-		<string>PostgresApp</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.PostgresApp</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.jleggat.PostgresApp.download</key>
+			<dict>
+				<key>git_hash</key>
+				<string>d9c068e0f5c739d5834edafc7ab93947e7605eb3</string>
+				<key>path</key>
+				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.jleggat-recipes/PostgresApp/PostgresApp.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>7a5debe57657d8a9e29d4a79bdc6e5479f4272c5cb36d8fc98d3c412b9e25030</string>
+			</dict>
+		</dict>
 	</dict>
 	<key>Process</key>
 	<array>
 		<dict>
-            <key>Processor</key>
-            <string>Unarchiver</string>
-    	</dict>
-    	<dict>
-            <key>Processor</key>
-            <string>Versioner</string>
-            <key>Arguments</key>
-            <dict>
-                <key>input_plist_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/Postgres.app/Contents/Info.plist</string>
-            </dict>
-        </dict>
+			<key>Processor</key>
+			<string>Unarchiver</string>
+		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
-                <key>fw_app_bundle_id</key>
+				<key>input_plist_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/Postgres.app/Contents/Info.plist</string>
+			</dict>
+			<key>Processor</key>
+			<string>Versioner</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
 				<string>%version%</string>
 				<key>fw_destination_root</key>
 				<string>%fw_destination_root%</string>
 				<key>fw_fileset_name</key>
-                <string>%NAME% - %version%</string>
+				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%/Postgres.app</string>
 			</dict>

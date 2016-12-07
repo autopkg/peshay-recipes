@@ -10,27 +10,44 @@
 	<dict>
 		<key>NAME</key>
 		<string>Telegram</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.Telegram</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.Telegram</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.app</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.peshay.download.Telegram</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.peshay.download.Telegram</key>
+			<dict>
+				<key>git_hash</key>
+				<string>675b5dfa397f5402d9d400ed8bfc6ee7f1f421f1</string>
+				<key>path</key>
+				<string>/Users/ahu/git/peshay/peshay-recipes/Telegram/Telegram.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>040a5d7db0d0e522fd822746d273cc5b8562b32535665bc98f29f5be55050aad</string>
+			</dict>
+		</dict>
+	</dict>
 	<key>Process</key>
 	<array>
-        <dict>
+		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>pkgroot</key>
-				<string>%RECIPE_CACHE_DIR%/Applications</string>
 				<key>pkgdirs</key>
 				<dict>
 					<key>Applications</key>
 					<string>0775</string>
 				</dict>
+				<key>pkgroot</key>
+				<string>%RECIPE_CACHE_DIR%/Applications</string>
 			</dict>
 			<key>Processor</key>
 			<string>PkgRootCreator</string>
@@ -47,25 +64,25 @@
 			<string>Copier</string>
 		</dict>
 		<dict>
-            <key>Processor</key>
-            <string>Versioner</string>
-            <key>Arguments</key>
-            <dict>
-                <key>input_plist_path</key>
-                <string>%pkgroot%/%NAME%.app/Contents/Info.plist</string>
-            </dict>
-        </dict>
+			<key>Arguments</key>
+			<dict>
+				<key>input_plist_path</key>
+				<string>%pkgroot%/%NAME%.app/Contents/Info.plist</string>
+			</dict>
+			<key>Processor</key>
+			<string>Versioner</string>
+		</dict>
 		<dict>
-            <key>Processor</key>
-            <string>CodeSignatureVerifier</string>
-            <key>Arguments</key>
-            <dict>
-                <key>input_path</key>
-                <string>%pkgroot%/%NAME%.app</string>
-                <key>requirement</key>
-                <string>identifier "com.tdesktop.Telegram" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "63FLR8MQA9"</string>
-            </dict>
-        </dict>
+			<key>Arguments</key>
+			<dict>
+				<key>input_path</key>
+				<string>%pkgroot%/%NAME%.app</string>
+				<key>requirement</key>
+				<string>identifier "com.tdesktop.Telegram" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "63FLR8MQA9"</string>
+			</dict>
+			<key>Processor</key>
+			<string>CodeSignatureVerifier</string>
+		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>

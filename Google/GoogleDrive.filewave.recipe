@@ -6,18 +6,35 @@
 	<string>Downloads latest version of GoogleDrive and imports into FileWave.</string>
 	<key>Identifier</key>
 	<string>com.github.peshay.filewave.GoogleDrive</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>GoogleDrive</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.GoogleDrive</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.app</string>
+	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.derak.download.GoogleDrive</string>
-    <key>Input</key>
+	<key>ParentRecipeTrustInfo</key>
 	<dict>
-		<key>NAME</key>
-		<string>GoogleDrive</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.GoogleDrive</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.derak.download.GoogleDrive</key>
+			<dict>
+				<key>git_hash</key>
+				<string>2127d358ce3eaf0b221e39b1b8fb8d06a60b4ac7</string>
+				<key>path</key>
+				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.derak-recipes/Google/GoogleDrive.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>c33a1f941a7a3ea4d3a19ace76037c915ac73317529c3fbdcaeae59b1bb25304</string>
+			</dict>
+		</dict>
 	</dict>
 	<key>Process</key>
 	<array>
@@ -30,18 +47,18 @@
 			<key>Processor</key>
 			<string>AppDmgVersioner</string>
 		</dict>
-        <dict>
-            <key>Processor</key>
-            <string>CodeSignatureVerifier</string>
-            <key>Arguments</key>
-            <dict>
-                <key>input_path</key>
-                <string>%pathname%/%app_name%</string>
-                <key>requirement</key>
-                <string>identifier "com.google.GoogleDrive" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = EQHXZ8M8AV</string>
-            </dict>
-        </dict>
-        <dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>input_path</key>
+				<string>%pathname%/%app_name%</string>
+				<key>requirement</key>
+				<string>identifier "com.google.GoogleDrive" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = EQHXZ8M8AV</string>
+			</dict>
+			<key>Processor</key>
+			<string>CodeSignatureVerifier</string>
+		</dict>
+		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>pkgdirs</key>
@@ -69,14 +86,14 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-                <key>fw_app_bundle_id</key>
+				<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
 				<string>%version%</string>
 				<key>fw_destination_root</key>
 				<string>%fw_destination_root%</string>
 				<key>fw_fileset_name</key>
-                <string>%NAME% - %version%</string>
+				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
 				<string>%pkgroot%/Applications/%app_name%</string>
 			</dict>

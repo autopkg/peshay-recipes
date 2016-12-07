@@ -10,43 +10,60 @@
 	<dict>
 		<key>NAME</key>
 		<string>Atom</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.Atom</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.Atom</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.app</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>io.github.hjuutilainen.download.Atom</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>io.github.hjuutilainen.download.Atom</key>
+			<dict>
+				<key>git_hash</key>
+				<string>8471b8fc8ee88153b5fee7b8aafd04c1e7526350</string>
+				<key>path</key>
+				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.hjuutilainen-recipes/GitHub/Atom.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>9354a4d7c156d6e440c32b51d03d891694daac0b914d31da025837f47ee9b5d2</string>
+			</dict>
+		</dict>
+	</dict>
 	<key>Process</key>
 	<array>
-        <dict>
-            <key>Processor</key>
-            <string>Unarchiver</string>
-        </dict>
 		<dict>
 			<key>Processor</key>
-			<string>PlistReader</string>
+			<string>Unarchiver</string>
+		</dict>
+		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>info_path</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%.app</string>
 				<key>plist_keys</key>
 				<dict>
-					<key>CFBundleShortVersionString</key>
-					<string>version</string>
 					<key>CFBundleIdentifier</key>
 					<string>bundleid</string>
 					<key>CFBundleName</key>
 					<string>app_name</string>
+					<key>CFBundleShortVersionString</key>
+					<string>version</string>
 				</dict>
 			</dict>
+			<key>Processor</key>
+			<string>PlistReader</string>
 		</dict>
-        <dict>
+		<dict>
 			<key>Arguments</key>
 			<dict>
-                <key>fw_app_bundle_id</key>
+				<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
 				<string>%version%</string>

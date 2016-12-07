@@ -10,30 +10,47 @@
 	<dict>
 		<key>NAME</key>
 		<string>Skitch</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.Skitch</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.pkg</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.Skitch</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.pkg</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.sheagcraig.download.Skitch</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.sheagcraig.download.Skitch</key>
+			<dict>
+				<key>git_hash</key>
+				<string>f009ecea03eedd179e35c10e5015e9b992a1d9fe</string>
+				<key>path</key>
+				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.sheagcraig-recipes/Skitch/Skitch.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>34588853141241eb0b059cec0cd25aa4cd768df19b0d14bfa6250e3d872c23a9</string>
+			</dict>
+		</dict>
+	</dict>
 	<key>Process</key>
 	<array>
 		<dict>
-            <key>Processor</key>
-            <string>Versioner</string>
-            <key>Arguments</key>
-            <dict>
-                <key>input_plist_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%.app/Contents/Info.plist</string>
-            </dict>
-        </dict>
+			<key>Arguments</key>
+			<dict>
+				<key>input_plist_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%.app/Contents/Info.plist</string>
+			</dict>
+			<key>Processor</key>
+			<string>Versioner</string>
+		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
-                <key>fw_app_bundle_id</key>
+				<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
 				<string>%version%</string>
@@ -42,7 +59,7 @@
 				<key>fw_fileset_name</key>
 				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%.app</string>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%.app</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>

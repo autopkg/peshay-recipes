@@ -10,25 +10,42 @@
 	<dict>
 		<key>NAME</key>
 		<string>iTerm</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.iTerm2</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.iTerm2</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.app</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.keeleysam.autopkg.download.iTerm2</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.keeleysam.autopkg.download.iTerm2</key>
+			<dict>
+				<key>git_hash</key>
+				<string>b0cea7d89566df5c0e2a92cfebff2734ca6c538b</string>
+				<key>path</key>
+				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.keeleysam-recipes/iTerm2/iTerm2.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>a2985bbb6e6ebf5093c5f5a75fb899ba140a0802359f334e3bda2cb0ff564303</string>
+			</dict>
+		</dict>
+	</dict>
 	<key>Process</key>
 	<array>
-        <dict>
-            <key>Processor</key>
-            <string>Unarchiver</string>
-        </dict>
+		<dict>
+			<key>Processor</key>
+			<string>Unarchiver</string>
+		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
-                <key>fw_app_bundle_id</key>
+				<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
 				<string>%version%</string>

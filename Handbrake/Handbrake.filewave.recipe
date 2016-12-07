@@ -6,18 +6,35 @@
 	<string>Downloads latest version of Handbrake and imports into FileWave.</string>
 	<key>Identifier</key>
 	<string>com.github.peshay.filewave.Handbrake</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Handbrake</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.Handbrake</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.app</string>
+	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.autopkg.download.Handbrake</string>
-    <key>Input</key>
+	<key>ParentRecipeTrustInfo</key>
 	<dict>
-		<key>NAME</key>
-		<string>Handbrake</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.Handbrake</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.autopkg.download.Handbrake</key>
+			<dict>
+				<key>git_hash</key>
+				<string>ac81e5e06db47f60ad8d294680ae669ebb7c61a7</string>
+				<key>path</key>
+				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/Handbrake/Handbrake.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>fb1c663a887520371cf1dbb618f41b3bee34a8f58a39983cea367071af14f446</string>
+			</dict>
+		</dict>
 	</dict>
 	<key>Process</key>
 	<array>
@@ -30,7 +47,7 @@
 			<key>Processor</key>
 			<string>AppDmgVersioner</string>
 		</dict>
-        <dict>
+		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>pkgdirs</key>
@@ -58,14 +75,14 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-                <key>fw_app_bundle_id</key>
+				<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
 				<string>%version%</string>
 				<key>fw_destination_root</key>
 				<string>%fw_destination_root%</string>
 				<key>fw_fileset_name</key>
-                <string>%NAME% - %version%</string>
+				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
 				<string>%pkgroot%/Applications/%app_name%</string>
 			</dict>

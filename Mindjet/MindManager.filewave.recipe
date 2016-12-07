@@ -11,14 +11,31 @@
 		<key>NAME</key>
 		<string>Mindjet MindManager</string>
 		<key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.MindManager</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+		<string>com.github.peshay.filewave.MindManager</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.app</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.peshay.download.MindManager</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.peshay.download.MindManager</key>
+			<dict>
+				<key>git_hash</key>
+				<string>663c8ae40013e6f340a810c6dc4750dd7d1b4a95</string>
+				<key>path</key>
+				<string>/Users/ahu/git/peshay/peshay-recipes/Mindjet/MindManager.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>f70b1800fe05994f6e0b5ad6bd8cdc13d84594d98f195703c3bf08c34d00e1ba</string>
+			</dict>
+		</dict>
+	</dict>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -30,7 +47,7 @@
 			<key>Processor</key>
 			<string>AppDmgVersioner</string>
 		</dict>
-        <dict>
+		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>pkgdirs</key>
@@ -58,7 +75,7 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-                <key>fw_app_bundle_id</key>
+				<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
 				<string>%version%</string>
@@ -67,7 +84,7 @@
 				<key>fw_fileset_name</key>
 				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
-                <string>%pkgroot%/Applications/%app_name%</string>
+				<string>%pkgroot%/Applications/%app_name%</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>

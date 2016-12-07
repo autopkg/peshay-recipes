@@ -10,46 +10,63 @@
 	<dict>
 		<key>NAME</key>
 		<string>FortiClient</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.FortiClient</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.FortiClient</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.app</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.peshay.download.FortiClient</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.peshay.download.FortiClient</key>
+			<dict>
+				<key>git_hash</key>
+				<string>53835aae9bcf929ec08531aabfc639eab1399a0a</string>
+				<key>path</key>
+				<string>/Users/ahu/git/peshay/peshay-recipes/FortiClient/FortiClient.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>75937b811f7742bfa1834aaf812586b5d0518da8ef7907e87444ee4c20a83373</string>
+			</dict>
+		</dict>
+	</dict>
 	<key>Process</key>
 	<array>
-        <dict>
-            <key>Arguments</key>
-            <dict>
-                <key>pkgroot</key>
-                <string>%RECIPE_CACHE_DIR%/Applications</string>
-                <key>pkgdirs</key>
-                <dict>
-                    <key>Applications</key>
-                    <string>0775</string>
-                </dict>
-            </dict>
-            <key>Processor</key>
-            <string>PkgRootCreator</string>
-        </dict>
-        <dict>
-            <key>Arguments</key>
-            <dict>
-                <key>destination_path</key>
-                <string>%pkgroot%/%NAME%.app</string>
-                <key>source_path</key>
-                <string>%pathname%/FortiClientUpdate.app</string>
-            </dict>
-            <key>Processor</key>
-            <string>Copier</string>
-        </dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
-                <key>fw_app_bundle_id</key>
+				<key>pkgdirs</key>
+				<dict>
+					<key>Applications</key>
+					<string>0775</string>
+				</dict>
+				<key>pkgroot</key>
+				<string>%RECIPE_CACHE_DIR%/Applications</string>
+			</dict>
+			<key>Processor</key>
+			<string>PkgRootCreator</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>destination_path</key>
+				<string>%pkgroot%/%NAME%.app</string>
+				<key>source_path</key>
+				<string>%pathname%/FortiClientUpdate.app</string>
+			</dict>
+			<key>Processor</key>
+			<string>Copier</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
 				<string>%version%</string>
@@ -58,7 +75,7 @@
 				<key>fw_fileset_name</key>
 				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
-                <string>%pkgroot%/%NAME%.app</string>
+				<string>%pkgroot%/%NAME%.app</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>

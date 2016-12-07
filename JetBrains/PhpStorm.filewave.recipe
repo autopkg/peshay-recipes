@@ -10,18 +10,45 @@
 	<dict>
 		<key>NAME</key>
 		<string>PhpStorm</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.PhpStorm</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.PhpStorm</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.app</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.mosen.download.PhpStorm</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict>
+			<key>JetbrainsURLProvider</key>
+			<dict>
+				<key>git_hash</key>
+				<string>179e97c49478895a3a4e1d1a9fceba65cb21fe19</string>
+				<key>path</key>
+				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.mosen-recipes/JetBrains/JetbrainsURLProvider.py</string>
+				<key>sha256_hash</key>
+				<string>8c41e8d687a594f782541555fd0a0ac19e55e7557d6c4cc28cb856b883ed0482</string>
+			</dict>
+		</dict>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.mosen.download.PhpStorm</key>
+			<dict>
+				<key>git_hash</key>
+				<string>a50ecbbf8b9d10f8c228f1d5b9c75ebc4b207c6b</string>
+				<key>path</key>
+				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.mosen-recipes/JetBrains/PhpStorm.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>ae15a7ef65f4cc9ce61fc06895da22b40fd7786c203dd1d55bd74d8ee30b02a2</string>
+			</dict>
+		</dict>
+	</dict>
 	<key>Process</key>
 	<array>
-        <dict>
+		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>pkgdirs</key>

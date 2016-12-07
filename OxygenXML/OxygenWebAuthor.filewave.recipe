@@ -10,32 +10,59 @@
 	<dict>
 		<key>NAME</key>
 		<string>oxygen-xml-web-author</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.OxygenWebAuthor</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.OxygenWebAuthor</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.peshay.download.OxygenWebAuthor</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict>
+			<key>OxygenURLProvider</key>
+			<dict>
+				<key>git_hash</key>
+				<string>28b7662a16460a78fa11d2e7ed0019db0882e2e3</string>
+				<key>path</key>
+				<string>/Users/ahu/git/peshay/peshay-recipes/OxygenXML/OxygenURLProvider.py</string>
+				<key>sha256_hash</key>
+				<string>8a2606a47013352753ee2439ab5258e31509a2736c2364566c54117e7dfe0bcf</string>
+			</dict>
+		</dict>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.peshay.download.OxygenWebAuthor</key>
+			<dict>
+				<key>git_hash</key>
+				<string>94ea93c808cf53f825f0a63d00597d3e6e25a404</string>
+				<key>path</key>
+				<string>/Users/ahu/git/peshay/peshay-recipes/OxygenXML/OxygenWebAuthor.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>1fb6a0604087025caa9080d7c2db23b2339244fb064cd82c88a0e51279a3cc2c</string>
+			</dict>
+		</dict>
+	</dict>
 	<key>Process</key>
 	<array>
-        <dict>
-            <key>Processor</key>
-            <string>Unarchiver</string>
-        </dict>
+		<dict>
+			<key>Processor</key>
+			<string>Unarchiver</string>
+		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
-                <key>fw_app_bundle_id</key>
+				<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
 				<string>%version%</string>
 				<key>fw_destination_root</key>
 				<string>%fw_destination_root%</string>
 				<key>fw_fileset_name</key>
-                <string>%NAME% - %version% - %platform_name%</string>
+				<string>%NAME% - %version% - %platform_name%</string>
 				<key>fw_import_source</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%</string>
 			</dict>

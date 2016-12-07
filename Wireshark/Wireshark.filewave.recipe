@@ -6,22 +6,39 @@
 	<string>Downloads latest version of Wireshark and imports into FileWave.</string>
 	<key>Identifier</key>
 	<string>com.github.peshay.filewave.Wireshark</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Wireshark</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.Wireshark</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.app</string>
+	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.jleggat.Wireshark.download</string>
-    <key>Input</key>
+	<key>ParentRecipeTrustInfo</key>
 	<dict>
-		<key>NAME</key>
-		<string>Wireshark</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.Wireshark</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.jleggat.Wireshark.download</key>
+			<dict>
+				<key>git_hash</key>
+				<string>d27da8c9918a0edec67d6d470a1b970b164c9c2f</string>
+				<key>path</key>
+				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.jleggat-recipes/Wireshark/Wireshark.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>7dd9055a619ae45f0fc700210d33a5162557cd46edd1a5754da9d1ceb91ea26d</string>
+			</dict>
+		</dict>
 	</dict>
 	<key>Process</key>
 	<array>
-        <dict>
+		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
@@ -33,51 +50,51 @@
 			<string>Copier</string>
 		</dict>
 		<dict>
-            <key>Processor</key>
-            <string>FlatPkgUnpacker</string>
-            <key>Arguments</key>
-            <dict>
-                <key>flat_pkg_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%.pkg</string>
-                <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/unpack</string>
-                <key>purge_destination</key>
-                <true/>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>PkgPayloadUnpacker</string>
-            <key>Arguments</key>
-            <dict>
-                <key>pkg_payload_path</key>
-                <string>%RECIPE_CACHE_DIR%/unpack/%NAME%.pkg/Payload</string>
-                <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/unpack/%NAME%.pkg.unpacked/</string>
-                <key>purge_destination</key>
-                <true/>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>Versioner</string>
-            <key>Arguments</key>
-            <dict>
-                <key>input_plist_path</key>
-                <string>%RECIPE_CACHE_DIR%/unpack/%NAME%.pkg.unpacked/%NAME%.app/Contents/Info.plist</string>
-            </dict>
-        </dict>
+			<key>Arguments</key>
+			<dict>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/unpack</string>
+				<key>flat_pkg_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%.pkg</string>
+				<key>purge_destination</key>
+				<true/>
+			</dict>
+			<key>Processor</key>
+			<string>FlatPkgUnpacker</string>
+		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
-                <key>fw_app_bundle_id</key>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/unpack/%NAME%.pkg.unpacked/</string>
+				<key>pkg_payload_path</key>
+				<string>%RECIPE_CACHE_DIR%/unpack/%NAME%.pkg/Payload</string>
+				<key>purge_destination</key>
+				<true/>
+			</dict>
+			<key>Processor</key>
+			<string>PkgPayloadUnpacker</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>input_plist_path</key>
+				<string>%RECIPE_CACHE_DIR%/unpack/%NAME%.pkg.unpacked/%NAME%.app/Contents/Info.plist</string>
+			</dict>
+			<key>Processor</key>
+			<string>Versioner</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
 				<string>%version%</string>
 				<key>fw_destination_root</key>
 				<string>%fw_destination_root%</string>
 				<key>fw_fileset_name</key>
-                <string>%NAME% - %version%</string>
+				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
 				<string>%RECIPE_CACHE_DIR%/unpack/%NAME%.pkg.unpacked/%NAME%.app</string>
 			</dict>

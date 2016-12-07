@@ -6,18 +6,35 @@
 	<string>Downloads latest version of NetSpot and imports into FileWave.</string>
 	<key>Identifier</key>
 	<string>com.github.peshay.filewave.NetSpot</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>NetSpot</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.NetSpot</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.app</string>
+	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.jaharmi.download.NetSpot</string>
-    <key>Input</key>
+	<key>ParentRecipeTrustInfo</key>
 	<dict>
-		<key>NAME</key>
-		<string>NetSpot</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.NetSpot</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.jaharmi.download.NetSpot</key>
+			<dict>
+				<key>git_hash</key>
+				<string>7cd1a4a67d2c81395f9ee1d8b1f6f440458a22f2</string>
+				<key>path</key>
+				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.jaharmi-recipes/Etwok/NetSpot.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>7071ef52d60226368a336ebc0db924da76b85d2567382af22fb03bc82cfb2166</string>
+			</dict>
+		</dict>
 	</dict>
 	<key>Process</key>
 	<array>
@@ -49,14 +66,14 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-                <key>fw_app_bundle_id</key>
+				<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
 				<string>%version%</string>
 				<key>fw_destination_root</key>
 				<string>%fw_destination_root%</string>
 				<key>fw_fileset_name</key>
-                <string>%NAME% - %version%</string>
+				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
 				<string>%pkgroot%/%NAME%.app</string>
 			</dict>

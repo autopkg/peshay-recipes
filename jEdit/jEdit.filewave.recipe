@@ -12,18 +12,35 @@
 	<dict>
 		<key>NAME</key>
 		<string>jEdit</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.jEdit</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.jEdit</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.app</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.peshay.download.jEdit</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.peshay.download.jEdit</key>
+			<dict>
+				<key>git_hash</key>
+				<string>4d5da0dcc8318ea3001ad2f2793291f3d089d250</string>
+				<key>path</key>
+				<string>/Users/ahu/git/peshay/peshay-recipes/jEdit/jEdit.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>1b58f3d21e312044f9a3eb60bfc568871f29c3886bdfe6a90e12f234fc459eb9</string>
+			</dict>
+		</dict>
+	</dict>
 	<key>Process</key>
 	<array>
-        <dict>
+		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>pkgdirs</key>

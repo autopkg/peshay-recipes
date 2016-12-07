@@ -10,42 +10,59 @@
 	<dict>
 		<key>NAME</key>
 		<string>Mattermost</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.Mattermost</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.Mattermost</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.app</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.peshay.download.Mattermost</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.peshay.download.Mattermost</key>
+			<dict>
+				<key>git_hash</key>
+				<string>675b5dfa397f5402d9d400ed8bfc6ee7f1f421f1</string>
+				<key>path</key>
+				<string>/Users/ahu/git/peshay/peshay-recipes/Mattermost/Mattermost.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>a08bb33dcc4c2502c4da4bbc32657db279955647ec342687fd80e989cf32e1f2</string>
+			</dict>
+		</dict>
+	</dict>
 	<key>Process</key>
 	<array>
-        <dict>
-            <key>Processor</key>
-            <string>Unarchiver</string>
-    	</dict>
-    	<dict>
-            <key>Processor</key>
-            <string>Versioner</string>
-            <key>Arguments</key>
-            <dict>
-                <key>input_plist_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/mattermost-desktop-osx/%NAME%.app/Contents/Info.plist</string>
-            </dict>
-        </dict>
 		<dict>
-            <key>Processor</key>
-            <string>CodeSignatureVerifier</string>
-            <key>Arguments</key>
-            <dict>
-                <key>input_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/mattermost-desktop-osx/%NAME%.app</string>
-                <key>requirement</key>
-                <string>identifier "com.electron.mattermost" and anchor apple generic</string>
-            </dict>
-        </dict>
-        <dict>
+			<key>Processor</key>
+			<string>Unarchiver</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>input_plist_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/mattermost-desktop-osx/%NAME%.app/Contents/Info.plist</string>
+			</dict>
+			<key>Processor</key>
+			<string>Versioner</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>input_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/mattermost-desktop-osx/%NAME%.app</string>
+				<key>requirement</key>
+				<string>identifier "com.electron.mattermost" and anchor apple generic</string>
+			</dict>
+			<key>Processor</key>
+			<string>CodeSignatureVerifier</string>
+		</dict>
+		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>fw_app_bundle_id</key>

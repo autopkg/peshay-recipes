@@ -10,15 +10,32 @@
 	<dict>
 		<key>NAME</key>
 		<string>Go2Shell</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.Go2Shell</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.Go2Shell</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.app</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>io.github.hjuutilainen.download.Go2Shell</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>io.github.hjuutilainen.download.Go2Shell</key>
+			<dict>
+				<key>git_hash</key>
+				<string>dc326244d2b52605c5720c9f06f2b4d80bd8aa3c</string>
+				<key>path</key>
+				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.hjuutilainen-recipes/ZipZapMac/Go2Shell.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>1489beb8b3aa836971d83f4516449677a6f0358c1b6fa8e28c7722b0409f714f</string>
+			</dict>
+		</dict>
+	</dict>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -58,14 +75,14 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-                <key>fw_app_bundle_id</key>
+				<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
 				<string>%version%</string>
 				<key>fw_destination_root</key>
 				<string>%fw_destination_root%</string>
 				<key>fw_fileset_name</key>
-                <string>%NAME% - %version%</string>
+				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
 				<string>%pkgroot%/%NAME%.app</string>
 			</dict>

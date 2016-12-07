@@ -6,32 +6,49 @@
 	<string>Downloads latest version of LibreOffice and imports into FileWave.</string>
 	<key>Identifier</key>
 	<string>com.github.peshay.filewave.LibreOffice</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>LibreOffice</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.LibreOffice</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.app</string>
+	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>io.github.hjuutilainen.download.LibreOffice</string>
-    <key>Input</key>
+	<key>ParentRecipeTrustInfo</key>
 	<dict>
-		<key>NAME</key>
-		<string>LibreOffice</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.LibreOffice</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>io.github.hjuutilainen.download.LibreOffice</key>
+			<dict>
+				<key>git_hash</key>
+				<string>8b6a277dd5915929ac29ae5e76a1de449f7ed10a</string>
+				<key>path</key>
+				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.hjuutilainen-recipes/LibreOffice/LibreOffice.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>e6adc0690acbb6061ed86c7ca5093bd2ff94d6518aaa7d4798176297527a4380</string>
+			</dict>
+		</dict>
 	</dict>
 	<key>Process</key>
 	<array>
 		<dict>
 			<key>Arguments</key>
 			<dict>
-                <key>fw_app_bundle_id</key>
+				<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
 				<string>%version%</string>
 				<key>fw_destination_root</key>
 				<string>%fw_destination_root%</string>
 				<key>fw_fileset_name</key>
-                <string>%NAME% - %version%</string>
+				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%.app</string>
 			</dict>

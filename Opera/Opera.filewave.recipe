@@ -10,43 +10,70 @@
 	<dict>
 		<key>NAME</key>
 		<string>Opera</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.Opera</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.Opera</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.app</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.bochoven.recipes.Opera.download</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict>
+			<key>OperaUpdateInfoProvider</key>
+			<dict>
+				<key>git_hash</key>
+				<string>599ccd85602168998f5945933627534bf661670f</string>
+				<key>path</key>
+				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.bochoven-recipes/Opera/OperaUpdateInfoProvider.py</string>
+				<key>sha256_hash</key>
+				<string>de6fe8ecc5b822df9cba526aed9bdbc3461c4ef04f8d0f65982eeefff477905a</string>
+			</dict>
+		</dict>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.bochoven.recipes.Opera.download</key>
+			<dict>
+				<key>git_hash</key>
+				<string>fa31187686ef51931e3227a22a7fe56eebd9af13</string>
+				<key>path</key>
+				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.bochoven-recipes/Opera/Opera.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>c1e685189916aac679004bd0a2ed421809ef8b285485ecb9616af64e3af232e7</string>
+			</dict>
+		</dict>
+	</dict>
 	<key>Process</key>
 	<array>
-        <dict>
-            <key>Processor</key>
-            <string>Unarchiver</string>
-        </dict>
-        <dict>
+		<dict>
 			<key>Processor</key>
-			<string>PlistReader</string>
+			<string>Unarchiver</string>
+		</dict>
+		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>info_path</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%.app</string>
 				<key>plist_keys</key>
 				<dict>
-					<key>CFBundleShortVersionString</key>
-					<string>version</string>
 					<key>CFBundleIdentifier</key>
 					<string>bundleid</string>
 					<key>CFBundleName</key>
 					<string>app_name</string>
+					<key>CFBundleShortVersionString</key>
+					<string>version</string>
 				</dict>
 			</dict>
+			<key>Processor</key>
+			<string>PlistReader</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
-                <key>fw_app_bundle_id</key>
+				<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
 				<string>%version%</string>
@@ -55,7 +82,7 @@
 				<key>fw_fileset_name</key>
 				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%.app</string>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%.app</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>

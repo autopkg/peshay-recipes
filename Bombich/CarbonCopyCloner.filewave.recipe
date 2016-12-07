@@ -10,21 +10,38 @@
 	<dict>
 		<key>NAME</key>
 		<string>Carbon Copy Cloner</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.CarbonCopyCloner</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.CarbonCopyCloner</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.app</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.keeleysam.recipes.CarbonCopyCloner.download</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.keeleysam.recipes.CarbonCopyCloner.download</key>
+			<dict>
+				<key>git_hash</key>
+				<string>a0aea073c3d82770a4ddf6e64f3f412e8f4dc398</string>
+				<key>path</key>
+				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.keeleysam-recipes/CarbonCopyCloner/CarbonCopyCloner.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>3947b31572da8e2f1fcaa783d23d38b71a12aa7453cadae6aec30c1b016cfbc6</string>
+			</dict>
+		</dict>
+	</dict>
 	<key>Process</key>
 	<array>
 		<dict>
 			<key>Arguments</key>
 			<dict>
-                <key>fw_app_bundle_id</key>
+				<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
 				<string>%version%</string>

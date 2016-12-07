@@ -6,18 +6,35 @@
 	<string>Downloads latest version of Mumble and imports into FileWave.</string>
 	<key>Identifier</key>
 	<string>com.github.peshay.filewave.Mumble</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Mumble</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.Mumble</string>
+		<key>fw_destination_root</key>
+		<string>/Applications/%NAME%.app</string>
+	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.triti.download.Mumble</string>
-    <key>Input</key>
+	<key>ParentRecipeTrustInfo</key>
 	<dict>
-		<key>NAME</key>
-		<string>Mumble</string>
-        <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.Mumble</string>
-        <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
+		<dict>
+			<key>com.github.triti.download.Mumble</key>
+			<dict>
+				<key>git_hash</key>
+				<string>7000a34f7c0c868fd9a4f4624d5a2448d395ef31</string>
+				<key>path</key>
+				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.triti-recipes/Mumble/Mumble.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>5c5a942042cc651475dacc42acdcba16b03cb2caec7942da073fc236a60ef48b</string>
+			</dict>
+		</dict>
 	</dict>
 	<key>Process</key>
 	<array>
@@ -35,14 +52,14 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-                <key>fw_app_bundle_id</key>
+				<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
 				<string>%version%</string>
 				<key>fw_destination_root</key>
 				<string>%fw_destination_root%</string>
 				<key>fw_fileset_name</key>
-                <string>%NAME% - %version%</string>
+				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%.app</string>
 			</dict>
