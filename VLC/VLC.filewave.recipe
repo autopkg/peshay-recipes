@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.autopkg.download.VLC</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.autopkg.download.VLC</key>
-			<dict>
-				<key>git_hash</key>
-				<string>e9fd841d100d01a4c30c6ecd4b7cc5f2eb42021e</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/VLC/VLC.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>fa7b7123ffe1d932eef69d7d97f8e02c40dfcd0fff46d249439fd5e0dd90783e</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -87,7 +70,7 @@
 				<string>%pkgroot%/Applications/%app_name%</string>
 			</dict>
 			<key>Processor</key>
-			<string>com.github.johncclayton.filewave.FWTool/FileWaveImporter</string>
+			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
 		</dict>
 	</array>
 </dict>
