@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>io.github.hjuutilainen.download.TeamViewer</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>io.github.hjuutilainen.download.TeamViewer</key>
-			<dict>
-				<key>git_hash</key>
-				<string>45d9a591c62e730a305afd7ce0d0e05bc6938e65</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.hjuutilainen-recipes/TeamViewer/TeamViewer.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>e289e3bfed3537e63044e3de17e33321f65899babf999c0ca67fbb8780e5a82d</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -97,7 +80,7 @@
 				<string>%RECIPE_CACHE_DIR%/payload/root/Applications/%NAME%.app</string>
 			</dict>
 			<key>Processor</key>
-			<string>com.github.johncclayton.filewave.FWTool/FileWaveImporter</string>
+			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
 		</dict>
 	</array>
 </dict>

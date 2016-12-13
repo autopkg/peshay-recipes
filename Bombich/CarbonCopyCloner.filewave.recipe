@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.keeleysam.recipes.CarbonCopyCloner.download</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.keeleysam.recipes.CarbonCopyCloner.download</key>
-			<dict>
-				<key>git_hash</key>
-				<string>a0aea073c3d82770a4ddf6e64f3f412e8f4dc398</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.keeleysam-recipes/CarbonCopyCloner/CarbonCopyCloner.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>3947b31572da8e2f1fcaa783d23d38b71a12aa7453cadae6aec30c1b016cfbc6</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -53,7 +36,7 @@
 				<string>%RECIPE_CACHE_DIR%/downloads/Applications/%NAME%.app</string>
 			</dict>
 			<key>Processor</key>
-			<string>com.github.johncclayton.filewave.FWTool/FileWaveImporter</string>
+			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
 		</dict>
 	</array>
 </dict>

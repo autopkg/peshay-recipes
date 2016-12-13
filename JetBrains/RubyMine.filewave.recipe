@@ -19,33 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.mosen.download.RubyMine</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict>
-			<key>JetbrainsURLProvider</key>
-			<dict>
-				<key>git_hash</key>
-				<string>179e97c49478895a3a4e1d1a9fceba65cb21fe19</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.mosen-recipes/JetBrains/JetbrainsURLProvider.py</string>
-				<key>sha256_hash</key>
-				<string>8c41e8d687a594f782541555fd0a0ac19e55e7557d6c4cc28cb856b883ed0482</string>
-			</dict>
-		</dict>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.mosen.download.RubyMine</key>
-			<dict>
-				<key>git_hash</key>
-				<string>40cf75452b7f720bdeae29bc3d17f2447f78c349</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.mosen-recipes/JetBrains/RubyMine.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>949ddcba72d6d3e46a0384000002a3137eba4cdad8badd0c05405ac0ecd5dff6</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

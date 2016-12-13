@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.autopkg.download.Skype</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.autopkg.download.Skype</key>
-			<dict>
-				<key>git_hash</key>
-				<string>88dcc41ccf4ab264d00d61fbb6a76bc3245bc10a</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/Skype/Skype.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>6243ae66813df7deed96b7c4fea4f8aee5dbde398672717d92ea725d031e0846</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -87,7 +70,7 @@
 				<string>%pkgroot%/Applications/%app_name%</string>
 			</dict>
 			<key>Processor</key>
-			<string>com.github.johncclayton.filewave.FWTool/FileWaveImporter</string>
+			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
 		</dict>
 	</array>
 </dict>

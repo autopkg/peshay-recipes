@@ -21,33 +21,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.autopkg.download.thunderbird</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict>
-			<key>MozillaURLProvider</key>
-			<dict>
-				<key>git_hash</key>
-				<string>8332edca4fbafc1e8aff8c119e571f27b4853bb5</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/Mozilla/MozillaURLProvider.py</string>
-				<key>sha256_hash</key>
-				<string>b3c2711d58a670f13d186f77743fd0808470d387fd780b852e8fcfcecdbec251</string>
-			</dict>
-		</dict>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.autopkg.download.thunderbird</key>
-			<dict>
-				<key>git_hash</key>
-				<string>223abbe4082fea498959e444e2aa21252e543995</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/Mozilla/Thunderbird.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>7e1249054f68cbee0ea359405cdd3653a3d57ab2e34a9fc2f127d17fc5f516a5</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

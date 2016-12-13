@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>io.github.hjuutilainen.download.CitrixReceiver</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>io.github.hjuutilainen.download.CitrixReceiver</key>
-			<dict>
-				<key>git_hash</key>
-				<string>6765e949bcdf381d59747202ef06d6c6fb543756</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.hjuutilainen-recipes/CitrixReceiver/CitrixReceiver.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>c55392968318f6b6f3152d33b1ad455fd5ee3fdebbab9ec2e2b61f754f11f66c</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

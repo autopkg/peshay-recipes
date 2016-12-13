@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.keeleysam.autopkg.download.iTerm2</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.keeleysam.autopkg.download.iTerm2</key>
-			<dict>
-				<key>git_hash</key>
-				<string>b0cea7d89566df5c0e2a92cfebff2734ca6c538b</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.keeleysam-recipes/iTerm2/iTerm2.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>a2985bbb6e6ebf5093c5f5a75fb899ba140a0802359f334e3bda2cb0ff564303</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -57,7 +40,7 @@
 				<string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%.app</string>
 			</dict>
 			<key>Processor</key>
-			<string>com.github.johncclayton.filewave.FWTool/FileWaveImporter</string>
+			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
 		</dict>
 	</array>
 </dict>
