@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>io.github.hjuutilainen.download.Atom</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>io.github.hjuutilainen.download.Atom</key>
-			<dict>
-				<key>git_hash</key>
-				<string>8471b8fc8ee88153b5fee7b8aafd04c1e7526350</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.hjuutilainen-recipes/GitHub/Atom.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>9354a4d7c156d6e440c32b51d03d891694daac0b914d31da025837f47ee9b5d2</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>
@@ -75,7 +58,7 @@
 				<string>%RECIPE_CACHE_DIR%/%NAME%/%app_name%.app</string>
 			</dict>
 			<key>Processor</key>
-			<string>com.github.johncclayton.filewave.FWTool/FileWaveImporter</string>
+			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
 		</dict>
 	</array>
 </dict>
