@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads latest version of MindManager2017EnterpriseWin.</string>
+    <key>Identifier</key>
+    <string>com.github.peshay.download.MindManager2017EnterpriseWin</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>MindManager2017EnterpriseWin</string>
+<!--
+
+OPEN www.mindjet.com/latest-release-notes-windows-english WITH YOUR WEB-BROWSER
+COPY THE VERSION INFORMATION BELOW
+
+ACTUAL VERSION 17.1.167
+
+-->
+		<key>ver1</key>
+    	<string>17</string> <!-- XX.x.xxx -->
+		<key>ver2</key>
+    	<string>1</string> <!-- xx.X.xxx -->
+    	<key>ver3</key>
+    	<string>167</string> <!-- xx.x.XXX -->
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.6.1</string>
+    <key>Process</key>
+    <array>
+        <dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+			<key>Arguments</key>
+			<dict>
+                <key>url</key>
+                <string>http://dwnld.mindjet.com/stubs/Builds/MindManager20%ver1%.%ver2%/MindManager_64bit_%ver1%.%ver2%.%ver3%.exe</string>
+			</dict>
+		</dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
+        </dict>
+    </array>
+</dict>
+</plist>
