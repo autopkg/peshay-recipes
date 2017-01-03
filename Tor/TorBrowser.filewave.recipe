@@ -21,23 +21,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.homebysix.download.TorBrowserBundle</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.homebysix.download.TorBrowserBundle</key>
-			<dict>
-				<key>git_hash</key>
-				<string>9a05bb6963e6739056a10a3d72453c4df2cb92e6</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/Tor/TorBrowserBundle.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>37f4091badd2251ae7bf1a1744b4ff0ac93846d623a1c47e02d5b12191099a9a</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

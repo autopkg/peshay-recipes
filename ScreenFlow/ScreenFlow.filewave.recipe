@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.peshay.download.ScreenFlow</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.peshay.download.ScreenFlow</key>
-			<dict>
-				<key>git_hash</key>
-				<string>3204076c016708f637477f80042e33f1d08002f0</string>
-				<key>path</key>
-				<string>/Users/ahu/git/peshay/peshay-recipes/ScreenFlow/ScreenFlow.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>7e24d6c03a5574dbcaeb3b93a447231efa04429d470d7e7a4fa84e35a44a4b16</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

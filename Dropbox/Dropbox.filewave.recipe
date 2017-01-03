@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.autopkg.download.dropbox</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.autopkg.download.dropbox</key>
-			<dict>
-				<key>git_hash</key>
-				<string>29e505418bf6e344ae43a4d5c847638153d142d1</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/Dropbox/Dropbox.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>6b3f290f226e7ae1e47b1acc0494c3c395ecb15c755803d24776cbbdf97157af</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

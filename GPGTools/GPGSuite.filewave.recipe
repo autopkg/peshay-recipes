@@ -17,23 +17,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.gerardkok.download.GPGSuite</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.gerardkok.download.GPGSuite</key>
-			<dict>
-				<key>git_hash</key>
-				<string>55a1a09c8b8d2c79678ba862c53ea0d09c1ae1fe</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.gerardkok-recipes/GPGTools/GPGSuite.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>eb03e307626bc690bba2be18fae2d5a01b09369527c4b27b9ab7b06bd1fcd645</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.peshay.download.RawTherapee</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.peshay.download.RawTherapee</key>
-			<dict>
-				<key>git_hash</key>
-				<string>675b5dfa397f5402d9d400ed8bfc6ee7f1f421f1</string>
-				<key>path</key>
-				<string>/Users/ahu/git/peshay/peshay-recipes/RawTherapee/RawTherapee.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>67fda805869dab3bcf60a8128e426ee1418e2d10e805526006fa6f5046019826</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

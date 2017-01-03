@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.jleggat.nvALT.download</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.jleggat.nvALT.download</key>
-			<dict>
-				<key>git_hash</key>
-				<string>9755cfa0843ef47d4d22150254fe0cf62ebd1bad</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.jleggat-recipes/nvAlt/nvALT.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>550a09602cdbdc10451249dc86639e7be5512b5b27c2370a7c35258189dcfcb3</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

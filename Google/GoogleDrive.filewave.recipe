@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.derak.download.GoogleDrive</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.derak.download.GoogleDrive</key>
-			<dict>
-				<key>git_hash</key>
-				<string>2127d358ce3eaf0b221e39b1b8fb8d06a60b4ac7</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.derak-recipes/Google/GoogleDrive.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>c33a1f941a7a3ea4d3a19ace76037c915ac73317529c3fbdcaeae59b1bb25304</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

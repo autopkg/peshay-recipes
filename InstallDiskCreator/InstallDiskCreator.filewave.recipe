@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.peshay.download.InstallDiskCreator</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.peshay.download.InstallDiskCreator</key>
-			<dict>
-				<key>git_hash</key>
-				<string>4548f3180f037b66bf99bde743f4275a787e57e8</string>
-				<key>path</key>
-				<string>/Users/ahu/git/peshay/peshay-recipes/InstallDiskCreator/InstallDiskCreator.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>a5c7e940a63bffd2782d8c9a4c8e3a85e1fba3e8d62f2c68327cd95d6cbb8d48</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

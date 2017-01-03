@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.jleggat.EasyFind.download</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.jleggat.EasyFind.download</key>
-			<dict>
-				<key>git_hash</key>
-				<string>d473e910f277356f5cba70928b467ab8abda59c0</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.jleggat-recipes/EasyFind/EasyFind.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>9e8f88d4895527df92b5ca517b30a1d470723679d329314948ba389fdf2250f0</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

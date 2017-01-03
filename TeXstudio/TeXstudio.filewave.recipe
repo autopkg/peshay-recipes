@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>io.github.hjuutilainen.download.TeXstudio</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>io.github.hjuutilainen.download.TeXstudio</key>
-			<dict>
-				<key>git_hash</key>
-				<string>b023c2e77d485198fa6d605e909b4d21587a5009</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.hjuutilainen-recipes/TeXstudio/TeXstudio.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>00c79ee6ee6093f8f1a2ecbf6fad01fb24b14a92c4f17206e84c4ccf9f9cbac6</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

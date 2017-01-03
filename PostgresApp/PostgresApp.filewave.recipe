@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.jleggat.PostgresApp.download</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.jleggat.PostgresApp.download</key>
-			<dict>
-				<key>git_hash</key>
-				<string>d9c068e0f5c739d5834edafc7ab93947e7605eb3</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.jleggat-recipes/PostgresApp/PostgresApp.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>7a5debe57657d8a9e29d4a79bdc6e5479f4272c5cb36d8fc98d3c412b9e25030</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

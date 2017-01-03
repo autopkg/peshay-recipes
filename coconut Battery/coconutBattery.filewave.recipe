@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.homebysix.download.coconutBattery</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.homebysix.download.coconutBattery</key>
-			<dict>
-				<key>git_hash</key>
-				<string>8a011dfd74579a361268b4c6d5cd07e7e9166b9c</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/coconutBattery/coconutBattery.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>815acbd22544f920d2bc999eb756854d93a8e0508043e3ba03c5dd5425c77afa</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.keeleysam.recipes.Caffeine.download</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.keeleysam.recipes.Caffeine.download</key>
-			<dict>
-				<key>git_hash</key>
-				<string>f6df176e67433ef78fb1621ca56724a5e8bc4860</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.keeleysam-recipes/Caffeine/Caffeine.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>0f46f4d83d6c4ba54f7ca8a7406ead1ef8921a90b8444ab04693b1e84e050e64</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

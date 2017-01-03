@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.sheagcraig.download.Skitch</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.sheagcraig.download.Skitch</key>
-			<dict>
-				<key>git_hash</key>
-				<string>f009ecea03eedd179e35c10e5015e9b992a1d9fe</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.sheagcraig-recipes/Skitch/Skitch.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>34588853141241eb0b059cec0cd25aa4cd768df19b0d14bfa6250e3d872c23a9</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

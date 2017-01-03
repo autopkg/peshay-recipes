@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.peshay.download.GlobalProtect</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.peshay.download.GlobalProtect</key>
-			<dict>
-				<key>git_hash</key>
-				<string>2d81a392af3bc0f09b4321f8208e87da2e27c0dc</string>
-				<key>path</key>
-				<string>/Users/ahu/git/peshay/peshay-recipes/PaloAlto/GlobalProtect.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>e185a75061ba2a7bf033f2831905399dbe92fa69031d71db78b6fd179272f9a2</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

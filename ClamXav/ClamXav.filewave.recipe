@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.homebysix.download.ClamXav</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.homebysix.download.ClamXav</key>
-			<dict>
-				<key>git_hash</key>
-				<string>8a011dfd74579a361268b4c6d5cd07e7e9166b9c</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/ClamXav/ClamXav.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>038160ce096f48407736c8844857717290ff8c30995150dd6e201cf68db43413</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

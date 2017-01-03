@@ -19,33 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>io.github.hjuutilainen.download.Alfred3</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict>
-			<key>AlfredURLProvider</key>
-			<dict>
-				<key>git_hash</key>
-				<string>7ecc2f0d28ff36d67aee66851531caff2377f7b3</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.hjuutilainen-recipes/AlfredApp/AlfredURLProvider.py</string>
-				<key>sha256_hash</key>
-				<string>eb8e3bc04d7e7b206af744c4c08206590b2d5a3b42e2670dcc849d8386133f55</string>
-			</dict>
-		</dict>
-		<key>parent_recipes</key>
-		<dict>
-			<key>io.github.hjuutilainen.download.Alfred3</key>
-			<dict>
-				<key>git_hash</key>
-				<string>7ecc2f0d28ff36d67aee66851531caff2377f7b3</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.hjuutilainen-recipes/AlfredApp/Alfred3.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>e21d209f245e1ac975003fa5fe34266074b4f52fcf2bf66a3651336bb08981bb</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

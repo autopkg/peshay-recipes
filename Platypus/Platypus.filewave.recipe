@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.peshay.download.Platypus</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.peshay.download.Platypus</key>
-			<dict>
-				<key>git_hash</key>
-				<string>d4c036ce186ba54fb6d405a3daad5b58528b1c0c</string>
-				<key>path</key>
-				<string>/Users/ahu/git/peshay/peshay-recipes/Platypus/Platypus.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>cbb79f07267992b987a1abdbd548cae407cccdad94ebc3fa0aa97a52246aafa5</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

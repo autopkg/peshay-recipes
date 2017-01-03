@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.peshay.download.MindManager</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.peshay.download.MindManager</key>
-			<dict>
-				<key>git_hash</key>
-				<string>663c8ae40013e6f340a810c6dc4750dd7d1b4a95</string>
-				<key>path</key>
-				<string>/Users/ahu/git/peshay/peshay-recipes/Mindjet/MindManager.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>f70b1800fe05994f6e0b5ad6bd8cdc13d84594d98f195703c3bf08c34d00e1ba</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.autopkg.download.TheUnarchiver</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.autopkg.download.TheUnarchiver</key>
-			<dict>
-				<key>git_hash</key>
-				<string>ce9996b461d6d6a03a639fb37f49da4d5e6e03e5</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/The Unarchiver/TheUnarchiver.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>dee2e0c13b3f5e5446ec119c638be2792640794aaebbe55fb3005b5947d49682</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

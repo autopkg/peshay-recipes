@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.peshay.download.Mattermost</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.peshay.download.Mattermost</key>
-			<dict>
-				<key>git_hash</key>
-				<string>675b5dfa397f5402d9d400ed8bfc6ee7f1f421f1</string>
-				<key>path</key>
-				<string>/Users/ahu/git/peshay/peshay-recipes/Mattermost/Mattermost.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>a08bb33dcc4c2502c4da4bbc32657db279955647ec342687fd80e989cf32e1f2</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

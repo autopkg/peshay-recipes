@@ -21,23 +21,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.homebysix.download.MerlinProject</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.homebysix.download.MerlinProject</key>
-			<dict>
-				<key>git_hash</key>
-				<string>abb8a7a1dd6f0dfa3e23de17829e083126474304</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/MerlinProject/MerlinProject.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>164a231bc2ac0a937ec1a985d70caf98e15afa670545f58a0ce3e4232b181301</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

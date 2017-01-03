@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.peshay.download.Duplicate</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.peshay.download.Duplicate</key>
-			<dict>
-				<key>git_hash</key>
-				<string>9106aba72c5efd58ddb6cc82361d8f84f61ffed5</string>
-				<key>path</key>
-				<string>/Users/ahu/git/peshay/peshay-recipes/Duplicate/Duplicate.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>a038c63825cff747c080c6a9fd09248f3583e672e9e3151bda931a2c74054c3e</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

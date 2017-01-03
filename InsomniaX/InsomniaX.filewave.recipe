@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.keeleysam.recipes.InsomniaX.download</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.keeleysam.recipes.InsomniaX.download</key>
-			<dict>
-				<key>git_hash</key>
-				<string>bd68c2f451bb7d088705102a1a0fddc543c48f37</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.keeleysam-recipes/InsomniaX/InsomniaX.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>e85ba676e1497b926fb2a65bf712cf29158fa99b2f5b395a9db051430a964164</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

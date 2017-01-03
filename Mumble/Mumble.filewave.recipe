@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.triti.download.Mumble</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.triti.download.Mumble</key>
-			<dict>
-				<key>git_hash</key>
-				<string>7000a34f7c0c868fd9a4f4624d5a2448d395ef31</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.triti-recipes/Mumble/Mumble.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>5c5a942042cc651475dacc42acdcba16b03cb2caec7942da073fc236a60ef48b</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

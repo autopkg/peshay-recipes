@@ -19,33 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.bochoven.recipes.Opera.download</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict>
-			<key>OperaUpdateInfoProvider</key>
-			<dict>
-				<key>git_hash</key>
-				<string>599ccd85602168998f5945933627534bf661670f</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.bochoven-recipes/Opera/OperaUpdateInfoProvider.py</string>
-				<key>sha256_hash</key>
-				<string>de6fe8ecc5b822df9cba526aed9bdbc3461c4ef04f8d0f65982eeefff477905a</string>
-			</dict>
-		</dict>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.bochoven.recipes.Opera.download</key>
-			<dict>
-				<key>git_hash</key>
-				<string>fa31187686ef51931e3227a22a7fe56eebd9af13</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.bochoven-recipes/Opera/Opera.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>c1e685189916aac679004bd0a2ed421809ef8b285485ecb9616af64e3af232e7</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

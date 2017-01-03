@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>io.github.hjuutilainen.download.CheatSheet</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>io.github.hjuutilainen.download.CheatSheet</key>
-			<dict>
-				<key>git_hash</key>
-				<string>686e5e19b7bafea36ccffaad2900f4c73f624858</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.hjuutilainen-recipes/CheatSheet/CheatSheet.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>9abcb08b5acaa3aeb2671896a68481ed5b7c5594da14a961f942d91fb0a21b13</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

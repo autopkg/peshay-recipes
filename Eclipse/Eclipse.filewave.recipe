@@ -19,33 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.sheagcraig.download.Eclipse</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict>
-			<key>OptionSelector</key>
-			<dict>
-				<key>git_hash</key>
-				<string>496f57602509a778c415bb41dd2d421fe5ddb58f</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.sheagcraig-recipes/Eclipse/OptionSelector.py</string>
-				<key>sha256_hash</key>
-				<string>827fd51b22cfa5e8492b9787fb171ad3ce88d2b3e39e80f55c111e90209dbb92</string>
-			</dict>
-		</dict>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.sheagcraig.download.Eclipse</key>
-			<dict>
-				<key>git_hash</key>
-				<string>b99b78f32b4b1b53398fe704fe6a55339d9e3967</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.sheagcraig-recipes/Eclipse/Eclipse.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>503e96e41de6dc332f9dfdf41d8840164778b27517d498e07a2eb7c2cb3738dd</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

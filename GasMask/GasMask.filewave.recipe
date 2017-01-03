@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.homebysix.download.GasMask</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.homebysix.download.GasMask</key>
-			<dict>
-				<key>git_hash</key>
-				<string>3d61141f85d0090f9c21ffa03a7417b644abbb5f</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/GasMask/GasMask.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>915594b3d393298e1169c1514899ea5f2f9749ce6b9d58818f0e7aa6f56ef305</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

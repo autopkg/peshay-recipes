@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.keeleysam.recipes.Colloquy.download</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.keeleysam.recipes.Colloquy.download</key>
-			<dict>
-				<key>git_hash</key>
-				<string>bd68c2f451bb7d088705102a1a0fddc543c48f37</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.keeleysam-recipes/Colloquy/Colloquy.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>8ebe38f2345687320f5b0d2a244505cf6546b015098c8a314f1aeaeeb7538268</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

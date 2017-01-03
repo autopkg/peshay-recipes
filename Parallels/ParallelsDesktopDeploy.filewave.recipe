@@ -19,30 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.peshay.pkg.ParallelsDesktopDeploy</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.homebysix.download.ParallelsDesktop</key>
-			<dict>
-				<key>git_hash</key>
-				<string>d880f7890123933cdb010acad47d21b57e1a0b9c</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/Parallels/ParallelsDesktop.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>f21c093efa95b2f0ac4e6dbec232ce6efd99fe473cc1a52efc1068b7feec7975</string>
-			</dict>
-			<key>com.github.peshay.pkg.ParallelsDesktopDeploy</key>
-			<dict>
-				<key>path</key>
-				<string>/Users/ahu/git/peshay/peshay-recipes/Parallels/ParallelsDesktopDeploy.pkg.recipe</string>
-				<key>sha256_hash</key>
-				<string>688b281354ea4a9563a63a02de75bc3f43af42774e2b12eeff122cf52b4c1b5f</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

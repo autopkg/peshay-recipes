@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.peshay.download.ClipGrab</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.peshay.download.ClipGrab</key>
-			<dict>
-				<key>git_hash</key>
-				<string>675b5dfa397f5402d9d400ed8bfc6ee7f1f421f1</string>
-				<key>path</key>
-				<string>/Users/ahu/git/peshay/peshay-recipes/ClipGrab/ClipGrab.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>a8b36feb1348e65b64d461b6784b990f0ce94382fe6e52b9192ce1016c3bf969</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>
