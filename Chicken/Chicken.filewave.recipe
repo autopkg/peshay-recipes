@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.keeleysam.recipes.Chicken.download</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.keeleysam.recipes.Chicken.download</key>
-			<dict>
-				<key>git_hash</key>
-				<string>bd68c2f451bb7d088705102a1a0fddc543c48f37</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.keeleysam-recipes/Chicken/Chicken.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>6e24e0484972c739f5e2d53dee0861878263f859c79b18bb16e9a542fb7827ec</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

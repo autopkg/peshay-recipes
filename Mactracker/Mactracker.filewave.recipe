@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.arubdesu.download.Mactracker</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.arubdesu.download.Mactracker</key>
-			<dict>
-				<key>git_hash</key>
-				<string>53f63ff6eb38b9efe4bf80bfa0d3a20e916453a7</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.arubdesu-recipes/Mactracker/Mactracker.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>259c72edcab21d12979ba8737fb77619b6889952f6e7b9df9a011317fd8e5cad</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.homebysix.download.UnRarX</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.homebysix.download.UnRarX</key>
-			<dict>
-				<key>git_hash</key>
-				<string>f68477e34af1447016db7b6bf08ff9045fe6a14a</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/UnRarX/UnRarX.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>30b504db82df82a290b5c6f897e48d4dec9bec8f8d6a3301b763385c1e8f3707</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

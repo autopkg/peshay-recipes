@@ -19,33 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>io.github.hjuutilainen.download.OpenOffice</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict>
-			<key>OpenOfficeURLProvider</key>
-			<dict>
-				<key>git_hash</key>
-				<string>49471a06962adde75e64ec73f0a2d6ceaeaccf4f</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.hjuutilainen-recipes/OpenOffice/OpenOfficeURLProvider.py</string>
-				<key>sha256_hash</key>
-				<string>bb4ff833bf4019f0515253f9d404646cb43da95c3338cfbac30deed484aa1591</string>
-			</dict>
-		</dict>
-		<key>parent_recipes</key>
-		<dict>
-			<key>io.github.hjuutilainen.download.OpenOffice</key>
-			<dict>
-				<key>git_hash</key>
-				<string>49471a06962adde75e64ec73f0a2d6ceaeaccf4f</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.hjuutilainen-recipes/OpenOffice/OpenOffice.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>a6765942108e359e26f710db59db240274ffdab73a8ddc7c05074d9b33cc2547</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

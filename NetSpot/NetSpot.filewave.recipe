@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.jaharmi.download.NetSpot</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.jaharmi.download.NetSpot</key>
-			<dict>
-				<key>git_hash</key>
-				<string>7cd1a4a67d2c81395f9ee1d8b1f6f440458a22f2</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.jaharmi-recipes/Etwok/NetSpot.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>7071ef52d60226368a336ebc0db924da76b85d2567382af22fb03bc82cfb2166</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

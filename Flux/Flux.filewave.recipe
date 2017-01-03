@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.keeleysam.recipes.Flux.download</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.keeleysam.recipes.Flux.download</key>
-			<dict>
-				<key>git_hash</key>
-				<string>bd68c2f451bb7d088705102a1a0fddc543c48f37</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.keeleysam-recipes/Flux/Flux.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>cb99c17e595a96461ca7952e2e1bc6c1ce5b56a248526923db86c1f6e059cb20</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

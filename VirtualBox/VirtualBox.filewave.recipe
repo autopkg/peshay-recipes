@@ -19,32 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.sheagcraig.pkg.VirtualBox</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.sheagcraig.download.VirtualBox</key>
-			<dict>
-				<key>git_hash</key>
-				<string>ef71a5ad37488b7187e21bd3ea19f136753f3146</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.sheagcraig-recipes/VirtualBox/VirtualBox.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>f232346691440eef33a0154055cada9054d5ef711e18152cb61c4ecd7b75c44f</string>
-			</dict>
-			<key>com.github.sheagcraig.pkg.VirtualBox</key>
-			<dict>
-				<key>git_hash</key>
-				<string>13fef4ea366eaeba5bfb1f3bf9b952b3a07abc49</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.sheagcraig-recipes/VirtualBox/VirtualBox.pkg.recipe</string>
-				<key>sha256_hash</key>
-				<string>1fa9740264ce79350234fd39569a2f39f56bd866ff2912a87f2158dabfbd8f85</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

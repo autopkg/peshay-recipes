@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.andrewvalentine.download.curb</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.andrewvalentine.download.curb</key>
-			<dict>
-				<key>git_hash</key>
-				<string>e2b151eeb1634c415fa711414eb8d3b041434818</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.andrewvalentine-recipes/curb/curb.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>f671549a549e0662a7f16227e44eedec3311081fcf415deebadf0e266f146f5d</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.peshay.download.Snk</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.peshay.download.Snk</key>
-			<dict>
-				<key>git_hash</key>
-				<string>675b5dfa397f5402d9d400ed8bfc6ee7f1f421f1</string>
-				<key>path</key>
-				<string>/Users/ahu/git/peshay/peshay-recipes/Snk/Snk.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>b367ece6e5321d4847b58a7434294c3292152409bee2e5e7f8daed17fa44dab9</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

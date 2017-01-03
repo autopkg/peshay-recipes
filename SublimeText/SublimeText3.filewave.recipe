@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.keeleysam.recipes.SublimeText.SublimeText3.download</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.keeleysam.recipes.SublimeText.SublimeText3.download</key>
-			<dict>
-				<key>git_hash</key>
-				<string>9ea4ad1be9603bc312c439c6810a9e07c374e9fc</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.keeleysam-recipes/SublimeText/SublimeText3.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>5bd3875dc38bce30bcfc921627db5f0e8bb375509ec6ff360e5ce319152aa0d8</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

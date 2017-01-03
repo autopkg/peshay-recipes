@@ -21,42 +21,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.patgmac.pkg.VMwareFusionDeploy</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict>
-			<key>VMwareFusionURLProvider</key>
-			<dict>
-				<key>git_hash</key>
-				<string>682aa5137ad752e17783bf4a3a43dc3afe4b344e</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.justinrummel-recipes/VMware Fusion/VMwareFusionURLProvider.py</string>
-				<key>sha256_hash</key>
-				<string>ba9ca63ac19aef71e0081d7abb7776a2e2cdd93e7071e895f384089cac41f547</string>
-			</dict>
-		</dict>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.patgmac.pkg.VMwareFusionDeploy</key>
-			<dict>
-				<key>git_hash</key>
-				<string>8e50e891e8a550ddc8bf5b75da45fbea296f90eb</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.patgmac-recipes/VMware Fusion/VMwareFusionDeploy.pkg.recipe</string>
-				<key>sha256_hash</key>
-				<string>2907780787660ed1edaa6c9cf5e8c1039d26eb19b658d44894ae1dcb942fe601</string>
-			</dict>
-			<key>com.justinrummel.download.VMwareFusion</key>
-			<dict>
-				<key>git_hash</key>
-				<string>3b408aa5b9bdb04fe6f1ab78254bd7ff44743f61</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.justinrummel-recipes/VMware Fusion/VMwareFusion.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>0fbc6c7dd668a296a7709e38a47b54e81360ec260ae27893bc4e1a75d917109f</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

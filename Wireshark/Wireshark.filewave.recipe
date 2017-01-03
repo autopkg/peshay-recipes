@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.jleggat.Wireshark.download</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.jleggat.Wireshark.download</key>
-			<dict>
-				<key>git_hash</key>
-				<string>d27da8c9918a0edec67d6d470a1b970b164c9c2f</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.jleggat-recipes/Wireshark/Wireshark.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>7dd9055a619ae45f0fc700210d33a5162557cd46edd1a5754da9d1ceb91ea26d</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

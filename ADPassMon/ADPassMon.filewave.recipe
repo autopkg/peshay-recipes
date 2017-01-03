@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.homebysix.download.ADPassMon</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.homebysix.download.ADPassMon</key>
-			<dict>
-				<key>git_hash</key>
-				<string>56d469b1b1a1157b994fdae4ab2f0e7c161f434d</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/ADPassMon/ADPassMon.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>b4a45f25ee910f627c337f487e12b9c1d85c57776498b3952dce3ecc559521f3</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

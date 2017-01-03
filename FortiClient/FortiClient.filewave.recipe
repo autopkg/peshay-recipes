@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.peshay.download.FortiClient</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.peshay.download.FortiClient</key>
-			<dict>
-				<key>git_hash</key>
-				<string>53835aae9bcf929ec08531aabfc639eab1399a0a</string>
-				<key>path</key>
-				<string>/Users/ahu/git/peshay/peshay-recipes/FortiClient/FortiClient.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>75937b811f7742bfa1834aaf812586b5d0518da8ef7907e87444ee4c20a83373</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

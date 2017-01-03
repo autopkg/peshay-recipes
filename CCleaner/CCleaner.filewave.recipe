@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.homebysix.download.CCleaner</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.homebysix.download.CCleaner</key>
-			<dict>
-				<key>git_hash</key>
-				<string>8c682bf8bb1a318a2f17af0ef17286666abb43e9</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/CCleaner/CCleaner.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>2a08e645c8496539484ff0e909be98ce8c6f3cfe3beb43c36c9c5b5cbc875dba</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

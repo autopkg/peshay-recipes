@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.homebysix.download.ParallelsDesktop</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.homebysix.download.ParallelsDesktop</key>
-			<dict>
-				<key>git_hash</key>
-				<string>d880f7890123933cdb010acad47d21b57e1a0b9c</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/Parallels/ParallelsDesktop.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>f21c093efa95b2f0ac4e6dbec232ce6efd99fe473cc1a52efc1068b7feec7975</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

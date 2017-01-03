@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.hansen-m.download.Prey</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.hansen-m.download.Prey</key>
-			<dict>
-				<key>git_hash</key>
-				<string>0326d1c53a87beaca631b09dc96cd1bdf4ee37ba</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.hansen-m-recipes/PreyProject/Prey.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>e9d8615f4358c1e143a0bcfb89325eff84dd0ebccb87e31a720e8f8ce45454a2</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

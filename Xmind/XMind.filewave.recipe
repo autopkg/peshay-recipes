@@ -21,33 +21,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.peshay.download.XMind</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict>
-			<key>XMindURLProvider</key>
-			<dict>
-				<key>git_hash</key>
-				<string>f4c8a76f2a7a0a912489e383d02a9050c424e1dd</string>
-				<key>path</key>
-				<string>/Users/ahu/git/peshay/peshay-recipes/Xmind/XMindURLProvider.py</string>
-				<key>sha256_hash</key>
-				<string>0a04584a3d332d6fad7783e55d27880fe159ec5d9cf3029364d2050b660a13eb</string>
-			</dict>
-		</dict>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.peshay.download.XMind</key>
-			<dict>
-				<key>git_hash</key>
-				<string>1a4e51b774860d6ba4f855be6607960c19f3c921</string>
-				<key>path</key>
-				<string>/Users/ahu/git/peshay/peshay-recipes/Xmind/XMind.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>f648876458a6f1b5a81bf29abf05ca47c9ac53c4be459c3962d6596d77d69ac2</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

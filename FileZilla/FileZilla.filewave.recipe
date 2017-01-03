@@ -19,33 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.keeleysam.recipes.FileZilla.download</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict>
-			<key>FileZillaURLProvider</key>
-			<dict>
-				<key>git_hash</key>
-				<string>94d81d1e796db36cd4f56fab8de5ceca6a04f966</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.keeleysam-recipes/FileZilla/FileZillaURLProvider.py</string>
-				<key>sha256_hash</key>
-				<string>74a0df416ade8dbbc70169b48fe7acd4eb0dae2794999ab4bda895323c646220</string>
-			</dict>
-		</dict>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.keeleysam.recipes.FileZilla.download</key>
-			<dict>
-				<key>git_hash</key>
-				<string>b0cea7d89566df5c0e2a92cfebff2734ca6c538b</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.keeleysam-recipes/FileZilla/FileZilla.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>2933e3b1ffbb88f76625ccc10424540f0e3cc765055ebb735008e8873a58e36e</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.andrewvalentine.download.pdfsam</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.andrewvalentine.download.pdfsam</key>
-			<dict>
-				<key>git_hash</key>
-				<string>4031853d5aa5574f4ab87dc92d4363c11a4258e3</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.andrewvalentine-recipes/pdfsam/pdfsam.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>06af73a8f4a296ef834d436d85939e8e46eedd99c70249710a9c22e393088af1</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

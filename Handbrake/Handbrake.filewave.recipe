@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.autopkg.download.Handbrake</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.autopkg.download.Handbrake</key>
-			<dict>
-				<key>git_hash</key>
-				<string>ac81e5e06db47f60ad8d294680ae669ebb7c61a7</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.recipes/Handbrake/Handbrake.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>fb1c663a887520371cf1dbb618f41b3bee34a8f58a39983cea367071af14f446</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>

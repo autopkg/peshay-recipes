@@ -19,23 +19,6 @@
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
 	<string>com.github.homebysix.download.BetterTouchTool</string>
-	<key>ParentRecipeTrustInfo</key>
-	<dict>
-		<key>non_core_processors</key>
-		<dict/>
-		<key>parent_recipes</key>
-		<dict>
-			<key>com.github.homebysix.download.BetterTouchTool</key>
-			<dict>
-				<key>git_hash</key>
-				<string>8a011dfd74579a361268b4c6d5cd07e7e9166b9c</string>
-				<key>path</key>
-				<string>/Users/ahu/Library/AutoPkg/RecipeRepos/com.github.autopkg.homebysix-recipes/BetterTouchTool/BetterTouchTool.download.recipe</string>
-				<key>sha256_hash</key>
-				<string>811d95d467a68e59b8982664ad77e05ec64c3ca9f5a187bd07ee5da501e45976</string>
-			</dict>
-		</dict>
-	</dict>
 	<key>Process</key>
 	<array>
 		<dict>
