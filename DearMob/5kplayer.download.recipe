@@ -6,10 +6,10 @@
 	<string>Downloads 5kplayer.</string>
 	<key>Identifier</key>
 	<string>com.github.peshay.download.5kplayer</string>
-    <key>NAME</key>
-    <string>5kplayer</string>
 	<key>Input</key>
 	<dict>
+		<key>NAME</key>
+		<string>5kplayer</string>
 		<key>url</key>
 		<string><![CDATA[<http://files.downloadnow.com/s/software/15/28/64/78/5kplayer.dmg?token=1472174181_33df3458b345b7a386763f3744930ef4&fileName=5kplayer.dmg]]></string>
 	</dict>
