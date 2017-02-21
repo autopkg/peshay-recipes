@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads latest version of OmniGraffle5 and imports into FileWave.</string>
+	<key>Identifier</key>
+	<string>com.github.peshay.filewave.OmniGraffle5</string>
+	<key>MinimumVersion</key>
+	<string>0.6.1</string>
+	<key>ParentRecipe</key>
+	<string>com.github.autopkg.download.omnigroupproduct</string>
+    <key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>OmniGraffle</string>
+        <key>fw_app_bundle_id</key>
+        <string>com.github.peshay.filewave.OmniGraffle5</string>
+        <key>fw_destination_root</key>
+        <string>/Applications/%NAME%5.app</string>
+	</dict>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%5.app</string>
+				<key>source_path</key>
+				<string>%pathname%/*.app</string>
+			</dict>
+			<key>Processor</key>
+			<string>Copier</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+                <key>fw_app_bundle_id</key>
+				<string>%fw_app_bundle_id%</string>
+				<key>fw_app_version</key>
+				<string>%version%</string>
+				<key>fw_destination_root</key>
+				<string>%fw_destination_root%</string>
+				<key>fw_fileset_name</key>
+                <string>OmniGraffle - %version%</string>
+				<key>fw_import_source</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%.app</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
+		</dict>
+	</array>
+</dict>
+</plist>
