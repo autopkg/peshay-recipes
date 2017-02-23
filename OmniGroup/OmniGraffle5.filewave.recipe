@@ -46,17 +46,6 @@
             <key>Processor</key>
             <string>Copier</string>
         </dict>
-        <dict>
-            <key>Processor</key>
-            <string>CodeSignatureVerifier</string>
-            <key>Arguments</key>
-            <dict>
-                <key>input_path</key>
-                <string>%pkgroot%/%NAME%5.app</string>
-                <key>requirement</key>
-                <string>certificate leaf = H"26fe998f5ff3bad1beeac952a233231d4e5ad523" and identifier "com.omnigroup.OmniGraffle"</string>
-            </dict>
-        </dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
