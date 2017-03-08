@@ -12,8 +12,6 @@
 		<string>Merlin Project</string>
 		<key>fw_app_bundle_id</key>
 		<string>com.github.peshay.filewave.MerlinProject</string>
-		<key>fw_app_version</key>
-		<string>%version%</string>
 		<key>fw_destination_root</key>
 		<string>/Applications/%NAME%.app</string>
 	</dict>
