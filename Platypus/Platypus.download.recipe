@@ -11,7 +11,7 @@
         <key>NAME</key>
         <string>Platypus</string>
         <key>SPARKLE_FEED_URL</key>
-		<string>http://sveinbjorn.org/files/appcasts/PlatypusAppcast.xml</string>
+		<string>https://sveinbjorn.org/files/appcasts/PlatypusAppcast.xml</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.6.1</string>

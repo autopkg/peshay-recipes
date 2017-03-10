@@ -11,7 +11,7 @@
         <key>NAME</key>
         <string>Duplicate</string>
         <key>URL</key>
-        <string>http://macdaddy.io/Duplicate.zip</string>
+        <string>https://macdaddy.io/Duplicate.zip</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.6.1</string>
