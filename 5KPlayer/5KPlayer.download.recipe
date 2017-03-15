@@ -28,7 +28,7 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>http://www.5kplayer.com/download/5kplayer.%os%</string>
+                <string>https://www.5kplayer.com/download/5kplayer.%os%</string>
             </dict>
         </dict>
         <dict>
