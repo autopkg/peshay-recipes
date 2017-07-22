@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of Eclipse, creates a fileset, and copies it into your FileWave Server.</string>
+	<string>Downloads the latest version of Eclipse IDE for Java Developers, creates a fileset, and copies it into your FileWave Server.</string>
 	<key>Identifier</key>
 	<string>com.github.peshay.filewave.Eclipse</string>
 	<key>Input</key>
@@ -13,39 +13,14 @@
 		<key>fw_app_bundle_id</key>
 		<string>com.github.peshay.filewave.Eclipse</string>
 		<key>fw_destination_root</key>
-		<string>/Applications/%NAME%.app</string>
+		<string>/Applications/Eclipse.app</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.sheagcraig.download.Eclipse</string>
+	<string>com.github.peshay.download.EclipseIDEJavaDev</string>
 	<key>Process</key>
 	<array>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>pkgdirs</key>
-				<dict>
-					<key>Applications</key>
-					<string>0775</string>
-				</dict>
-				<key>pkgroot</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
-			</dict>
-			<key>Processor</key>
-			<string>PkgRootCreator</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>destination_path</key>
-				<string>%pkgroot%/Applications/%NAME%.app</string>
-				<key>source_path</key>
-				<string>%pathname%/*.app</string>
-			</dict>
-			<key>Processor</key>
-			<string>Copier</string>
-		</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
@@ -56,9 +31,9 @@
 				<key>fw_destination_root</key>
 				<string>%fw_destination_root%</string>
 				<key>fw_fileset_name</key>
-				<string>%NAME% - %version%</string>
+				<string>Eclipse %version2% - %version%</string>
 				<key>fw_import_source</key>
-				<string>%pkgroot%/Applications/%NAME%.app</string>
+				<string>%pkgroot%/Applications/Eclipse.app</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
