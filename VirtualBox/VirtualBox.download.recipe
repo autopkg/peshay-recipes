@@ -88,7 +88,7 @@
             <key>Arguments</key>
             <dict>
                 <key>input_plist_path</key>
-                <string>%RECIPE_CACHE_DIR%/unpack/VirtualBox.pkg.unpacked/*.app/Contents/Info.plist</string>
+                <string>%RECIPE_CACHE_DIR%/unpack/VirtualBox.pkg.unpacked/VirtualBox.app/Contents/Info.plist</string>
             </dict>
 		</dict>
     </array>
