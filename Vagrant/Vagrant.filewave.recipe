@@ -21,23 +21,6 @@
 	<array>
 		<dict>
             <key>Processor</key>
-            <string>URLTextSearcher</string>
-            <key>Arguments</key>
-            <dict>
-                <key>url</key>
-                <string>https://www.vagrantup.com/downloads.html</string>
-                <key>re_pattern</key>
-                <string>href="https://releases.hashicorp.com/vagrant/[0-9]+.[0-9]+.[0-9]+/vagrant_([0-9]+.[0-9]+.[0-9]+)_x86_64.dmg">64-bit</string>
-                <key>re_flags</key>
-                <array>
-                    <string>IGNORECASE</string>
-                </array>
-                <key>result_output_var_name</key>
-                <string>version2</string>
-            </dict>
-        </dict>
-		<dict>
-            <key>Processor</key>
             <string>Copier</string>
             <key>Arguments</key>
             <dict>
@@ -53,9 +36,9 @@
                 <key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
-				<string>%version2%</string>
+				<string>%version%</string>
 				<key>fw_fileset_name</key>
-                <string>%NAME% - %version2%</string>
+                <string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
 				<string>%destination_path%</string>
 			</dict>
