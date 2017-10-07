@@ -7,6 +7,10 @@
 </string>
 	<key>Identifier</key>
 	<string>com.github.peshay.filewave.Office2011UpdatesEN</string>
+	<key>MinimumVersion</key>
+	<string>0.6.1</string>
+	<key>ParentRecipe</key>
+	<string>com.github.autopkg.download.Office2011Updates</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -16,10 +20,7 @@
 		<key>fw_app_bundle_id</key>
         <string>com.github.peshay.filewave.Office2011UpdatesEN</string>
 	</dict>
-	<key>MinimumVersion</key>
-	<string>0.6.1</string>
-	<key>ParentRecipe</key>
-	<string>com.github.autopkg.download.Office2011Updates</string>
+	
 	<key>Process</key>
 	<array>
 		<dict>
