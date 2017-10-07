@@ -3,16 +3,18 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the current update package of Office 2011 and imports into FileWave.
+	<string>Downloads the current update package of Office 2011 EN and imports into FileWave.
 </string>
 	<key>Identifier</key>
-	<string>com.github.peshay.filewave.Office2011Updates</string>
+	<string>com.github.peshay.filewave.Office2011UpdatesEN</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
 		<string>Office2011_update</string>
+		<key>CULTURE_CODE</key>
+        <string>0409</string>
 		<key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.Office2011Updates</string>
+        <string>com.github.peshay.filewave.Office2011UpdatesEN</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
@@ -53,7 +55,7 @@
 				<key>fw_app_version</key>
 				<string>%version%</string>
 				<key>fw_fileset_name</key>
-				<string>%NAME% - %version%</string>
+				<string>%NAME% - EN - %version%</string>
 				<key>fw_import_source</key>
                 <string>%pkgroot%/%pkg_name%</string>
 			</dict>
