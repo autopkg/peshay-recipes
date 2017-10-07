@@ -14,7 +14,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>MSAutoUpdate</string>
+		<string>Office2016AutoUpdate</string>
 		<key>fw_app_bundle_id</key>
         <string>com.github.peshay.filewave.Office2016AutoUpdate</string>
 	</dict>
