@@ -3,8 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the current update package of Office 2016 AutoUpdate and imports into FileWave.
-</string>
+	<string>Downloads the current update package of Office 2016 AutoUpdate and imports into FileWave.</string>
 	<key>Identifier</key>
 	<string>com.github.peshay.filewave.Office2016AutoUpdate</string>
 	<key>MinimumVersion</key>
