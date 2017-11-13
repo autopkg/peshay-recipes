@@ -18,7 +18,7 @@
 -->
 
 		<key>os</key>
-		<string>dmg</string>
+		<string></string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.6.1</string>
