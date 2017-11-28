@@ -11,36 +11,27 @@
 		<key>NAME</key>
 		<string>draw.io Desktop</string>
 		<!-- VALID os FOR THIS RECIPE ARE: dmg (OS X), exe (Windows), deb (Linux Debian/Ubuntu), AppImage (Linux AppImage) -->
+		<key>os</key>
+		<string></string>
 	</dict>
 	<key>MinimumVersion</key>
     <string>0.6.1</string>
 	<key>Process</key>
 	<array>
 		<dict>
-            <key>Processor</key>
-            <string>URLTextSearcher</string>
-            <key>Arguments</key>
-            <dict>
-                <key>url</key>
-                <string>https://download.draw.io/</string>
-                <key>re_pattern</key>
-				<string>href="(https://github.com/jgraph/drawio-desktop/releases/download/v(?P&lt;version&gt;[0-9]+.[0-9]+.[0-9]+)/draw.io[^"]*.%os%)" class="btn"</string>
-                <key>re_flags</key>
-                <array>
-                    <string>IGNORECASE</string>
-                </array>
-                <key>result_output_var_name</key>
-                <string>url</string>
-            </dict>
-        </dict>
+        	<key>Arguments</key>
+        	<dict>
+          		<key>github_repo</key>
+          		<string>jgraph/drawio-desktop</string>
+          		<key>asset_regex</key>
+          		<string>(draw.io-[^"]*.%os%)</string>
+        	</dict>
+        		<key>Processor</key>
+        		<string>GitHubReleasesInfoProvider</string>
+      	</dict>
 		<dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
-			<key>Arguments</key>
-			<dict>
-                <key>url</key>
-                <string>%url%</string>
-			</dict>
 		</dict>
 		<dict>
 			<key>Processor</key>
