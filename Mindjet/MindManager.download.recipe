@@ -34,7 +34,7 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>http://download.mindjet.com/Mindjet_MindManager_Mac_%version%.dmg</string>
+                <string>http://download.mindjet.com/Mac/Mindjet_MindManager_Mac_%version%.dmg</string>
             </dict>
         </dict>
         <dict>
