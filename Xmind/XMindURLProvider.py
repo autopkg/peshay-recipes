@@ -61,7 +61,7 @@ class XMindURLProvider(Processor):
         self.env["object"] = self.get_xmind_url(base_url)
         substring_version = 'The latest release is XMind ([0-9]*).* ' #+\
                             #'\(v([0-9]*.[0-9]*.[0-9]*)\)'
-        substring_url = 'href="(https://www.xmind.net/xmind/downloads/(.*.dmg))">'
+        substring_url = '(https://www.xmind.net/xmind/downloads/(.*.dmg))'
         latest = re.search(substring_version, self.env["object"])
         download = re.search(substring_url, self.env["object"])
         self.env["object"] = self.get_xmind_url(base_url)
