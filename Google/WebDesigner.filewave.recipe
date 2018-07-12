@@ -21,6 +21,17 @@
 	</dict>
 	<key>Process</key>
 	<array>
+        <dict>
+			<key>Arguments</key>
+			<dict>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%.app</string>
+				<key>source_path</key>
+				<string>%pathname%/*.app</string>
+			</dict>
+			<key>Processor</key>
+			<string>Copier</string>
+		</dict>        
 		<dict>
 			<key>Arguments</key>
 			<dict>
