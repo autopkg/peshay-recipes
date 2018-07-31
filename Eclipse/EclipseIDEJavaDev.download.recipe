@@ -21,29 +21,11 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>https://eclipse.org/downloads/eclipse-packages/</string>
+                <string>https://www.eclipse.org/downloads/packages/</string>
                 <key>re_pattern</key>
-                <string>href="\/downloads\/download\.php\?file=([/\w]+eclipse-java[\w-]+macosx-cocoa-x86_64\.dmg)"</string>
+                <string>href=[^"]*file=([^"]*eclipse-java-(?P&lt;version2&gt;[^"]*)-[^"]*-macosx-cocoa-x86_64\.dmg)</string>
                 <key>result_output_var_name</key>
                 <string>eclipse</string>
-                <key>request_headers</key>
-                <dict>
-                    <key>user-agent</key>
-                    <string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11) AppleWebKit/601.1.39 (KHTML, like Gecko) Version/9.0 Safari/601.1.39</string>
-                </dict>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>URLTextSearcher</string>
-            <key>Arguments</key>
-            <dict>
-                <key>url</key>
-                <string>https://eclipse.org/downloads/eclipse-packages/</string>
-                <key>re_pattern</key>
-                <string>span id="descriptionText">Eclipse ([^"]*) \([^"]*\)  Release</string>
-                <key>result_output_var_name</key>
-                <string>version2</string>
                 <key>request_headers</key>
                 <dict>
                     <key>user-agent</key>
