@@ -12,6 +12,8 @@
 		<string>en-US</string>
 		<key>NAME</key>
 		<string>Thunderbird</string>
+		<key>DISABLE_CODE_SIGNATURE_VERIFICATION</key>
+        	<true/>
 		<key>fw_app_bundle_id</key>
 		<string>com.github.peshay.filewave.Thunderbird</string>
 		<key>fw_destination_root</key>
