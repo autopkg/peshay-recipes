@@ -14,8 +14,6 @@
 	<dict>
 		<key>NAME</key>
 		<string>VMwareFusion</string>
-		<key>DISABLE_CODE_SIGNATURE_VERIFICATION</key>
-		<true/>
         	<key>fw_app_bundle_id</key>
         	<string>com.github.peshay.filewave.VMwareFusion</string>
         	<key>fw_destination_root</key>
