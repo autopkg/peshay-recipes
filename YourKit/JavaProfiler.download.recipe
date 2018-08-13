@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest version of JavaProfiler.</string>
+	<key>Identifier</key>
+	<string>com.github.peshay.download.JavaProfiler</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>JavaProfiler</string>
+<!-- OVERWRITE OS IN YOUR OVERRIDE:
+     "exe" for Windows
+     "dmg" for Mac OS
+     "zip" for Linux
+-->
+		<key>OS</key>
+		<string>dmg</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.6.1</string>
+	<key>Process</key>
+	<array>
+        <dict>
+	    <key>Processor</key>
+	    <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>https://www.yourkit.com/java/profiler/download/</string>
+                <key>result_output_var_name</key>
+                <string>version</string>
+                <key>re_pattern</key>
+                <string>href="\/download\/YourKit-JavaProfiler-([0-9]+.[0-9]+)-[^"]*.%OS%</string>
+            </dict>
+	</dict>
+        <dict>
+	    <key>Processor</key>
+	    <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>https://www.yourkit.com/java/profiler/download/</string>
+                <key>result_output_var_name</key>
+                <string>build</string>
+                <key>re_pattern</key>
+                <string>href="\/download\/YourKit-JavaProfiler-%version%-([^"]*).%OS%</string>
+            </dict>
+	</dict>
+        <dict>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>https://www.yourkit.com/download/YourKit-JavaProfiler-%version%-%build%.%OS%</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+	</array>
+</dict>
+</plist>
