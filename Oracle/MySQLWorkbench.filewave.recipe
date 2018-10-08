@@ -5,7 +5,7 @@
 		<key>Description</key>
 		<string>Downloads latest version of MySQLWorkbench and imports into FileWave.</string>
 		<key>Identifier</key>
-		<string>com.oracle.workbench.MySQLWorkbench</string>
+		<string>com.github.peshay.filewave.MySQLWorkbench</string>
 		<key>MinimumVersion</key>
 		<string>0.6.1</string>
 		<key>ParentRecipe</key>
@@ -15,7 +15,7 @@
 			<key>NAME</key>
 			<string>MySQLWorkbench</string>
 			<key>fw_app_bundle_id</key>
-			<string>com.github.autopkg.cgerke-recipes.download.MySQLWorkbench</string>
+			<string>com.github.peshay.filewave.MySQLWorkbench</string>
 		</dict>
 		<key>Process</key>
 		<array>
