@@ -16,6 +16,8 @@
 	<string>Flinto</string>
         <key>fw_app_bundle_id</key>
         <string>com.github.peshay.filewave.Flinto</string>
+        <key>fw_destination_root</key>
+        <string>/Applications/%NAME%.app</string>
 	</dict>
 	<key>Process</key>
 	<array>
@@ -51,6 +53,8 @@
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
 				<string>%version%</string>
+				<key>fw_destination_root</key>
+                <string>%fw_destination_root%</string>
 				<key>fw_fileset_name</key>
                 <string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
