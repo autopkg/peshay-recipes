@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Axure RP %MAJOR_VERSION%</string>
+		<string>Axure RP</string>
 		<key>fw_app_bundle_id</key>
 		<string>com.github.peshay.filewave.AxureRP</string>
 		<key>fw_destination_root</key>
