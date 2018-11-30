@@ -20,7 +20,7 @@
 -->
 
 		<key>os</key>
-		<string>osx</string><!-- <<<<<< INPUT HERE <<<<<< -->
+		<string>mac</string><!-- <<<<<< INPUT HERE <<<<<< -->
 	</dict>
 	<key>MinimumVersion</key>
     <string>0.6.1</string>
