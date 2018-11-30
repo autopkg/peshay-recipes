@@ -12,7 +12,7 @@
 		<string>Mattermost</string>
 		
 <!--SELECT YOUR OS VERSION AND INPUT BELOW
-	"osx" for MAC OS X
+	"mac" for MAC OS X
 	"win32" for WINDOWS 32 BIT EXE
 	"win64" for WINDOWS 64 BIT EXE
 	"linux-ia32" for LINUX 32 BIT
