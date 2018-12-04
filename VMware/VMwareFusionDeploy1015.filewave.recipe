@@ -15,12 +15,12 @@
 		<key>SERIAL</key>
 		<string>XXXXX-XXXXX-XXXXX-XXXXX-XXXXX</string>
 		<key>fw_app_bundle_id</key>
-		<string>com.github.peshay.filewave.VMwareFusionDeploy1014</string>
+		<string>com.github.peshay.filewave.VMwareFusionDeploy1015</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.peshay.download.VMwareFusionDeploy1014</string>
+	<string>com.github.peshay.download.VMwareFusionDeploy1015</string>
 	<key>Process</key>
 	<array>
 		<dict>
