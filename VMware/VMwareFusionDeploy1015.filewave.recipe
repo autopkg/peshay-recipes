@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Imports the VMwareFusion mass deployment package into FileWave.</string>
 	<key>Identifier</key>
-	<string>com.github.peshay.filewave.VMwareFusionDeploy1014</string>
+	<string>com.github.peshay.filewave.VMwareFusionDeploy1015</string>
 	<key>Input</key>
 	<dict>
 		<key>LICENSE_KEY</key>

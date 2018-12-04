@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Download recipe for VMware Fusion 10.1.4</string>
+	<string>Download recipe for VMware Fusion 10.1.5</string>
 	<key>Identifier</key>
-	<string>com.github.peshay.download.VMwareFusionDeploy1014</string>
+	<string>com.github.peshay.download.VMwareFusionDeploy1015</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
 		<string>VMwareFusionDeploy</string>
 		<key>version</key>
-		<string>10.1.4</string>
+		<string>10.1.5</string>
 		<key>LICENSE_KEY</key>
 		<string># key = XXXXX-XXXXX-XXXXX-XXXXX-XXXXX</string>
 		<key>NAME</key>
@@ -27,7 +27,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>https://softwareupdate.vmware.com/cds/vmw-desktop/fusion/10.1.4/10700604/core/com.vmware.fusion.zip.tar</string>
+				<string>https://softwareupdate.vmware.com/cds/vmw-desktop/fusion/10.1.5/10950653/core/com.vmware.fusion.zip.tar</string>
 				<key>filename</key>
 				<string>%NAME%.zip.tar</string>
 			</dict>
