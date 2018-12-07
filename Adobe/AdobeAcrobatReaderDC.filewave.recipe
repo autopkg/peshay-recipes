@@ -14,8 +14,6 @@
     <dict>
       <key>NAME</key>
       <string>AdobeAcrobatReaderDC</string>
-      <key>OS_VERSION</key>
-		  <string>10.14.0</string>
       <key>fw_app_bundle_id</key>
       <string>com.github.peshay.filewave.AdobeAcrobatReaderDCUpdates</string>
     </dict>
