@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>Description</key>
+		<string>Imports Latest Version of Oracle Java11JDK into Filewave</string>
+		<key>Identifier</key>
+		<string>com.github.peshay.filewave.OracleJava11JDK</string>
+		<key>MinimumVersion</key>
+		<string>0.6.1</string>
+		<key>ParentRecipe</key>
+		<string>com.github.hansen-m.download.OracleJava11JDK</string>
+		<key>Input</key>
+		<dict>
+			<key>NAME</key>
+			<string>OracleJava11JDK</string>
+			<key>fw_app_bundle_id</key>
+			<string>com.github.peshay.filewave.OracleJava11JDK</string>
+		</dict>
+		<key>Process</key>
+		<array>
+			<dict>
+				<key>Processor</key>
+				<string>URLTextSearcher</string>
+				<key>Arguments</key>
+				<dict>
+					<key>url</key>
+					<string>%SEARCH_URL%</string>
+					<key>re_pattern</key>
+					<string>https://download.oracle.com/otn-pub/java/jdk.*?/jdk-(11\.[0-9\.]+)_osx-x64_bin\.dmg</string>
+					<key>result_output_var_name</key>
+					<string>version</string>
+				</dict>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<dict>
+					<key>destination_path</key>
+					<string>%RECIPE_CACHE_DIR%/%NAME%.pkg</string>
+					<key>source_path</key>
+					<string>%pathname%/*.pkg</string>
+				</dict>
+				<key>Processor</key>
+				<string>Copier</string>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<dict>
+					<key>fw_app_bundle_id</key>
+					<string>%fw_app_bundle_id%</string>
+					<key>fw_app_version</key>
+					<string>%version%</string>
+					<key>fw_fileset_name</key>
+					<string>%NAME% - %version%</string>
+					<key>fw_import_source</key>
+					<string>%RECIPE_CACHE_DIR%/%NAME%.pkg</string>
+				</dict>
+				<key>Processor</key>
+				<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
+			</dict>
+		</array>
+	</dict>
+</plist>
