@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads latest version of DBeaver Community Edition.</string>
+    <key>Identifier</key>
+    <string>com.github.peshay.download.DBeaverCE</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>DBeaverCE</string>
+        
+<!--SELECT YOUR OS VERSION AND USE IT IN YOUR OVERRIDE
+	"installer" for MAC OS X Pkg installer
+	"macos" for MAC OS X .app
+	"linux.gtk.x86" for LINUX 32bit
+	"linux.gtk.x86_64" for LINUX 64bit
+-->
+
+		<key>os</key>
+		<string></string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.6.1</string>
+    <key>Process</key>
+    <array>
+    	<dict>
+        	<key>Arguments</key>
+        	<dict>
+          		<key>github_repo</key>
+          		<string>dbeaver/dbeaver</string>
+          		<key>asset_regex</key>
+          		<string>(dbeaver-ce-_[0-9]+.[0-9]+.[0-9]+[-_]+%os%.[^"]*)</string>
+        	</dict>
+        		<key>Processor</key>
+        		<string>GitHubReleasesInfoProvider</string>
+      	</dict>
+		<dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
+        </dict>
+    </array>
+</dict>
+</plist>
