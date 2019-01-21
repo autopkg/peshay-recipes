@@ -15,7 +15,7 @@
 			<key>NAME</key>
 			<string>BlockBlock</string>
 			<key>fw_app_bundle_id</key>
-			<string>com.github.jps3.download.BlockBlock</string>
+			<string>com.github.peshay.filewave.BlockBlock</string>
 		</dict>
 		<key>Process</key>
 		<array>
