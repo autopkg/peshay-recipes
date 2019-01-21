@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>Description</key>
+		<string>Downloads the latest version of BlockBlock and imports it to FileWave</string>
+		<key>Identifier</key>
+		<string>com.github.peshay.filewave.BlockBlock</string>
+		<key>MinimumVersion</key>
+		<string>0.6.1</string>
+		<key>ParentRecipe</key>
+		<string>com.github.jps3.download.BlockBlock</string>
+		<key>Input</key>
+		<dict>
+			<key>NAME</key>
+			<string>BlockBlock</string>
+			<key>fw_app_bundle_id</key>
+			<string>com.github.jps3.download.BlockBlock</string>
+		</dict>
+		<key>Process</key>
+		<array>
+			<dict>
+				<key>Arguments</key>
+				<dict>
+					<key>input_plist_path</key>
+					<string>%RECIPE_CACHE_DIR%/%NAME%/BlockBlock Installer.app/Contents/Info.plist</string>
+				</dict>
+				<key>Processor</key>
+				<string>Versioner</string>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<dict>
+					<key>fw_app_bundle_id</key>
+					<string>%fw_app_bundle_id%</string>
+					<key>fw_app_version</key>
+					<string>%version%</string>
+					<key>fw_fileset_name</key>
+					<string>%NAME% - %version%</string>
+					<key>fw_import_source</key>
+					<string>%RECIPE_CACHE_DIR%/%NAME%/BlockBlock Installer.app</string>
+				</dict>
+				<key>Processor</key>
+				<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
+			</dict>
+		</array>
+	</dict>
+</plist>
