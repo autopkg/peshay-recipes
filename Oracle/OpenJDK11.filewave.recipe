@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest OpenJDK 11 and imports into FileWave.</string>
+	<key>Identifier</key>
+	<string>com.github.peshay.filewave.OpenJDK11</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>OpenJDK</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.OpenJDK11</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>1.0.0</string>
+	<key>ParentRecipe</key>
+	<string>com.github.rtrouton.pkg.OpenJDK11</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>fw_app_bundle_id</key>
+				<string>com.github.peshay.filewave.OpenJDK11</string>
+				<key>fw_app_version</key>
+				<string>%version%</string>
+				<key>fw_fileset_name</key>
+				<string>%NAME% - %version%</string>
+				<key>fw_import_source</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
+			</dict>
+			<key>Comment</key>
+			<string>Import the OpenJDK 11 pkg into FileWave</string>
+			<key>Processor</key>
+			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
+		</dict>
+	</array>
+</dict>
+</plist>
