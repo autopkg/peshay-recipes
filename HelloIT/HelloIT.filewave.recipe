@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>Description</key>
+		<string>Imports Latest Version of HelloIT into Filewave</string>
+		<key>Identifier</key>
+		<string>com.github.peshay.filewave.HelloIT</string>
+		<key>MinimumVersion</key>
+		<string>0.5.0</string>
+		<key>ParentRecipe</key>
+		<string>com.github.ygini.download.HelloIT</string>
+		<key>Input</key>
+		<dict>
+			<key>NAME</key>
+			<string>HelloIT</string>
+			<key>fw_app_bundle_id</key>
+			<string>com.github.peshay.filewave.HelloIT</string>
+		</dict>
+		<key>Process</key>
+		<array>
+			<dict>
+				<key>Arguments</key>
+				<dict>
+					<key>fw_app_bundle_id</key>
+					<string>%fw_app_bundle_id%</string>
+					<key>fw_app_version</key>
+					<string>%version%</string>
+					<key>fw_fileset_name</key>
+					<string>%NAME% - %version%</string>
+					<key>fw_import_source</key>
+					<string>%pathname%</string>
+				</dict>
+				<key>Processor</key>
+				<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
+			</dict>
+		</array>
+	</dict>
+</plist>
