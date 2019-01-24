@@ -31,7 +31,7 @@
           		<key>github_repo</key>
           		<string>dbeaver/dbeaver</string>
           		<key>asset_regex</key>
-          		<string>(dbeaver-ce-_[0-9]+.[0-9]+.[0-9]+[-_]+%os%.[^"]*)</string>
+          		<string>(dbeaver-ce-[0-9]+.[0-9]+.[0-9]+[-_]+%os%.[^"]*)</string>
         	</dict>
         		<key>Processor</key>
         		<string>GitHubReleasesInfoProvider</string>
