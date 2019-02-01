@@ -27,7 +27,7 @@
 					<key>url</key>
 					<string>%SEARCH_URL%</string>
 					<key>re_pattern</key>
-					<string>https://download.oracle.com/otn-pub/java/jdk.*?/jdk-(11\.[0-9\.]+)_osx-x64_bin\.dmg</string>
+					<string>http://download.oracle.com/otn-pub/java/jdk.*?/jdk-(11\.[0-9\.]+)_osx-x64_bin\.dmg</string>
 					<key>result_output_var_name</key>
 					<string>version</string>
 				</dict>
