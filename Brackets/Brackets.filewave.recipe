@@ -21,6 +21,20 @@
 	</dict>
 	<key>Process</key>
 	<array>
+	<dict>
+            	<key>Arguments</key>
+            	<dict>
+                	<key>pkgroot</key>
+                	<string>%RECIPE_CACHE_DIR%/Applications</string>
+                	<key>pkgdirs</key>
+                	<dict>
+                    		<key>Applications</key>
+                    		<string>0775</string>
+                	</dict>
+            	</dict>
+            		<key>Processor</key>
+            		<string>PkgRootCreator</string>
+        	</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
