@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads latest version of Zoom and imports into FileWave.</string>
+	<string>Downloads latest version of Zoom.us and imports into FileWave.</string>
 	<key>Identifier</key>
-	<string>com.github.peshay.filewave.Zoom</string>
+	<string>com.github.peshay.filewave.zoomus</string>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
@@ -15,7 +15,7 @@
 		<key>NAME</key>
 		<string>Zoom</string>
         <key>fw_app_bundle_id</key>
-        <string>com.github.peshay.filewave.Zoom</string>
+        <string>com.github.peshay.filewave.zoomus</string>
 	</dict>
 	<key>Process</key>
 	<array>
@@ -27,7 +27,7 @@
                 <key>url</key>
                 <string>https://zoom.us/download</string>
                 <key>re_pattern</key>
-                <string>href="/client/([^"]*)/zoomusInstaller.pkg" class="btn"</string>
+                <string>https://zoom.us/client/([^"]*)/ZoomInstallerIT.pkg</string>
                 <key>re_flags</key>
                 <array>
                     <string>IGNORECASE</string>
