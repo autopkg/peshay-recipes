@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of JavaProfiler.</string>
+	<string>Downloads the latest version of YourKit Java Profiler.</string>
 	<key>Identifier</key>
 	<string>com.github.peshay.download.JavaProfiler</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>JavaProfiler</string>
+		<string>YourKit-Java-Profiler</string>
 <!-- OVERWRITE OS IN YOUR OVERRIDE:
      "exe" for Windows
      "dmg" for Mac OS
