@@ -13,7 +13,7 @@
     <key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>OmniFocus2</string>
+		<string>OmniFocus3</string>
         <key>fw_app_bundle_id</key>
         <string>com.github.peshay.filewave.OmniFocus3</string>
         <key>fw_destination_root</key>
