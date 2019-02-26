@@ -10,6 +10,8 @@
 	<dict>
 		<key>NAME</key>
 		<string>FileZilla</string>
+		<key>OS</key>
+		<string>macosx</string>
 		<key>fw_app_bundle_id</key>
 		<string>com.github.peshay.filewave.FileZilla</string>
 		<key>fw_destination_root</key>
@@ -18,26 +20,24 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.keeleysam.recipes.FileZilla.download</string>
+	<string>com.github.peshay.download.FileZilla</string>
 	<key>Process</key>
 	<array>
 		<dict>
 			<key>Processor</key>
 			<string>Unarchiver</string>
-		</dict>
+        </dict>
 		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>re_pattern</key>
-				<string>release ([0-9]+.[0-9]+.[^"]*) http</string>
-				<key>result_output_var_name</key>
-				<string>version</string>
-				<key>url</key>
-				<string>http://update.filezilla-project.org/updatecheck.php?platform=i686-apple-darwin9&amp;version=3.0.0&amp;osversion=12</string>
-			</dict>
-			<key>Processor</key>
-			<string>URLTextSearcher</string>
-		</dict>
+            <key>Processor</key>
+            <string>CodeSignatureVerifier</string>
+            <key>Arguments</key>
+            <dict>
+                <key>input_path</key>
+                <string>%RECIPE_CACHE_DIR%/FileZilla/*.app</string>
+                <key>requirement</key>
+                <string>identifier "org.filezilla-project.filezilla" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "5VPGKXL75N"</string>
+            </dict>
+        </dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
@@ -50,7 +50,7 @@
 				<key>fw_fileset_name</key>
 				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%.app</string>
+				<string>%RECIPE_CACHE_DIR%/FileZilla/%NAME%.app</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>

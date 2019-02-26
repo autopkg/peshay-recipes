@@ -11,7 +11,7 @@
         <key>NAME</key>
         <string>InstallDiskCreator</string>
         <key>URL</key>
-        <string>http://macdaddy.io/InstallDiskCreator.zip</string>
+        <string>https://macdaddy.io/InstallDiskCreator.zip</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.6.1</string>

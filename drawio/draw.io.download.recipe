@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest version of draw.io Desktop.</string> 
+	<key>Identifier</key>
+	<string>com.github.peshay.download.draw.io</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>draw.io Desktop</string>
+		<!-- VALID os FOR THIS RECIPE ARE: dmg (OS X), exe (Windows), deb (Linux Debian/Ubuntu), AppImage (Linux AppImage) -->
+		<key>os</key>
+		<string></string>
+	</dict>
+	<key>MinimumVersion</key>
+    <string>0.6.1</string>
+	<key>Process</key>
+	<array>
+		<dict>
+        	<key>Arguments</key>
+        	<dict>
+          		<key>github_repo</key>
+          		<string>jgraph/drawio-desktop</string>
+          		<key>asset_regex</key>
+          		<string>(draw.io-[^"]*.%os%)</string>
+        	</dict>
+        		<key>Processor</key>
+        		<string>GitHubReleasesInfoProvider</string>
+      	</dict>
+		<dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+		<dict>
+		  	<key>Arguments</key>
+		  	<dict>
+		    		<key>input_path</key>
+		    		<string>%pathname%/draw.io.app</string>
+		    		<key>requirement</key>
+		    		<string>identifier "com.jgraph.drawio.desktop" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UZEUFB4N53</string>
+		  	</dict>
+		  	<key>Processor</key>
+		  	<string>CodeSignatureVerifier</string>
+		</dict>
+	</array>
+</dict>
+</plist>

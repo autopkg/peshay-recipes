@@ -47,7 +47,7 @@
                 <string>%pathname%</string>
                 <key>expected_authority_names</key>
                 <array>
-                    <string>Developer ID Installer: Palo Alto Networks</string>
+                    <string>Developer ID Installer: Palo Alto Networks (PXPZ95SK77)</string>
                     <string>Developer ID Certification Authority</string>
                     <string>Apple Root CA</string>
                 </array>

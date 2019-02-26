@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads latest version of TagSpaces.</string>
+    <key>Identifier</key>
+    <string>com.github.peshay.download.TagSpaces</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>TagSpaces</string>
+        
+<!--SELECT YOUR OS VERSION AND USE IT IN YOUR OVERRIDE
+	"osx64" for MAC OS X
+	"win32" for WINDOWS 32bit
+	"win64" for WINDOWS 64bit
+	"linux32" for LINUX 32bit
+	"linux64" for LINUX 64bit
+	
+-->
+
+		<key>os</key>
+		<string></string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.6.1</string>
+    <key>Process</key>
+    <array>
+    	<dict>
+        	<key>Arguments</key>
+        	<dict>
+          		<key>github_repo</key>
+          		<string>tagspaces/tagspaces</string>
+          		<key>asset_regex</key>
+          		<string>(tagspaces-[^"]*-%os%.[^"]*)</string>
+        	</dict>
+        		<key>Processor</key>
+        		<string>GitHubReleasesInfoProvider</string>
+      	</dict>
+		<dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>Unarchiver</string>
+    	</dict>
+    </array>
+</dict>
+</plist>

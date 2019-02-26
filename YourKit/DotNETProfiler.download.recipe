@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the latest version of DotNETProfiler.</string>
+	<key>Identifier</key>
+	<string>com.github.peshay.download.DotNETProfiler</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>DotNETProfiler</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.6.1</string>
+	<key>Process</key>
+	<array>
+        <dict>
+	    <key>Processor</key>
+	    <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>https://www.yourkit.com/.net/profiler/download/</string>
+                <key>result_output_var_name</key>
+                <string>version</string>
+                <key>re_pattern</key>
+                <string>href="\/dotnet\/download\/YourKit-NetProfiler-([0-9]+.[0-9]+)-[^"]*.exe</string>
+            </dict>
+	</dict>
+        <dict>
+	    <key>Processor</key>
+	    <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>https://www.yourkit.com/.net/profiler/download/</string>
+                <key>result_output_var_name</key>
+                <string>build</string>
+                <key>re_pattern</key>
+                <string>href="\/dotnet\/download\/YourKit-NetProfiler-%version%-([^"]*).exe</string>
+            </dict>
+	</dict>
+        <dict>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>https://www.yourkit.com/dotnet/download/YourKit-NetProfiler-%version%-%build%.exe</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+	</array>
+</dict>
+</plist>

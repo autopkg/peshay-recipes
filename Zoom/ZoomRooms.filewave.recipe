@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads latest version of ZoomRooms and imports into FileWave.</string>
+	<key>Identifier</key>
+	<string>com.github.peshay.filewave.ZoomRooms</string>
+	<key>MinimumVersion</key>
+	<string>0.6.1</string>
+	<key>ParentRecipe</key>
+	<string>com.github.homebysix.download.ZoomPresence</string>
+    <key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>ZoomRooms</string>
+        <key>fw_app_bundle_id</key>
+        <string>com.github.peshay.filewave.ZoomRooms</string>
+	</dict>
+	<key>Process</key>
+	<array>
+		<dict>
+            <key>Processor</key>
+            <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>https://support.zoom.us/hc/en-us/articles/115002847183-New-Updates-for-Zoom-Rooms-for-Mac</string>
+                <key>re_pattern</key>
+                <string>Zoom Rooms for Mac:[^"]*Version ([^"]*.\d{4})</string>
+                <key>re_flags</key>
+                <array>
+                    <string>IGNORECASE</string>
+                </array>
+                <key>result_output_var_name</key>
+                <string>version</string>
+            </dict>
+        </dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+                <key>fw_app_bundle_id</key>
+				<string>%fw_app_bundle_id%</string>
+				<key>fw_app_version</key>
+				<string>%version%</string>
+				<key>fw_fileset_name</key>
+                <string>%NAME% - %version%</string>
+				<key>fw_import_source</key>
+				<string>%pathname%</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
+		</dict>
+	</array>
+</dict>
+</plist>

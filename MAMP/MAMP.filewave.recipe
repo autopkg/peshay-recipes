@@ -3,49 +3,25 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads latest version of keystore-explorer 5 and imports into FileWave.</string>
+	<string>Downloads latest version of MAMP and imports into FileWave.</string>
 	<key>Identifier</key>
-	<string>com.github.peshay.filewave.keystore-explorer5</string>
+	<string>com.github.peshay.filewave.MAMP</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>KeyStore Explorer 5</string>
+		<string>MAMP</string>
 		<key>fw_app_bundle_id</key>
-		<string>com.github.peshay.filewave.keystore-explorer5</string>
+		<string>com.github.peshay.filewave.MAMP</string>
 		<key>fw_destination_root</key>
 		<string>/Applications/%NAME%.app</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.peshay.download.keystore-explorer5</string>
+	<string>com.github.n8felton.download.MAMP</string>
 	<key>Process</key>
 	<array>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>pkgdirs</key>
-				<dict>
-					<key>Applications</key>
-					<string>0775</string>
-				</dict>
-				<key>pkgroot</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
-			</dict>
-			<key>Processor</key>
-			<string>PkgRootCreator</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>destination_path</key>
-				<string>%pkgroot%/Applications/%app_name%</string>
-				<key>source_path</key>
-				<string>%pathname%/%app_name%</string>
-			</dict>
-			<key>Processor</key>
-			<string>Copier</string>
-		</dict>
+		
 		<dict>
 			<key>Arguments</key>
 			<dict>
@@ -58,7 +34,7 @@
 				<key>fw_fileset_name</key>
 				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
-				<string>%pkgroot%/Applications/%app_name%</string>
+				<string>%pkgroot%/%NAME%.app</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>

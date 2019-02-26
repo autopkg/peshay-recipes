@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads latest version of Zoom.us and imports into FileWave.</string>
+	<key>Identifier</key>
+	<string>com.github.peshay.filewave.zoomus</string>
+	<key>MinimumVersion</key>
+	<string>0.6.1</string>
+	<key>ParentRecipe</key>
+	<string>com.github.hansen-m.download.zoomus</string>
+    <key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Zoom</string>
+        <key>fw_app_bundle_id</key>
+        <string>com.github.peshay.filewave.zoomus</string>
+	</dict>
+	<key>Process</key>
+	<array>
+		<dict>
+            <key>Processor</key>
+            <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>https://zoom.us/download</string>
+                <key>re_pattern</key>
+                <string>href="/client/([^"]*)/ZoomInstallerIT.pkg"</string>
+                <key>re_flags</key>
+                <array>
+                    <string>IGNORECASE</string>
+                </array>
+                <key>result_output_var_name</key>
+                <string>version</string>
+		<key>request_headers</key>
+                <dict>
+                    <key>user-agent</key>
+                    <string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/601.1.39 (KHTML, like Gecko) Version/9.0 Safari/601.1.39</string>
+                </dict>
+            </dict>
+        </dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+                <key>fw_app_bundle_id</key>
+				<string>%fw_app_bundle_id%</string>
+				<key>fw_app_version</key>
+				<string>%version%</string>
+				<key>fw_fileset_name</key>
+                <string>%NAME% - %version%</string>
+				<key>fw_import_source</key>
+				<string>%pathname%</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
+		</dict>
+	</array>
+</dict>
+</plist>

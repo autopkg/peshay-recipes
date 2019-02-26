@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+
+<dict>
+	<key>Description</key>
+	<string>Downloads the current release of FileZilla</string>
+	<key>Identifier</key>
+	<string>com.github.peshay.download.FileZilla</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>FileZilla</string>
+<!--
+REPLACE OS IN YOUR RECIPE WITH
+For WINDOWS 64bit use win64
+For WINDOWS 32bit use win32
+For MAC OSX use macosx
+For LINUX use i686 or x86
+-->
+		<key>OS</key>
+		<string></string>
+		<key>USER_AGENT</key>
+	    <string>Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; AS; rv:11.0) like Gecko</string>
+	</dict>
+	    <key>MinimumVersion</key>
+	    <string>0.6.0</string>
+	    <key>Process</key>
+<array>
+<dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>https://filezilla-project.org/download.php?show_all=1</string>
+				<key>re_pattern</key>
+				<string>The latest stable version of FileZilla Client is ([0-9]+.[0-9]+.[0-9]+)</string>
+				<key>re_flags</key>
+				<array>
+					<string>IGNORECASE</string>
+				</array>
+		<key>result_output_var_name</key>
+		<string>version</string>
+			</dict>
+</dict>
+<dict>
+			<key>Processor</key>
+			<string>URLTextSearcher</string>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>https://filezilla-project.org/download.php?show_all=1</string>
+				<key>re_pattern</key>
+				<string>href="[^"]*(FileZilla_%version%_%OS%[^"]*)\?</string>
+				<key>re_flags</key>
+				<array>
+					<string>IGNORECASE</string>
+				</array>
+				<key>result_output_var_name</key>
+				<string>filename</string>
+			</dict>
+</dict>
+<dict>
+                        <key>Processor</key>
+                        <string>URLDownloader</string>
+                        <key>Arguments</key>
+                        <dict>
+                                <key>url</key>
+                                <string>https://download.filezilla-project.org/client/%filename%</string>
+                        </dict>
+                </dict>
+<dict>
+				<key>Processor</key>
+				<string>EndOfCheckPhase</string>
+</dict>
+	</array>
+		</dict>
+</plist>
