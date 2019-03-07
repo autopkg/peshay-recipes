@@ -16,6 +16,8 @@
 			<string>Visual Studio Code</string>
 			<key>fw_app_bundle_id</key>
 			<string>com.github.peshay.filewave.visualstudiocode</string>
+			<key>fw_destination_root</key>
+			<string>/Applications/%NAME%.app</string>
 		</dict>
 		<key>Process</key>
 		<array>
@@ -37,6 +39,8 @@
 					<string>%version%</string>
 					<key>fw_fileset_name</key>
 					<string>%NAME% - %version%</string>
+					<key>fw_destination_root</key>
+					<string>%fw_destination_root%</string>
 					<key>fw_import_source</key>
 					<string>%RECIPE_CACHE_DIR%/%NAME%/Visual Studio Code.app</string>
 				</dict>
