@@ -28,7 +28,7 @@
                 <key>result_output_var_name</key>
                 <string>url</string>
                 <key>re_pattern</key>
-                <string>href="(https://desktop.realtimeboard.com/platforms/%os%/[^"]*.[^"]*)"</string>
+                <string>href=\"(https://desktop.realtimeboard.com/platforms/%os%/[^"]*.[^"]*)\"</string>
             </dict>
         </dict>
 		<dict>
