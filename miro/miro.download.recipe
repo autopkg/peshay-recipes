@@ -13,7 +13,7 @@
 		<!-- VALID os FOR THIS RECIPE ARE: darwin (OS X), win32 (Windows 64bit), win32-x86 (Windows 32bit) -->
 		<key>os</key>
 		<string></string>
-		<!-- VALID ext FOR THIS RECIPE ARE: dmg (OS X), exe (Windows)	
+		<!-- VALID ext FOR THIS RECIPE ARE: dmg (OS X), exe (Windows) -->
 		<key>ext</key>
 		<string></string>
 	</dict>
