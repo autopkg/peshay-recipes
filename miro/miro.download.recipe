@@ -24,7 +24,7 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>https://realtimeboard.com/apps/</string>
+                <string>https://miro.com/apps/</string>
                 <key>result_output_var_name</key>
                 <string>ext</string>
                 <key>re_pattern</key>
