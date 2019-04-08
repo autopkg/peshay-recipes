@@ -13,24 +13,14 @@
 		<!-- VALID os FOR THIS RECIPE ARE: darwin (OS X), win32 (Windows 64bit), win32-x86 (Windows 32bit) -->
 		<key>os</key>
 		<string></string>
+		<!-- VALID ext FOR THIS RECIPE ARE: dmg (OS X), exe (Windows)	
+		<key>ext</key>
+		<string></string>
 	</dict>
 	<key>MinimumVersion</key>
     <string>0.6.1</string>
 	<key>Process</key>
 	<array>
-		<dict>
-            <key>Processor</key>
-            <string>URLTextSearcher</string>
-            <key>Arguments</key>
-            <dict>
-                <key>url</key>
-                <string>https://miro.com/apps/</string>
-                <key>result_output_var_name</key>
-                <string>ext</string>
-                <key>re_pattern</key>
-                <string>href="https://desktop.realtimeboard.com/platforms/%os%/[^"]*.([^"]*)"</string>
-            </dict>
-        </dict>
 		<dict>
             <key>Processor</key>
             <string>URLDownloader</string>

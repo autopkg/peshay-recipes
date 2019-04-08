@@ -12,6 +12,8 @@
 		<string>miro</string>
 		<key>os</key>
 		<string>darwin</string>
+		<key>ext</key>
+		<string>dmg</string>
         <key>fw_app_bundle_id</key>
         <string>com.github.peshay.filewave.miro</string>
         <key>fw_destination_root</key>
