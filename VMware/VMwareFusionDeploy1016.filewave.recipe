@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Imports the VMwareFusion mass deployment package into FileWave.</string>
+	<key>Identifier</key>
+	<string>com.github.peshay.filewave.VMwareFusionDeploy1016</string>
+	<key>Input</key>
+	<dict>
+		<key>LICENSE_KEY</key>
+		<string># key = %SERIAL%</string>
+		<key>NAME</key>
+		<string>VMwareFusionDeploy</string>
+		<key>SERIAL</key>
+		<string>XXXXX-XXXXX-XXXXX-XXXXX-XXXXX</string>
+		<key>fw_app_bundle_id</key>
+		<string>com.github.peshay.filewave.VMwareFusionDeploy1016</string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.6.1</string>
+	<key>ParentRecipe</key>
+	<string>com.github.peshay.download.VMwareFusionDeploy1016</string>
+	<key>Process</key>
+	<array>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>fw_app_bundle_id</key>
+				<string>%fw_app_bundle_id%</string>
+				<key>fw_app_version</key>
+				<string>%version%</string>
+				<key>fw_fileset_name</key>
+				<string>%NAME% - %version% - %SERIAL%</string>
+				<key>fw_import_source</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%-%version%.mpkg</string>
+			</dict>
+			<key>Processor</key>
+			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
+		</dict>
+	</array>
+</dict>
+</plist>
