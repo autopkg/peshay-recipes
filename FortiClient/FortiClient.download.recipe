@@ -40,9 +40,22 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-		<string>https://docs.fortinet.com/techdocs.xml</string>
+		<string>https://docs.fortinet.com/product/forticlient</string>
                 <key>re_pattern</key>
-		<string>FortiClient\s*[A-za-z]*\s*([0-9]+.[0-9]+.[0-9]+)</string>
+		<string>\/product\/forticlient\/([0-9]+.[0-9]+)</string>
+                <key>result_output_var_name</key>
+                <string>v1</string>
+            </dict>
+        </dict>
+        <dict>
+        	<key>Processor</key>
+            <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+		<string>https://docs.fortinet.com/product/forticlient/%v1%</string>
+                <key>re_pattern</key>
+		<string>/document/forticlient/([0-9]+.[0-9]+.[0-9]+)/administration-guide</string>
                 <key>result_output_var_name</key>
                 <string>version</string>
             </dict>
