@@ -15,7 +15,7 @@
 		<key>fw_app_bundle_id</key>
 		<string>com.github.peshay.filewave.TorMessenger</string>
 		<key>fw_destination_root</key>
-		<string>/Applications/%NAME%.app</string>
+		<string>/Applications/TorMessenger.app</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
@@ -61,9 +61,9 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%pkgroot%/Applications/%NAME%.app</string>
+				<string>%pkgroot%/Applications/TorMessenger.app</string>
 				<key>source_path</key>
-				<string>%pathname%/%NAME%.app</string>
+				<string>%pathname%/TorMessenger.app</string>
 			</dict>
 			<key>Processor</key>
 			<string>Copier</string>
@@ -80,7 +80,7 @@
 				<key>fw_fileset_name</key>
 				<string>%NAME% %LANGUAGE% - %version%</string>
 				<key>fw_import_source</key>
-				<string>%pkgroot%/Applications/%NAME%.app</string>
+				<string>%pkgroot%/Applications/TorMessenger.app</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>

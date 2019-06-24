@@ -17,7 +17,7 @@
         <key>fw_app_bundle_id</key>
         <string>com.github.peshay.filewave.OmniGraffle6</string>
         <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+        <string>/Applications/OmniGraffle6.app</string>
 	</dict>
 	<key>Process</key>
 	<array>
@@ -39,7 +39,7 @@
             <key>Arguments</key>
             <dict>
                 <key>destination_path</key>
-                <string>%pkgroot%/%NAME%.app</string>
+                <string>%pkgroot%/OmniGraffle6.app</string>
                 <key>source_path</key>
                 <string>%pathname%/*.app</string>
             </dict>
@@ -52,7 +52,7 @@
             <key>Arguments</key>
             <dict>
                 <key>input_path</key>
-                <string>%pkgroot%/%NAME%.app</string>
+                <string>%pkgroot%/OmniGraffle6.app</string>
                 <key>requirement</key>
                 <string>certificate leaf = H"26fe998f5ff3bad1beeac952a233231d4e5ad523" and identifier "com.omnigroup.OmniGraffle6"</string>
             </dict>
@@ -69,7 +69,7 @@
 				<key>fw_fileset_name</key>
                 <string>OmniGraffle - %version%</string>
 				<key>fw_import_source</key>
-				<string>%pkgroot%/%NAME%.app</string>
+				<string>%pkgroot%/OmniGraffle6.app</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>

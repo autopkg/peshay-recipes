@@ -17,7 +17,7 @@
         <key>fw_app_bundle_id</key>
         <string>com.github.peshay.filewave.TextWrangler</string>
         <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+        <string>/Applications/TextWrangler.app</string>
 	</dict>
 	<key>Process</key>
 	<array>
@@ -39,9 +39,9 @@
             <key>Arguments</key>
             <dict>
                 <key>destination_path</key>
-                <string>%pkgroot%/%NAME%.app</string>
+                <string>%pkgroot%/TextWrangler.app</string>
                 <key>source_path</key>
-                <string>%pathname%/%NAME%.app</string>
+                <string>%pathname%/TextWrangler.app</string>
             </dict>
             <key>Processor</key>
             <string>Copier</string>
@@ -52,7 +52,7 @@
             <key>Arguments</key>
             <dict>
                 <key>input_plist_path</key>
-                <string>%pkgroot%/%NAME%.app/Contents/Info.plist</string>
+                <string>%pkgroot%/TextWrangler.app/Contents/Info.plist</string>
             </dict>
         </dict>
 		<dict>
@@ -67,7 +67,7 @@
 				<key>fw_fileset_name</key>
                 <string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
-				<string>%pkgroot%/%NAME%.app</string>
+				<string>%pkgroot%/TextWrangler.app</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
