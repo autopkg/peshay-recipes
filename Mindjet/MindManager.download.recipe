@@ -23,7 +23,7 @@
                 <key>url</key>
                 <string>https://www.mindjet.com/support-info/download-library</string>
                 <key>re_pattern</key>
-                <string>Build ([^"]*)\) - [0-9]* MB - \<a href="https://www.mindjet.com/mm-mac-dmg</string>
+                <string>Build ([^"]*)\) - [0-9]* MB - \<a href\="https://www.mindjet.com/mm-mac-dmg</string>
                 <key>result_output_var_name</key>
                 <string>version</string>
             </dict>
