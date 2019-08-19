@@ -39,7 +39,7 @@
             <key>Arguments</key>
             <dict>
                 <key>destination_path</key>
-                <string>%pkgroot%/%NAME%.app</string>
+                <string>%pkgroot%/Magewell USB Capture Utility.app</string>
                 <key>source_path</key>
                 <string>%RECIPE_CACHE_DIR%/USB_Capture/USBCaptureUtility_%version%Intenal.dmg/*.app</string>
             </dict>
@@ -58,7 +58,7 @@
 				<key>fw_fileset_name</key>
 				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
-				<string>%pkgroot%/%NAME%.app</string>
+				<string>%pkgroot%/Magewell USB Capture Utility.app</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>

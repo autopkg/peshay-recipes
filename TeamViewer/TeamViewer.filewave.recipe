@@ -13,7 +13,7 @@
 		<key>fw_app_bundle_id</key>
 		<string>com.github.peshay.filewave.TeamViewer</string>
 		<key>fw_destination_root</key>
-		<string>/Applications/%NAME%.app</string>
+		<string>/Applications/TeamViewer.app</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
@@ -60,7 +60,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>input_plist_path</key>
-				<string>%RECIPE_CACHE_DIR%/payload/root/Applications/%NAME%.app/Contents/Info.plist</string>
+				<string>%RECIPE_CACHE_DIR%/payload/root/Applications/TeamViewer.app/Contents/Info.plist</string>
 			</dict>
 			<key>Processor</key>
 			<string>Versioner</string>
@@ -77,7 +77,7 @@
 				<key>fw_fileset_name</key>
 				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
-				<string>%RECIPE_CACHE_DIR%/payload/root/Applications/%NAME%.app</string>
+				<string>%RECIPE_CACHE_DIR%/payload/root/Applications/TeamViewer.app</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>

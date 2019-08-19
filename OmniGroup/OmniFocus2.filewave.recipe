@@ -17,7 +17,7 @@
         <key>fw_app_bundle_id</key>
         <string>com.github.peshay.filewave.OmniFocus2</string>
         <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+        <string>/Applications/OmniFocus2.app</string>
 	</dict>
 	<key>Process</key>
 	<array>
@@ -39,7 +39,7 @@
             <key>Arguments</key>
             <dict>
                 <key>destination_path</key>
-                <string>%pkgroot%/%NAME%.app</string>
+                <string>%pkgroot%/OmniFocus2.app</string>
                 <key>source_path</key>
                 <string>%pathname%/*.app</string>
             </dict>
@@ -58,7 +58,7 @@
 				<key>fw_fileset_name</key>
                 <string>OmniFocus - %version%</string>
 				<key>fw_import_source</key>
-				<string>%pkgroot%/%NAME%.app</string>
+				<string>%pkgroot%/OmniFocus2.app</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>

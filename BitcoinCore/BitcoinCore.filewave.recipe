@@ -13,7 +13,7 @@
 		<key>fw_app_bundle_id</key>
 		<string>com.github.peshay.filewave.BitcoinCore</string>
 		<key>fw_destination_root</key>
-		<string>/Applications/%NAME%.app</string>
+		<string>/Applications/BitcoinCore.app</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
@@ -39,7 +39,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%pkgroot%/%NAME%.app</string>
+				<string>%pkgroot%/BitcoinCore.app</string>
 				<key>source_path</key>
 				<string>%pathname%/*.app</string>
 			</dict>
@@ -50,7 +50,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>input_plist_path</key>
-				<string>%pkgroot%/%NAME%.app/Contents/Info.plist</string>
+				<string>%pkgroot%/BitcoinCore.app/Contents/Info.plist</string>
 			</dict>
 			<key>Processor</key>
 			<string>Versioner</string>
@@ -59,7 +59,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>input_path</key>
-				<string>%pkgroot%/%NAME%.app</string>
+				<string>%pkgroot%/BitcoinCore.app</string>
 				<key>requirement</key>
 				<string>identifier "org.bitcoinfoundation.Bitcoin-Qt" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = PBV4GLS9J4</string>
 			</dict>
@@ -78,7 +78,7 @@
 				<key>fw_fileset_name</key>
 				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
-				<string>%pkgroot%/%NAME%.app</string>
+				<string>%pkgroot%/BitcoinCore.app</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>

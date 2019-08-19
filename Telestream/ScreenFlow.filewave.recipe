@@ -15,7 +15,7 @@
 		<key>fw_app_bundle_id</key>
 		<string>com.github.peshay.filewave.ScreenFlow</string>
 		<key>fw_destination_root</key>
-		<string>/Applications/%NAME%.app</string>
+		<string>/Applications/ScreenFlow.app</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
@@ -41,9 +41,9 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%pkgroot%/Applications/%NAME%.app</string>
+				<string>%pkgroot%/Applications/ScreenFlow.app</string>
 				<key>source_path</key>
-				<string>%pathname%/%NAME%.app</string>
+				<string>%pathname%/ScreenFlow.app</string>
 			</dict>
 			<key>Processor</key>
 			<string>Copier</string>
@@ -60,7 +60,7 @@
 				<key>fw_fileset_name</key>
 				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
-				<string>%pkgroot%/Applications/%NAME%.app</string>
+				<string>%pkgroot%/Applications/ScreenFlow.app</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.johncclayton.filewave.FWTool/FileWaveImporter</string>
