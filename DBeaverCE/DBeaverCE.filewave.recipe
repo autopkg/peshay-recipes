@@ -17,7 +17,7 @@
         <key>fw_app_bundle_id</key>
         <string>com.github.peshay.filewave.DBeaverCE</string>
         <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+        <string>/Applications/DBeaverCE.app</string>
         <key>os</key>
 		<string>macos</string>
 	</dict>
@@ -41,7 +41,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%pkgroot%/%NAME%.app</string>
+				<string>%pkgroot%/DBeaverCE.app</string>
 				<key>source_path</key>
 				<string>%pathname%/*.app</string>
 			</dict>
@@ -54,7 +54,7 @@
             <key>Arguments</key>
             <dict>
                 <key>input_path</key>
-                <string>%pkgroot%/%NAME%.app</string>
+                <string>%pkgroot%/DBeaverCE.app</string>
                 <key>requirement</key>
                 <string>identifier "org.jkiss.dbeaver.core.product" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "42B6MDKMW8"</string>
             </dict>
@@ -71,7 +71,7 @@
 				<key>fw_fileset_name</key>
                 <string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
-				<string>%pkgroot%/%NAME%.app</string>
+				<string>%pkgroot%/DBeaverCE.app</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>

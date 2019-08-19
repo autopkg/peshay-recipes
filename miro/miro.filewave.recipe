@@ -54,7 +54,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%pkgroot%/%NAME%.app</string>
+				<string>%pkgroot%/miro.app</string>
 				<key>source_path</key>
 				<string>%pathname%/*.app</string>
 			</dict>
@@ -65,7 +65,7 @@
                 <key>Arguments</key>
                 <dict>
                     <key>input_plist_path</key>
-                    <string>%pkgroot%/%NAME%.app/Contents/Info.plist</string>
+                    <string>%pkgroot%/miro.app/Contents/Info.plist</string>
                 </dict>
                 <key>Processor</key>
                 <string>Versioner</string>
@@ -82,7 +82,7 @@
 				<key>fw_fileset_name</key>
 				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
-				<string>%pkgroot%/%NAME%.app</string>
+				<string>%pkgroot%/miro.app</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>

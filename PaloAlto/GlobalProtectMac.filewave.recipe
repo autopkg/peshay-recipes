@@ -47,7 +47,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%.app/Contents</string>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/GlobalProtect.app/Contents</string>
 				<key>source_path</key>
 				<string>%RECIPE_CACHE_DIR%/%NAME%/Contents</string>
 			</dict>
@@ -58,7 +58,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>input_plist_path</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/%NAME%.app/Contents/Info.plist</string>
+				<string>%RECIPE_CACHE_DIR%/%NAME%/GlobalProtect.app/Contents/Info.plist</string>
 			</dict>
 			<key>Processor</key>
 			<string>Versioner</string>

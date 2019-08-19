@@ -17,7 +17,7 @@
         <key>fw_app_bundle_id</key>
         <string>com.github.peshay.filewave.Processing</string>
         <key>fw_destination_root</key>
-        <string>/Applications/%NAME%.app</string>
+        <string>/Applications/Processing.app</string>
 	</dict>
 	<key>Process</key>
 	<array>

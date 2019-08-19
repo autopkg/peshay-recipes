@@ -13,7 +13,7 @@
 		<key>fw_app_bundle_id</key>
 		<string>com.github.peshay.filewave.PhpStorm</string>
 		<key>fw_destination_root</key>
-		<string>/Applications/%NAME%.app</string>
+		<string>/Applications/PhpStorm.app</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
