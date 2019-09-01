@@ -18,10 +18,14 @@
 # pylint: disable=e1101
 
 from __future__ import absolute_import
-import urllib2
 import re
 
 from autopkglib import Processor, ProcessorError
+
+try:
+    from urllib.parse import urlopen  # For Python 3
+except ImportError:
+    from urllib2 import urlopen  # For Python 2
 
 __all__ = ["OxygenURLProvider"]
 
@@ -93,7 +97,7 @@ class OxygenURLProvider(Processor):
                 "platform_name %s is invalid; it must be one of: %s"
                 % (plat, valid_plats))
         try:
-            self.env["object"] = urllib2.urlopen(url).read()
+            self.env["object"] = urlopen(url).read()
         except BaseException as err:
             raise ProcessorError(
                 "Unexpected error retrieving product manifest: '%s'" % err)
