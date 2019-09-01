@@ -80,12 +80,11 @@ class OxygenURLProvider(Processor):
     }
 
     def main(self):
-        valid_prods = URLS.keys()
         prod = self.env.get("product_name")
-        if prod not in valid_prods:
+        if prod not in URLS:
             raise ProcessorError(
                 "product_name %s is invalid; it must be one of: %s"
-                % (prod, valid_prods))
+                % (prod, ', '.join(URLS)))
         url = URLS[prod]
         valid_plats = PLATS
         plat = self.env.get("platform_name")
