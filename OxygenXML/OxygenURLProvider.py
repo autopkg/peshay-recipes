@@ -136,7 +136,7 @@ class OxygenURLProvider(Processor):
                 download_url = ("http://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen%s.tar.gz" % (prod, plat, prod))
 
         self.env["url"] = download_url
-        self.env["filename"] = re.search('/([0-9a-zA-Z-_.]*$)', download_url).group(1)
+        self.env["filename"] = re.search(r'/([0-9a-zA-Z-_.]*$)', download_url).group(1)
         self.output("Found Version %s" % self.env["version"])
         self.output("Found Build id %s" % self.env["buildid"])
         self.output("Use URL %s" % self.env["url"])
