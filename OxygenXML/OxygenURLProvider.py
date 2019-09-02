@@ -18,7 +18,10 @@
 # pylint: disable=e1101
 
 from __future__ import absolute_import
+
 import re
+import ssl
+from functools import wraps
 
 from autopkglib import Processor, ProcessorError
 
@@ -37,8 +40,6 @@ URLS = {"Editor": "https://www.oxygenxml.com/xml_editor/download_oxygenxml_edito
 
 PLATS = ['Windows64', 'MacOSX', 'Linux64', 'All', 'Eclipse']
 
-import ssl
-from functools import wraps
 
 
 def sslwrap(func):
