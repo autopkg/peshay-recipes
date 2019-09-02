@@ -17,10 +17,18 @@
 # suppress 'missing class member env'
 # pylint: disable=e1101
 
-import urllib2
+from __future__ import absolute_import
+
 import re
+import ssl
+from functools import wraps
 
 from autopkglib import Processor, ProcessorError
+
+try:
+    from urllib.parse import urlopen  # For Python 3
+except ImportError:
+    from urllib2 import urlopen  # For Python 2
 
 __all__ = ["OxygenURLProvider"]
 
@@ -32,8 +40,6 @@ URLS = {"Editor": "https://www.oxygenxml.com/xml_editor/download_oxygenxml_edito
 
 PLATS = ['Windows64', 'MacOSX', 'Linux64', 'All', 'Eclipse']
 
-import ssl
-from functools import wraps
 
 
 def sslwrap(func):
@@ -79,12 +85,11 @@ class OxygenURLProvider(Processor):
     }
 
     def main(self):
-        valid_prods = URLS.keys()
         prod = self.env.get("product_name")
-        if prod not in valid_prods:
+        if prod not in URLS:
             raise ProcessorError(
                 "product_name %s is invalid; it must be one of: %s"
-                % (prod, valid_prods))
+                % (prod, ', '.join(URLS)))
         url = URLS[prod]
         valid_plats = PLATS
         plat = self.env.get("platform_name")
@@ -93,7 +98,7 @@ class OxygenURLProvider(Processor):
                 "platform_name %s is invalid; it must be one of: %s"
                 % (plat, valid_plats))
         try:
-            self.env["object"] = urllib2.urlopen(url).read()
+            self.env["object"] = urlopen(url).read()
         except BaseException as err:
             raise ProcessorError(
                 "Unexpected error retrieving product manifest: '%s'" % err)
@@ -131,7 +136,7 @@ class OxygenURLProvider(Processor):
                 download_url = ("http://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen%s.tar.gz" % (prod, plat, prod))
 
         self.env["url"] = download_url
-        self.env["filename"] = re.search('/([0-9a-zA-Z-_.]*$)', download_url).group(1)
+        self.env["filename"] = re.search(r'/([0-9a-zA-Z-_.]*$)', download_url).group(1)
         self.output("Found Version %s" % self.env["version"])
         self.output("Found Build id %s" % self.env["buildid"])
         self.output("Use URL %s" % self.env["url"])
