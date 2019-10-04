@@ -9,7 +9,7 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.jps3.download.Brackets</string>
+	<string>com.github.novaksam.download.Brackets</string>
     <key>Input</key>
 	<dict>
 		<key>NAME</key>
