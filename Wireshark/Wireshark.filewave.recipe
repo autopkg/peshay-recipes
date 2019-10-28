@@ -49,15 +49,6 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>input_plist_path</key>
-				<string>%pkgroot%/Wireshark.app/Contents/Info.plist</string>
-			</dict>
-			<key>Processor</key>
-			<string>Versioner</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
 				<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
