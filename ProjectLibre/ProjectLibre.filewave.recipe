@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
-		<string>Axure RP</string>
+		<string>ProjectLibre</string>
 		<key>fw_app_bundle_id</key>
 		<string>com.github.peshay.filewave.ProjectLibre</string>
 		<key>fw_destination_root</key>
