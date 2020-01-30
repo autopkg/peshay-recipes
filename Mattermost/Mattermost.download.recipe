@@ -13,8 +13,9 @@
 		
 <!--SELECT YOUR OS VERSION AND INPUT BELOW
 	"mac" for MAC OS X
-	"win32" for WINDOWS 32 BIT EXE
-	"win64" for WINDOWS 64 BIT EXE
+	"win" for WINDOWS EXE
+	"x64" for WINDOWS 64 BIT MSI
+	"x32" for WINDOWS 32 BIT MSI
 	"linux-ia32" for LINUX 32 BIT
 	"linux-x64" for LINUX 64 BIT
 -->
@@ -27,28 +28,19 @@
 	<key>Process</key>
 	<array>
         <dict>
-            <key>Processor</key>
-            <string>URLTextSearcher</string>
-            <key>Arguments</key>
-            <dict>
-                <key>url</key>
-                <string>https://github.com/mattermost/desktop/releases/</string>
-                <key>re_pattern</key>
-                <string>href="(?P&lt;match&gt;https?:\/\/releases.mattermost.com/desktop/[^"]*/mattermost-[^"]*-[^"]*-%os%.[^"]*)"</string>
-                <key>re_flags</key>
-                <array>
-                    <string>IGNORECASE</string>
-                </array>
-            </dict>
+                <key>Arguments</key>
+                <dict>
+                        <key>github_repo</key>
+                        <string>mattermost/desktop</string>
+                        <key>asset_regex</key>
+                        <string>(mattermost-desktop-[^"]*-%os%.[^"]*)</string>
+                </dict>
+                        <key>Processor</key>
+                        <string>GitHubReleasesInfoProvider</string>
         </dict>
 		<dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
-			<key>Arguments</key>
-			<dict>
-                <key>url</key>
-                <string>%match%</string>
-			</dict>
 		</dict>
 		<dict>
 			<key>Processor</key>
