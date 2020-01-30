@@ -20,68 +20,43 @@
 from __future__ import absolute_import
 
 import re
-import ssl
-from functools import wraps
 
-from autopkglib import Processor, ProcessorError
-
-try:
-    from urllib.parse import urlopen  # For Python 3
-except ImportError:
-    from urllib2 import urlopen  # For Python 2
+from autopkglib import Processor, ProcessorError, URLGetter
 
 __all__ = ["OxygenURLProvider"]
 
-URLS = {"Editor": "https://www.oxygenxml.com/xml_editor/download_oxygenxml_editor.html",
-        "Author": "https://www.oxygenxml.com/xml_author/download_oxygenxml_author.html",
-        "web-author": "https://www.oxygenxml.com/xml_web_author/download_oxygenxml_web_author.html",
-        "Developer": "https://www.oxygenxml.com/xml_developer/download_oxygenxml_developer.html",
-        "WebHelp": "https://www.oxygenxml.com/xml_webhelp/download_oxygenxml_webhelp.html"}
+URLS = {
+    "Editor": "https://www.oxygenxml.com/xml_editor/download_oxygenxml_editor.html",
+    "Author": "https://www.oxygenxml.com/xml_author/download_oxygenxml_author.html",
+    "web-author": "https://www.oxygenxml.com/xml_web_author/download_oxygenxml_web_author.html",
+    "Developer": "https://www.oxygenxml.com/xml_developer/download_oxygenxml_developer.html",
+    "WebHelp": "https://www.oxygenxml.com/xml_webhelp/download_oxygenxml_webhelp.html",
+}
 
-PLATS = ['Windows64', 'MacOSX', 'Linux64', 'All', 'Eclipse']
-
-
-
-def sslwrap(func):
-    """http://stackoverflow.com/a/24175862"""
-    @wraps(func)
-    def wraps_sslwrap(*args, **kw):
-        """Monkey-patch for sslwrap to force TLSv1"""
-        kw['ssl_version'] = ssl.PROTOCOL_TLSv1
-        return func(*args, **kw)
-    return wraps_sslwrap
-
-ssl.wrap_socket = sslwrap(ssl.wrap_socket)
+PLATS = ["Windows64", "MacOSX", "Linux64", "All", "Eclipse"]
 
 
-class OxygenURLProvider(Processor):
+class OxygenURLProvider(URLGetter):
     """Provides a version and dmg download for the Oxygen product given."""
+
     description = __doc__
     input_variables = {
         "product_name": {
             "required": True,
-            "description":
-                "Product to fetch URL for. One of 'Editor', 'Author', 'WebAuthor', 'Developer', 'WebHelp'.",
+            "description": "Product to fetch URL for. "
+            "One of '%s'." % "', '".join(URLS),
         },
         "platform_name": {
             "required": True,
-            "description":
-                "Platform to fetch URL for. One of 'Windows64', 'MacOSX', 'Linux64', 'All', 'Eclipse'.",
-        }
+            "description": "Platform to fetch URL for. "
+            "One of '%s'." % "', '".join(PLATS),
+        },
     }
     output_variables = {
-        "version": {
-            "description": "Version of the product.",
-        },
-        "buildid": {
-            "description": "Build id of the product.",
-        },
-        "url": {
-            "description": "Download URL.",
-        },
-        "filename": {
-            "description": "filename of the latest Oxygen product.",
-        }
+        "version": {"description": "Version of the product.",},
+        "buildid": {"description": "Build id of the product.",},
+        "url": {"description": "Download URL.",},
+        "filename": {"description": "filename of the latest Oxygen product.",},
     }
 
     def main(self):
@@ -89,58 +64,91 @@ class OxygenURLProvider(Processor):
         if prod not in URLS:
             raise ProcessorError(
                 "product_name %s is invalid; it must be one of: %s"
-                % (prod, ', '.join(URLS)))
+                % (prod, ", ".join(URLS))
+            )
         url = URLS[prod]
         valid_plats = PLATS
         plat = self.env.get("platform_name")
         if plat not in valid_plats:
             raise ProcessorError(
                 "platform_name %s is invalid; it must be one of: %s"
-                % (plat, valid_plats))
-        try:
-            self.env["object"] = urlopen(url).read()
-        except BaseException as err:
-            raise ProcessorError(
-                "Unexpected error retrieving product manifest: '%s'" % err)
+                % (plat, valid_plats)
+            )
+        self.env["object"] = self.download(url)
 
-        substring_version = '<li>Version: ([0-9]+[.]?[0-9]*)'
-        substring_buildid = 'Build id: <a href="/build_history.html#[0-9]{10}">([0-9]{10})</a>'
+        substring_version = r"<li>Version: ([\d\.]+)"
+        substring_buildid = r"Build id: <a href=\"(/\S+)?/build_history\.html#[0-9]{10}\">([0-9]{10})</a>"
         version = re.search(substring_version, self.env["object"])
         buildid = re.search(substring_buildid, self.env["object"])
 
+        if not version:
+            raise ProcessorError("No matching version found on URL: %s" % url)
+        if not buildid:
+            raise ProcessorError("No matching build ID found on URL: %s" % url)
+
         self.env["version"] = version.group(1)
         self.env["buildid"] = buildid.group(1)
-        if plat == 'Eclipse':
-            download_url = ("https://www.oxygenxml.com/InstData/%s/%s/com.oxygenxml.%s_%s.0.v%s.zip" % (prod, plat, prod.lower(), self.env["version"], self.env["buildid"]))
-        elif prod == 'web-author':
+        if plat == "Eclipse":
+            download_url = (
+                "https://www.oxygenxml.com/InstData/%s/%s/com.oxygenxml.%s_%s.0.v%s.zip"
+                % (prod, plat, prod.lower(), self.env["version"], self.env["buildid"])
+            )
+        elif prod == "web-author":
             download_url = "http://mirror.oxygenxml.com/InstData/WebAuthor/All/oxygenxml-web-author-all-platforms.zip"
-        elif prod == 'WebHelp':
-            download_url = "https://www.oxygenxml.com/InstData/Editor/Webhelp/oxygen-webhelp.zip"
-        elif prod == 'Editor':
-            if plat == 'Windows64':
-                download_url = ("http://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen-64bit.exe" % (prod, plat))
-            elif plat == 'Linux64':
-                download_url = ("https://www.oxygenxml.com/InstData/%s/%s/VM/oxygen-64bit.sh" % (prod, plat))
-            elif plat == 'MacOSX':
-                download_url = ("https://www.oxygenxml.com/InstData/%s/%s/VM/oxygen.dmg" % (prod, plat))
+        elif prod == "WebHelp":
+            download_url = (
+                "https://www.oxygenxml.com/InstData/Editor/Webhelp/oxygen-webhelp.zip"
+            )
+        elif prod == "Editor":
+            if plat == "Windows64":
+                download_url = (
+                    "http://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen-64bit.exe"
+                    % (prod, plat)
+                )
+            elif plat == "Linux64":
+                download_url = (
+                    "https://www.oxygenxml.com/InstData/%s/%s/VM/oxygen-64bit.sh"
+                    % (prod, plat)
+                )
+            elif plat == "MacOSX":
+                download_url = (
+                    "https://www.oxygenxml.com/InstData/%s/%s/VM/oxygen.dmg"
+                    % (prod, plat)
+                )
             else:
-                download_url = ("http://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen.tar.gz" % (prod, plat))
+                download_url = (
+                    "http://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen.tar.gz"
+                    % (prod, plat)
+                )
         else:
-            if plat == 'Windows64':
-                download_url = ("http://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen%s-64bit.exe" % (prod, plat, prod))
-            elif plat == 'Linux64':
-                download_url = ("https://www.oxygenxml.com/InstData/%s/%s/VM/oxygen%s-64bit.sh" % (prod, plat, prod))
-            elif plat == 'MacOSX':
-                download_url = ("https://www.oxygenxml.com/InstData/%s/%s/VM/oxygen%s.dmg" % (prod, plat, prod))
+            if plat == "Windows64":
+                download_url = (
+                    "http://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen%s-64bit.exe"
+                    % (prod, plat, prod)
+                )
+            elif plat == "Linux64":
+                download_url = (
+                    "https://www.oxygenxml.com/InstData/%s/%s/VM/oxygen%s-64bit.sh"
+                    % (prod, plat, prod)
+                )
+            elif plat == "MacOSX":
+                download_url = (
+                    "https://www.oxygenxml.com/InstData/%s/%s/VM/oxygen%s.dmg"
+                    % (prod, plat, prod)
+                )
             else:
-                download_url = ("http://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen%s.tar.gz" % (prod, plat, prod))
+                download_url = (
+                    "http://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen%s.tar.gz"
+                    % (prod, plat, prod)
+                )
 
         self.env["url"] = download_url
-        self.env["filename"] = re.search(r'/([0-9a-zA-Z-_.]*$)', download_url).group(1)
+        self.env["filename"] = re.search(r"/([0-9a-zA-Z-_.]*$)", download_url).group(1)
         self.output("Found Version %s" % self.env["version"])
         self.output("Found Build id %s" % self.env["buildid"])
         self.output("Use URL %s" % self.env["url"])
         self.output("Use filename %s" % self.env["filename"])
+
 
 if __name__ == "__main__":
     PROCESSOR = OxygenURLProvider()
