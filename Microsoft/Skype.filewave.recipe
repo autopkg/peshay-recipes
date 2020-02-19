@@ -24,15 +24,6 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>dmg_path</key>
-				<string>%pathname%</string>
-			</dict>
-			<key>Processor</key>
-			<string>AppDmgVersioner</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
 				<key>pkgdirs</key>
 				<dict>
 					<key>Applications</key>
@@ -54,6 +45,17 @@
 			</dict>
 			<key>Processor</key>
 			<string>Copier</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>input_plist_path</key>
+				<string>%pkgroot%/Applications/%app_name%/Contents/Info.plist</string>
+				<key>plist_version_key</key>
+                <string>CFBundleVersion</string>
+			</dict>
+			<key>Processor</key>
+			<string>Versioner</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
