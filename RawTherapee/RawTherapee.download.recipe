@@ -31,7 +31,7 @@
                 <key>url</key>
                 <string>http://rawtherapee.com/downloads</string>
                 <key>re_pattern</key>
-                <string>href="./releases_head/%os%/([^"]*).zip"</string>
+                <string>/shared/builds/%os%/([^"]*).dmg</string>
                 <key>re_flags</key>
                 <array>
                     <string>IGNORECASE</string>
@@ -44,30 +44,33 @@
 			<key>Arguments</key>
 			<dict>
                 <key>url</key>
-                <string>http://rawtherapee.com/releases_head/%os%/%match%.zip</string>
+                <string>http://rawtherapee.com/shared/builds/%os%/%match%.dmg</string>
 			</dict>
 		</dict>
 		<dict>
             <key>Processor</key>
-            <string>URLTextSearcher</string>
+            <string>Versioner</string>
             <key>Arguments</key>
             <dict>
-                <key>url</key>
-                <string>http://rawtherapee.com/downloads</string>
-                <key>re_pattern</key>
-                <string>href="./releases_head/%os%/[^"]*_([0-9]+.[0-9]+.[0-9]+).zip"</string>
-                <key>result_output_var_name</key>
-                <string>version</string>
+                <key>input_plist_path</key>
+                <string>%pathname%/%NAME%.app/Contents/Info.plist</string>
             </dict>
         </dict>
 		<dict>
 			<key>Processor</key>
-			<string>EndOfCheckPhase</string>
+			<string>CodeSignatureVerifier</string>
+			<key>Arguments</key>
+			<dict>
+				<key>input_path</key>
+				<string>%pathname%/%NAME%.app</string>
+				<key>requirement</key>
+				<string>identifier "com.rawtherapee.rawtherapee" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "5SJ86G6Q2R"</string>
+			</dict>
 		</dict>
 		<dict>
-            <key>Processor</key>
-            <string>Unarchiver</string>
-    	</dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
 	</array>
 </dict>
 </plist>
