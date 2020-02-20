@@ -24,17 +24,8 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>dmg_path</key>
-				<string>%pathname%</string>
-			</dict>
-			<key>Processor</key>
-			<string>AppDmgVersioner</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
 				<key>input_path</key>
-				<string>%pathname%/%app_name%</string>
+				<string>%pathname%/*.app</string>
 				<key>requirement</key>
 				<string>identifier "com.google.GoogleDrive" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = EQHXZ8M8AV</string>
 			</dict>
@@ -59,12 +50,23 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%pkgroot%/Applications/%app_name%</string>
+				<string>%pkgroot%/Applications/Backup and Sync.app</string>
 				<key>source_path</key>
-				<string>%pathname%/%app_name%</string>
+				<string>%pathname%/Backup and Sync.app</string>
 			</dict>
 			<key>Processor</key>
 			<string>Copier</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>input_plist_path</key>
+				<string>%pkgroot%/Applications/Backup and Sync.app/Contents/Info.plist</string>
+				<key>plist_version_key</key>
+                <string>CFBundleVersion</string>
+			</dict>
+			<key>Processor</key>
+			<string>Versioner</string>
 		</dict>
 		<dict>
 			<key>Arguments</key>
@@ -78,7 +80,7 @@
 				<key>fw_fileset_name</key>
 				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
-				<string>%pkgroot%/Applications/%app_name%</string>
+				<string>%pkgroot%/Applications/Backup and Sync.app</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
