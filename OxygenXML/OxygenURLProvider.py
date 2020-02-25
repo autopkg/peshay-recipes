@@ -74,7 +74,7 @@ class OxygenURLProvider(URLGetter):
                 "platform_name %s is invalid; it must be one of: %s"
                 % (plat, valid_plats)
             )
-        self.env["object"] = self.download(url)
+        self.env["object"] = self.download(url).decode('utf-8')
 
         substring_version = r"<li>Version: ([\d\.]+)"
         substring_buildid = r"Build id: <a href=\"(/\S+)?/build_history\.html#[0-9]{10}\">([0-9]{10})</a>"
