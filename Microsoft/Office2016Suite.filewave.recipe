@@ -10,13 +10,11 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.autopkg.arubdesu-recipes.download.Office2016Suite</string>
+	<string>com.github.rtrouton.download.MicrosoftOffice365Suite</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
 		<string>Office2016Suite</string>
-		<key>REGION</key>
-        <string>532572</string>
 		<key>fw_app_bundle_id</key>
         <string>com.github.peshay.filewave.Office2016</string>
 	</dict>
