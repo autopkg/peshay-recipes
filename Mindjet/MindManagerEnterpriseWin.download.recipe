@@ -29,7 +29,7 @@
                 <key>url</key>
                 <string>https://www.mindjet.com/support-info/enterprise-download/</string>
                 <key>re_pattern</key>
-                <string>Build ([0-9]+.[0-9]+.[0-9]+)</string>
+                <string>400\;\"\>([0-9]+.[0-9]+.[0-9]+)</string>
                 <key>result_output_var_name</key>
                 <string>version</string>
             </dict>
