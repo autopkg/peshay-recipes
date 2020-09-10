@@ -9,7 +9,7 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.homebysix.download.MenuMeters</string>
+	<string>com.github.peshay.download.MenuMeters</string>
     <key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -24,31 +24,6 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-				<key>pkgdirs</key>
-				<dict>
-					<key>Applications</key>
-					<string>0775</string>
-				</dict>
-				<key>pkgroot</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%</string>
-			</dict>
-			<key>Processor</key>
-			<string>PkgRootCreator</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>destination_path</key>
-				<string>%pkgroot%/Applications/MenuMeters.app</string>
-				<key>source_path</key>
-				<string>%pathname%/*.app</string>
-			</dict>
-			<key>Processor</key>
-			<string>Copier</string>
-		</dict>
-		<dict>
-			<key>Arguments</key>
-			<dict>
                 <key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
@@ -58,7 +33,7 @@
 				<key>fw_fileset_name</key>
                 <string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
-				<string>%pkgroot%/Applications/MenuMeters.app</string>
+				<string>%RECIPE_CACHE_DIR%/MenuMeters/MenuMeters.app</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
