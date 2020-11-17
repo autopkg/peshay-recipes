@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>Description</key>
+		<string>Downloads latest version of OpenJDK16 early access and imports into FileWave.</string>
+		<key>Identifier</key>
+		<string>com.github.peshay.filewave.OpenJDK16</string>
+		<key>MinimumVersion</key>
+		<string>0.6.1</string>
+		<key>ParentRecipe</key>
+		<string>com.github.peshay.pkg.OpenJDK16</string>
+		<key>Input</key>
+		<dict>
+			<key>fw_app_bundle_id</key>
+			<string>com.github.peshay.filewave.OpenJDK16</string>
+		</dict>
+		<key>Process</key>
+		<array>
+			<dict>
+				<key>Arguments</key>
+				<dict>
+					<key>fw_app_bundle_id</key>
+					<string>%fw_app_bundle_id%</string>
+					<key>fw_app_version</key>
+					<string>%version%</string>
+					<key>fw_fileset_name</key>
+					<string>%VENDOR% - %version%</string>
+					<key>fw_import_source</key>
+					<string>%RECIPE_CACHE_DIR%/%VENDOR%-%version%.pkg</string>
+				</dict>
+				<key>Processor</key>
+				<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
+			</dict>
+		</array>
+	</dict>
+</plist>
