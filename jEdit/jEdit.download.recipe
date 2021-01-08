@@ -32,7 +32,7 @@
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>http://netcologne.dl.sourceforge.net/project/jedit/jedit/%version%/jedit%version%install.dmg</string>
+				<string>https://netcologne.dl.sourceforge.net/project/jedit/jedit/%version%/jedit%version%install.dmg</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
