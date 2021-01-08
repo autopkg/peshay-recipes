@@ -29,7 +29,7 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>http://rawtherapee.com/downloads</string>
+                <string>https://rawtherapee.com/downloads</string>
                 <key>re_pattern</key>
                 <string>/shared/builds/%os%/([^"]*).dmg</string>
                 <key>re_flags</key>
@@ -44,7 +44,7 @@
 			<key>Arguments</key>
 			<dict>
                 <key>url</key>
-                <string>http://rawtherapee.com/shared/builds/%os%/%match%.dmg</string>
+                <string>https://rawtherapee.com/shared/builds/%os%/%match%.dmg</string>
 			</dict>
 		</dict>
 		<dict>
