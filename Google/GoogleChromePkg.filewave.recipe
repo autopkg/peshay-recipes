@@ -20,25 +20,43 @@
 	<key>Process</key>
 	<array>
 		<dict>
-            <key>Processor</key>
-            <string>URLTextSearcher</string>
-            <key>Arguments</key>
-            <dict>
-                <key>url</key>
-                <string>https://www.whatismybrowser.com/guides/the-latest-version/chrome</string>
-                <key>result_output_var_name</key>
-                <string>version</string>
-                <key>re_pattern</key>
-                <string>([0.9]+.[0-9]+.[0-9]+.[0-9]+)</string>
-            </dict>
-        </dict>
+				<key>Arguments</key>
+				<dict>
+					<key>flat_pkg_path</key>
+					<string>%pathname%</string>
+					<key>destination_path</key>
+					<string>%RECIPE_CACHE_DIR%/unpack</string>
+				</dict>
+				<key>Processor</key>
+				<string>FlatPkgUnpacker</string>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<dict>
+					<key>pkg_payload_path</key>
+					<string>%RECIPE_CACHE_DIR%/unpack/GoogleChrome.pkg/Payload</string>
+					<key>destination_path</key>
+					<string>%RECIPE_CACHE_DIR%/payload/Applications</string>
+				</dict>
+				<key>Processor</key>
+				<string>PkgPayloadUnpacker</string>
+			</dict>
+			<dict>
+				<key>Arguments</key>
+				<dict>
+					<key>input_plist_path</key>
+					<string>%RECIPE_CACHE_DIR%/payload/Applications/Google Chrome.app/Contents/Info.plist</string>
+				</dict>
+				<key>Processor</key>
+				<string>Versioner</string>
+			</dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
 				<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
-				<string>%version% - %build%</string>
+				<string>%version%</string>
 				<key>fw_fileset_name</key>
 				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
