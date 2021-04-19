@@ -9,7 +9,7 @@
 		<key>MinimumVersion</key>
 		<string>0.6.1</string>
 		<key>ParentRecipe</key>
-		<string>com.github.autopkg.cgerke-recipes.download.MySQLWorkbench</string>
+		<string>com.github.homebysix.download.MySQLWorkbench</string>
 		<key>Input</key>
 		<dict>
 			<key>NAME</key>
