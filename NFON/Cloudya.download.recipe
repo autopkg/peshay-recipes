@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads latest version of Cloudya </string>
+	<key>Identifier</key>
+	<string>com.github.peshay.download.cloudya</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>Cloudya</string>
+		<key>OS</key>
+		<string></string>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.6.1</string>
+	<key>Process</key>
+	<array>
+	<dict>
+            <key>Processor</key>
+            <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>https://www.nfon.com/en/service/downloads</string>
+                <key>re_pattern</key>
+                <string>(https://cdn.cloudya.com/Cloudya-[0-9]+.[0-9]+.[0-9]+-%OS%.zip)</string>
+                <key>re_flags</key>
+                <array>
+                    <string>IGNORECASE</string>
+                </array>
+                <key>result_output_var_name</key>
+                <string>URL</string>
+            </dict>
+	</dict>
+	<dict>
+            <key>Processor</key>
+            <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>https://www.nfon.com/en/service/downloads</string>
+                <key>re_pattern</key>
+                <string>https://cdn.cloudya.com/Cloudya-([0-9]+.[0-9]+.[0-9]+)-%OS%.zip</string>
+                <key>re_flags</key>
+                <array>
+                    <string>IGNORECASE</string>
+                </array>
+                <key>result_output_var_name</key>
+                <string>version</string>
+            </dict>
+	</dict>
+	<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>url</key>
+				<string>%URL%</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>EndOfCheckPhase</string>
+		</dict>
+		<dict>
+			 <key>Processor</key>
+			 <string>Unarchiver</string>
+		</dict>
+	</array>
+</dict>
+</plist>
