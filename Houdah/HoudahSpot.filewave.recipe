@@ -10,8 +10,6 @@
 	<dict>
 		<key>NAME</key>
 		<string>HoudahSpot</string>
-		<key>APP_VERSION</key>
-		<string>6</string>
         	<key>fw_app_bundle_id</key>
         	<string>com.github.peshay.filewave.HoudahSpot</string>
         	<key>fw_destination_root</key>
