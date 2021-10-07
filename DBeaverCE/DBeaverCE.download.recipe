@@ -13,7 +13,8 @@
         
 <!--SELECT YOUR OS VERSION AND USE IT IN YOUR OVERRIDE
 	"installer" for MAC OS X Pkg installer
-	"macos" for MAC OS X .app
+	"macos-x86_64" for macOS x86_64 DMG
+	"macos-aarch64" for macOS arm64 M1 DMG
 	"linux.gtk.x86" for LINUX 32bit
 	"linux.gtk.x86_64" for LINUX 64bit
 -->
