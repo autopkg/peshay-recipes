@@ -12,7 +12,8 @@
 		<string>Mattermost</string>
 		
 <!--SELECT YOUR OS VERSION AND INPUT BELOW
-	"mac" for macOS Intel
+	"mac-universal" for macOS Universal
+	"mac-arm64" for macOS 64-Bit ARM
 	"mac-m1" for macOS Apple Silicon
 	"win" for WINDOWS EXE
 	"x64" for WINDOWS 64 BIT MSI
@@ -22,7 +23,7 @@
 -->
 
 	<key>os</key>
-	<string>mac</string><!-- <<<<<< INPUT HERE <<<<<< -->
+	<string>mac-universal</string><!-- <<<<<< INPUT HERE <<<<<< -->
 	</dict>
 	<key>MinimumVersion</key>
     	<string>0.6.1</string>
