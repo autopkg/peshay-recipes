@@ -87,7 +87,7 @@ class OxygenURLProvider(URLGetter):
             raise ProcessorError("No matching build ID found on URL: %s" % url)
 
         self.env["version"] = version.group(1)
-        self.env["buildid"] = buildid.group(1)
+        self.env["buildid"] = buildid.group(2)
         if plat == "Eclipse":
             download_url = (
                 "https://www.oxygenxml.com/InstData/%s/%s/com.oxygenxml.%s_%s.0.v%s.zip"
