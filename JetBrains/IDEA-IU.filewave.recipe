@@ -18,7 +18,7 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.mosen.download.IDEA-IU</string>
+	<string>com.github.bnpl.autopkg.download.intellijideaue</string>
 	<key>Process</key>
 	<array>
 		<dict>
