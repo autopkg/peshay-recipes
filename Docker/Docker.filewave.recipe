@@ -9,11 +9,13 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.chilcote.download.Docker</string>
-    <key>Input</key>
+	<string>com.github.homebysix.download.DockerDesktop</string>
+    	<key>Input</key>
 	<dict>
-		<key>NAME</key>
-		<string>Docker</string>
+	<key>NAME</key>
+	<string>Docker</string>
+	<key>PLATFORM_ARCH</key>
+	<string>amd64</string>
         <key>fw_app_bundle_id</key>
         <string>com.github.peshay.filewave.Docker</string>
         <key>fw_destination_root</key>
