@@ -12,8 +12,6 @@
 		<string>Enpass</string>
 		<key>fw_app_bundle_id</key>
 		<string>com.github.peshay.filewave.enpass</string>
-		<key>fw_destination_root</key>
-		<string>/Applications/Enpass.app</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
@@ -30,12 +28,10 @@
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
 				<string>%version%</string>
-				<key>fw_destination_root</key>
-				<string>%fw_destination_root%</string>
 				<key>fw_fileset_name</key>
 				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
-				<string>%RECIPE_CACHE_DIR%/%NAME%/Enpass.app</string>
+				<string>%pathname%</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
