@@ -39,9 +39,9 @@
 			<key>Arguments</key>
 			<dict>
 				<key>destination_path</key>
-				<string>%pkgroot%/Applications/%app_name%</string>
+				<string>%pkgroot%/Applications/%dmg_found_filename%</string>
 				<key>source_path</key>
-				<string>%pathname%/%app_name%</string>
+				<string>%pathname%/%dmg_found_filename%</string>
 			</dict>
 			<key>Processor</key>
 			<string>Copier</string>
@@ -58,7 +58,7 @@
 				<key>fw_fileset_name</key>
 				<string>%NAME% - %version%</string>
 				<key>fw_import_source</key>
-				<string>%pkgroot%/Applications/%app_name%</string>
+				<string>%pkgroot%/Applications/%dmg_found_filename%</string>
 			</dict>
 			<key>Processor</key>
 			<string>com.github.autopkg.filewave.FWTool/FileWaveImporter</string>
