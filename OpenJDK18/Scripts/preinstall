@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Remove existing OpenJDK 16 installations
+# Remove existing OpenJDK 18 installations
 
-for JAVADIR in "$3"/Library/Java/JavaVirtualMachines/jdk-16*; do
+for JAVADIR in "$3"/Library/Java/JavaVirtualMachines/jdk-18*; do
   rm -rf "$JAVADIR"
 done
 
