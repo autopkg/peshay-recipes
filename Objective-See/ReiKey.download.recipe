@@ -25,22 +25,23 @@
                     <key>url</key>
                     <string>%DOWNLOAD_PAGE_URL%</string>
                     <key>re_pattern</key>
-                    <string>"(?P&lt;url&gt;https://bitbucket.org/objective-see/deploy/downloads/%NAME%.*\.zip)"</string>
+                    <string>"(https:\/\/bitbucket\.org\/objective-see\/deploy\/downloads\/ReiKey.*\.zip)"</string>
                     <!-- https://bitbucket.org/objective-see/deploy/downloads/ReiKey_0.9.3.zip -->
                     <!-- So, how can we check digest signatures against what's downloaded "easily" -->
                     <key>re_flags</key>
                     <array>
                         <string>IGNORECASE</string>
                     </array>
-                    <key>curl_opts</key>
-                    <array>
-                        <string>--compress</string>
-                    </array>
                 </dict>
             </dict>
             <dict>
                 <key>Processor</key>
                 <string>URLDownloader</string>
+                <key>Arguments</key>
+                <dict>
+                    <key>url</key>
+                    <string>%match%</string>
+                </dict>
             </dict>
             <dict>
                 <key>Processor</key>
