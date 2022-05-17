@@ -32,7 +32,7 @@
                 <key>result_output_var_name</key>
                 <string>version</string>
                 <key>re_pattern</key>
-                <string>href="\/download\/YourKit-JavaProfiler-([0-9]+.[0-9]+)-[^"]*.%OS%</string>
+                <string>href="[^"]*\/YourKit-JavaProfiler-([0-9]+.[0-9]+)-[^"]*.%OS%</string>
             </dict>
 	</dict>
         <dict>
@@ -45,14 +45,14 @@
                 <key>result_output_var_name</key>
                 <string>build</string>
                 <key>re_pattern</key>
-                <string>href="\/download\/YourKit-JavaProfiler-%version%-([^"]*).%OS%</string>
+                <string>href="[^"]*\/YourKit-JavaProfiler-%version%-([^"]*).%OS%</string>
             </dict>
 	</dict>
         <dict>
 			<key>Arguments</key>
 			<dict>
 				<key>url</key>
-				<string>https://www.yourkit.com/download/YourKit-JavaProfiler-%version%-%build%.%OS%</string>
+				<string>https://download.yourkit.com/yjp/%version%/YourKit-JavaProfiler-%version%-%build%.%OS%</string>
 			</dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
