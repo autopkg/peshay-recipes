@@ -77,7 +77,7 @@ class OxygenURLProvider(URLGetter):
         self.env["object"] = self.download(url).decode('utf-8')
 
         substring_version = r"<li>Version: ([\d\.]+)"
-        substring_buildid = r"Build id: <a href=\"(/\S+)?/build_history\.html#[0-9]{10}\">([0-9]{10})</a>"
+        substring_buildid = r"Build id: <a href=\"(/\S+)?/build_history\.html\?build_id\=[0-9]{10}\">([0-9]{10})</a>"
         version = re.search(substring_version, self.env["object"])
         buildid = re.search(substring_buildid, self.env["object"])
 
