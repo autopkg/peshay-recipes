@@ -3,7 +3,7 @@
 <plist version="1.0">
   <dict>
     <key>Description</key>
-    <string>Downloads the latest version of AdobeAcrobatReader DC and imports into FileWave</string>
+    <string>Downloads the latest version of Adobe Acrobat Reader DC and imports into FileWave</string>
     <key>Identifier</key>
     <string>com.github.peshay.filewave.AdobeAcrobatReaderDCUpdates</string>
     <key>MinimumVersion</key>
@@ -13,7 +13,7 @@
     <key>Input</key>
     <dict>
       <key>NAME</key>
-      <string>AdobeAcrobatReaderDC</string>
+      <string>Adobe Acrobat Reader DC</string>
       <key>fw_app_bundle_id</key>
       <string>com.github.peshay.filewave.AdobeAcrobatReaderDCUpdates</string>
     </dict>
