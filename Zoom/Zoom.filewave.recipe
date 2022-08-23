@@ -25,9 +25,9 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>https://zoom.us/download</string>
+                <string>https://zoom.us/rest/download?os=mac</string>
                 <key>re_pattern</key>
-                <string>href="/client/([^"]*)/ZoomInstallerIT.pkg"</string>
+                <string>"downloadVO":{"zoom":{"version":"([^"]*)"</string>
                 <key>re_flags</key>
                 <array>
                     <string>IGNORECASE</string>
