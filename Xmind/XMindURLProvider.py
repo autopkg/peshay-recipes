@@ -28,7 +28,7 @@ except ImportError:
 __all__ = ["XMindUrlProvider"]
 
 
-BASE_URL = "https://www.xmind.net/download/mac/"
+BASE_URL = "https://www.xmind.app/download/mac/"
 
 
 class XMindURLProvider(Processor):
