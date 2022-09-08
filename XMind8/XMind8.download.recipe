@@ -11,7 +11,7 @@
 		<key>NAME</key>
 		<string>XMind 8</string>
 		<key>BASEURL</key>
-		<string>//www.xmind.net/xmind/downloads/</string>
+		<string>//www.xmind.app/xmind/downloads/</string>
 <!-- REPLACE OS IN YOUR RECIPE WITH
 	 For WINDOWS use windows
      For MAC OX use macosx
@@ -29,7 +29,7 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>https://www.xmind.net/download/xmind8</string>
+                <string>https://www.xmind.app/download/xmind8</string>
                 <key>re_pattern</key>
                 <string>%BASEURL%xmind-[0-9]*-([^"]*)-%OS%.</string>
                 <key>re_flags</key>
@@ -46,7 +46,7 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>https://www.xmind.net/download/xmind8</string>
+                <string>https://www.xmind.app/download/xmind8</string>
                 <key>re_pattern</key>
 		<string>(%BASEURL%xmind-[0-9]*-%version%-%OS%.[a-zA-Z]*)</string>
                 <key>re_flags</key>
