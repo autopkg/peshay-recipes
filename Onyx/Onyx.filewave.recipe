@@ -18,7 +18,7 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.tallfunnyjew.download.Onyx1012</string>
+	<string>com.github.peshay.download.OnyX</string>
 	<key>Process</key>
 	<array>
 		<dict>
