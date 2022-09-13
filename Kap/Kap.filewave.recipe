@@ -10,6 +10,8 @@
 	<dict>
 		<key>NAME</key>
 		<string>Kap</string>
+		<key>ARCH</key>
+		<string></string>
         <key>fw_app_bundle_id</key>
         <string>com.github.peshay.filewave.Kap</string>
         <key>fw_destination_root</key>
@@ -56,7 +58,7 @@
 				<key>fw_destination_root</key>
 				<string>%fw_destination_root%</string>
 				<key>fw_fileset_name</key>
-				<string>%NAME% - %version%</string>
+				<string>%NAME% - %version% (%ARCH%)</string>
 				<key>fw_import_source</key>
 				<string>%pkgroot%/Kap.app</string>
 			</dict>
