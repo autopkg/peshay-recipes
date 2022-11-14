@@ -102,68 +102,68 @@ class OxygenURLProvider(URLGetter):
         elif prod == "Editor":
             if plat == "Windows64":
                 download_url = (
-                    "http://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen-64bit.exe"
+                    "https://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen-64bit.exe"
                     % (prod, plat)
                 )
             elif plat == "Windows64-OpenJDK":
                 download_url = (
-                    "https://www.oxygenxml.com/InstData/%s/%s/VM/oxygen-64bit-openjdk.exe"
+                    "https://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen-64bit-openjdk.exe"
                     % (prod, plat)
                 )
             elif plat == "Linux64":
                 download_url = (
-                    "https://www.oxygenxml.com/InstData/%s/%s/VM/oxygen-64bit.sh"
+                    "https://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen-64bit.sh"
                     % (prod, plat)
                 )
             elif plat == "Linux64-OpenJDK":
                 download_url = (
-                    "https://www.oxygenxml.com/InstData/%s/%s/VM/oxygen-64bit-openjdk.sh"
+                    "https://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen-64bit-openjdk.sh"
                     % (prod, plat)
                 )
             elif plat == "MacOSX":
                 download_url = (
-                    "https://www.oxygenxml.com/InstData/%s/%s/VM/oxygen.dmg"
+                    "https://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen.dmg"
                     % (prod, plat)
                 )
             elif plat == "MacOSX-OpenJDK":
                 download_url = (
-                    "https://www.oxygenxml.com/InstData/%s/%s/VM/oxygen-openjdk.dmg"
+                    "https://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen-openjdk.dmg"
                     % (prod, plat)
                 )
             else:
                 download_url = (
-                    "http://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen.tar.gz"
+                    "https://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen.tar.gz"
                     % (prod, plat)
                 )
         else:
             if plat == "Windows64":
                 download_url = (
-                    "http://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen%s-64bit.exe"
+                    "https://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen%s-64bit.exe"
                     % (prod, plat, prod)
                 )
             elif plat == "Windows64-OpenJDK":
                 download_url = (
-                    "https://www.oxygenxml.com/InstData/%s/%s/VM/oxygen%s-64bit-openjdk.exe"
+                    "https://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen%s-64bit-openjdk.exe"
                     % (prod, plat, prod)
                 )
             elif plat == "Linux64":
                 download_url = (
-                    "https://www.oxygenxml.com/InstData/%s/%s/VM/oxygen%s-64bit.sh"
+                    "https://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen%s-64bit.sh"
                     % (prod, plat, prod)
                 )
             elif plat == "Linux64-OpenJDK":
                 download_url = (
-                    "https://www.oxygenxml.com/InstData/%s/%s/VM/oxygen%s-64bit-openjdk.sh"
+                    "https://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen%s-64bit-openjdk.sh"
                     % (prod, plat, prod)
                 )
             elif plat == "MacOSX":
                 download_url = (
-                    "https://www.oxygenxml.com/InstData/%s/%s/VM/oxygen%s.dmg"
+                    "https://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen%s.dmg"
                     % (prod, plat, prod)
                 )
             elif plat == "MacOSX-OpenJDK":
                 download_url = (
-                    "https://www.oxygenxml.com/InstData/%s/%s/VM/oxygen%s-openjdk.dmg"
+                    "https://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen%s-openjdk.dmg"
                     % (prod, plat, prod)
                 )
             else:
