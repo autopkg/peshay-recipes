@@ -33,7 +33,7 @@ URLS = {
     "WebHelp": "https://www.oxygenxml.com/xml_webhelp/download_oxygenxml_webhelp.html",
 }
 
-PLATS = ["Windows64", "Windows64-OpenJDK", "MacOSX", "MacOSX-OpenJDK", "Linux64", "Linux64-OpenJDK", "All", "Eclipse"]
+PLATS = ["Windows64", "MacOSX", "Linux64", "All", "Eclipse"]
 
 
 class OxygenURLProvider(URLGetter):
@@ -94,40 +94,25 @@ class OxygenURLProvider(URLGetter):
                 % (prod, plat, prod.lower(), self.env["version"], self.env["buildid"])
             )
         elif prod == "web-author":
-            download_url = "http://mirror.oxygenxml.com/InstData/WebAuthor/All/oxygenxml-web-author-all-platforms.zip"
+            download_url = "https://mirror.oxygenxml.com/InstData/WebAuthor/All/oxygenxml-web-author-all-platforms.zip"
         elif prod == "WebHelp":
             download_url = (
-                "https://www.oxygenxml.com/InstData/Editor/Webhelp/oxygen-webhelp.zip"
+                "https://mirror.oxygenxml.com/InstData/Editor/Webhelp/oxygen-webhelp.zip"
             )
         elif prod == "Editor":
             if plat == "Windows64":
                 download_url = (
-                    "https://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen-64bit.exe"
-                    % (prod, plat)
-                )
-            elif plat == "Windows64-OpenJDK":
-                download_url = (
-                    "https://mirror.oxygenxml.com/InstData/Windows64/VM/oxygen-64bit-openjdk.exe"
+                    "https://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen-64bit-openjdk.exe"
                     % (prod, plat)
                 )
             elif plat == "Linux64":
                 download_url = (
-                    "https://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen-64bit.sh"
-                    % (prod, plat)
-                )
-            elif plat == "Linux64-OpenJDK":
-                download_url = (
-                    "https://mirror.oxygenxml.com/InstData/Linux64/VM/oxygen-64bit-openjdk.sh"
+                    "https://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen-64bit-openjdk.sh"
                     % (prod, plat)
                 )
             elif plat == "MacOSX":
                 download_url = (
-                    "https://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen.dmg"
-                    % (prod, plat)
-                )
-            elif plat == "MacOSX-OpenJDK":
-                download_url = (
-                    "https://mirror.oxygenxml.com/InstData/MacOSX/VM/oxygen-openjdk.dmg"
+                    "https://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen-openjdk.dmg"
                     % (prod, plat)
                 )
             else:
@@ -138,32 +123,17 @@ class OxygenURLProvider(URLGetter):
         else:
             if plat == "Windows64":
                 download_url = (
-                    "https://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen%s-64bit.exe"
-                    % (prod, plat, prod)
-                )
-            elif plat == "Windows64-OpenJDK":
-                download_url = (
-                    "https://mirror.oxygenxml.com/InstData/Windows64/VM/oxygen%s-64bit-openjdk.exe"
+                    "https://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen%s-64bit-openjdk.exe"
                     % (prod, plat, prod)
                 )
             elif plat == "Linux64":
                 download_url = (
-                    "https://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen%s-64bit.sh"
-                    % (prod, plat, prod)
-                )
-            elif plat == "Linux64-OpenJDK":
-                download_url = (
-                    "https://mirror.oxygenxml.com/InstData/Linux64/VM/oxygen%s-64bit-openjdk.sh"
+                    "https://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen%s-64bit-openjdk.sh"
                     % (prod, plat, prod)
                 )
             elif plat == "MacOSX":
                 download_url = (
-                    "https://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen%s.dmg"
-                    % (prod, plat, prod)
-                )
-            elif plat == "MacOSX-OpenJDK":
-                download_url = (
-                    "https://mirror.oxygenxml.com/InstData/MacOSX/VM/oxygen%s-openjdk.dmg"
+                    "https://mirror.oxygenxml.com/InstData/%s/%s/VM/oxygen%s-openjdk.dmg"
                     % (prod, plat, prod)
                 )
             else:
