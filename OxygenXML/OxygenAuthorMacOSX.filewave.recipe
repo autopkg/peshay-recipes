@@ -15,7 +15,7 @@
 		<key>fw_destination_root</key>
 		<string>/Applications/%NAME%</string>
 		<key>platform_name</key>
-		<string>MacOSX</string>
+		<string>MacOSX-OpenJDK</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
