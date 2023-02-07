@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest Slack version and imports into FileWave.</string>
 	<key>Identifier</key>
-	<string>com.github.peshay.download.Slack-Win</string>
+	<string>com.github.peshay.filewave.Slack-Win</string>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>

@@ -9,7 +9,7 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.peshay.download.AnyDesk-Win</string>
+	<string>com.github.peshay.download.AnyDesk</string>
     <key>Input</key>
 	<dict>
 		<key>NAME</key>
@@ -22,7 +22,7 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
-        <key>fw_app_bundle_id</key>
+        		<key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>
 				<string>%version%</string>

@@ -5,7 +5,7 @@
 	<key>Description</key>
 	<string>Downloads the latest version of AnyDesk.</string> 
 	<key>Identifier</key>
-	<string>com.github.peshay.download.Anydesk</string>
+	<string>com.github.peshay.download.AnyDesk</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>

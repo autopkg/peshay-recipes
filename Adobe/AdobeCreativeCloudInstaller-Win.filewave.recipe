@@ -5,17 +5,17 @@
 	<key>Description</key>
 	<string>Downloads the latest Adobe Creative Cloud version and imports into FileWave.</string>
 	<key>Identifier</key>
-	<string>com.github.peshay.download.Adobe Creative Cloud-Win</string>
+	<string>com.github.peshay.filewave.Adobe-Creative-Cloud-Win</string>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.peshay.download.Adobe Creative Cloud-Win</string>
+	<string>com.github.peshay.download.Adobe-Creative-Cloud-Win</string>
     <key>Input</key>
 	<dict>
 		<key>NAME</key>
 		<string>Adobe Creative Cloud</string>
         <key>fw_app_bundle_id</key>
-		<string>com.github.peshay.download.Adobe Creative Cloud-Win</string>
+		<string>com.github.peshay.download.Adobe-Creative-Cloud-Win</string>
 	</dict>
 	<key>Process</key>
 	<array>
