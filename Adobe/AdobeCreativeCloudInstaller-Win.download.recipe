@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of Adobe Creative Cloud.</string> 
+	<string>Downloads the latest version of Adobe Creative Cloud.</string>
 	<key>Identifier</key>
 	<string>com.github.peshay.download.Adobe-Creative-Cloud-Win</string>
 	<key>Input</key>
@@ -16,19 +16,17 @@
 	<key>Process</key>
 	<array>
 		<dict>
-			<key>Processor</key>
-			<string>URLDownloader</string>
 			<key>Arguments</key>
 			<dict>
-                <dict>
-                    <key>user-agent</key>
-                    <string>%USER_AGENT%</string>
-                </dict>
-                <key>filename</key>
+				<key>filename</key>
 				<string>%NAME%.exe</string>
-                <key>url</key>
+				<key>url</key>
 				<string>https://prod-rel-ffc-ccm.oobesaas.adobe.com/adobe-ffc-external/core/v1/wam/download?sapCode=KCCC&amp;productName=CreativeCloud&amp;os=win</string>
+				<key>user-agent</key>
+				<string>%USER_AGENT%</string>
 			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
 		</dict>
 		<dict>
 			<key>Processor</key>
