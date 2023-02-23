@@ -14,14 +14,27 @@
 	<key>Process</key>
 	<array>
 		<dict>
+        	<key>Processor</key>
+            <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>https://anydesk.com/en/downloads/windows</string>
+                <key>re_pattern</key>
+                <string>v([0-9]+.[0-9]+.[0-9]+)[^"]*</string>
+                <key>result_output_var_name</key>
+                <string>version</string>
+        	</dict>
+        </dict>
+		<dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
 			<key>Arguments</key>
 			<dict>
                 <key>filename</key>
-				<string>%NAME%.exe</string>
+				<string>%NAME%-%version%.msi</string>
                 <key>url</key>
-                <string>https://download.anydesk.com/AnyDesk.exe</string>
+                <string>https://download.anydesk.com/AnyDesk.msi</string>
 			</dict>
 		</dict>
 		<dict>

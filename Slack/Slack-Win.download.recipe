@@ -10,18 +10,33 @@
 	<dict>
 		<key>NAME</key>
 		<string>Slack</string>
+		<key>USER_AGENT</key>
+		<string>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36</string>
 	</dict>
 	<key>Process</key>
 	<array>
+		<dict>
+        	<key>Processor</key>
+            <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>https://slack.com/downloads/windows</string>
+                <key>re_pattern</key>
+                <string>[Version] ([0-9]+.[0-9]+.[0-9]+)[^"]*</string>
+                <key>result_output_var_name</key>
+                <string>version</string>
+        	</dict>
+        </dict>
 		<dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
 			<key>Arguments</key>
 			<dict>
                 <key>filename</key>
-				<string>%NAME%.exe</string>
+				<string>%NAME%.msi</string>
                 <key>url</key>
-				<string>https://slack.com/ssb/download-win</string>
+				<string>https://slack.com/ssb/download-win64-msi</string>
 			</dict>
 		</dict>
 		<dict>
