@@ -11,7 +11,7 @@
 		<key>NAME</key>
 		<string>Visual Studio Code</string>
 		<key>DOWNLOAD_URL</key>
-		<string>https://code.visualstudio.com/sha/download?build=stable\&os=darwin-arm64</string>
+		<string>https://code.visualstudio.com/sha/download?build=stable&amp;os=darwin-arm64</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.2.0</string>
