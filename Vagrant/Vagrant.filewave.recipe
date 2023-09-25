@@ -38,7 +38,7 @@
 				<key>fw_app_version</key>
 				<string>%version%</string>
 				<key>fw_fileset_name</key>
-                <string>%NAME% - %version%</string>
+                <string>%NAME% - %version% (%DOWNLOAD_ARCH%)</string>
 				<key>fw_import_source</key>
 				<string>%destination_path%</string>
 			</dict>
