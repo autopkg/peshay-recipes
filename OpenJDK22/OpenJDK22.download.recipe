@@ -16,10 +16,12 @@
         <string>Java</string>
         <key>SOFTWARETYPE</key>
         <string>JDK</string>
+        <key>SOFTWAREARCH</key>
+        <string>aarch64</string>
         <key>SEARCH_URL</key>
         <string>https://jdk.java.net/22/index.html</string>
         <key>SEARCH_PATTERN</key>
-        <string>(?P&lt;url&gt;https://download.java.net/java/[^"]*/GPL/openjdk-[^"]*_macos-x64_bin\.tar\.gz)</string>
+        <string>(?P&lt;url&gt;https://download.java.net/java/[^"]*/GPL/openjdk-[^"]*_macos-%SOFTWAREARCH%_bin\.tar\.gz)</string>
     </dict>
     <key>MinimumVersion</key>
     <string>1.0.0</string>
