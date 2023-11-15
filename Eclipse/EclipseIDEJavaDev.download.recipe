@@ -10,6 +10,9 @@
     <dict>
         <key>NAME</key>
         <string>EclipseIDEJavaDev</string>
+	<!-- VALID arch FOR THIS RECIPE ARE: x86_64 (Intel), aarch64 (Apple Silicon) -->
+	<key>arch</key>
+        <string>aarch64</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.6.1</string>
@@ -23,7 +26,7 @@
                 <key>url</key>
                 <string>https://www.eclipse.org/downloads/packages/</string>
                 <key>re_pattern</key>
-                <string>href=[^"]*file=([^"]*eclipse-java-(?P&lt;version2&gt;[^"]*)-[^"]*-macosx-cocoa-x86_64\.dmg)</string>
+                <string>href=[^"]*file=([^"]*eclipse-java-(?P&lt;version2&gt;[^"]*)-[^"]*-macosx-cocoa-%arch%\.dmg)</string>
                 <key>result_output_var_name</key>
                 <string>eclipse</string>
                 <key>request_headers</key>
