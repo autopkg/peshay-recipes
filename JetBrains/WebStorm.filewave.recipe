@@ -56,7 +56,7 @@
 				<key>fw_destination_root</key>
 				<string>%fw_destination_root%</string>
 				<key>fw_fileset_name</key>
-				<string>%NAME% - %version%</string>
+				<string>%NAME% - %version% (%ARCH_TYPE%)</string>
 				<key>fw_import_source</key>
 				<string>%pkgroot%/Applications/%dmg_found_filename%</string>
 			</dict>
