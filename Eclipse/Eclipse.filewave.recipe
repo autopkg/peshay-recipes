@@ -31,7 +31,7 @@
 				<key>fw_destination_root</key>
 				<string>%fw_destination_root%</string>
 				<key>fw_fileset_name</key>
-				<string>Eclipse %version2% - %version%</string>
+				<string>Eclipse %version2% - %version% (%arch%)</string>
 				<key>fw_import_source</key>
 				<string>%pkgroot%/Applications/Eclipse.app</string>
 			</dict>
