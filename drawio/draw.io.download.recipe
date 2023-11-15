@@ -13,6 +13,9 @@
         <!-- VALID os FOR THIS RECIPE ARE: dmg (OS X), exe (Windows), deb (Linux Debian/Ubuntu), AppImage (Linux AppImage) -->
         <key>os</key>
         <string></string>
+        <!-- VALID arch FOR THIS RECIPE ARE: x64 (Intel), universal (Intel / Apple Silicon), arm64 (Apple Silicon) -->
+        <key>arch</key>
+        <string>universal</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.6.1</string>
@@ -24,7 +27,7 @@
                 <key>github_repo</key>
                 <string>jgraph/drawio-desktop</string>
                 <key>asset_regex</key>
-                <string>(draw.io-universal-.*?\.dmg)$</string>
+                <string>(draw.io-%arch%-.*?\.dmg)$</string>
             </dict>
             <key>Processor</key>
             <string>GitHubReleasesInfoProvider</string>
