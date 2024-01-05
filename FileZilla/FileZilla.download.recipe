@@ -15,7 +15,8 @@
 REPLACE OS IN YOUR RECIPE WITH
 For WINDOWS 64bit use win64
 For WINDOWS 32bit use win32
-For MAC OSX use macosx
+For MAC OSX Intel use macos-x86
+For MAC OSX Silicon use macos-arm64
 For LINUX use i686 or x86
 -->
 		<key>OS</key>
