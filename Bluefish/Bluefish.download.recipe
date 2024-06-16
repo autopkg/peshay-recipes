@@ -27,7 +27,7 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>http://www.bennewitz.com/bluefish/stable/binaries/%os%/?C=M;O=D</string>
+                <string>https://www.bennewitz.com/bluefish/stable/binaries/%os%/?C=M;O=D</string>
                 <key>re_pattern</key>
                 <string>href="(?P&lt;match&gt;Bluefish-[^"]*[.exe|.dmg])"</string>
                 <key>re_flags</key>

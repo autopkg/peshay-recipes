@@ -9,7 +9,7 @@
 	<key>Input</key>
 	<dict>
 		<key>url</key>
-		<string>http://www.oracle.com/technetwork/java/javase/downloads/index.html</string>
+		<string>https://www.oracle.com/technetwork/java/javase/downloads/index.html</string>
         <key>ORACLE_LICENSE_COOKIE</key>
         <string>oraclelicense=accept-securebackup-cookie</string>
 	</dict>

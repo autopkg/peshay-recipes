@@ -42,7 +42,7 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>http://download.mindjet.com/MindManager_%version%.exe</string>
+                <string>https://download.mindjet.com/MindManager_%version%.exe</string>
             </dict>
         </dict>
         <dict>
