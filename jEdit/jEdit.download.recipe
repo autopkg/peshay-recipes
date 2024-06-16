@@ -21,7 +21,7 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>http://www.jedit.org/index.php?page=download</string>
+                <string>https://www.jedit.org/index.php?page=download</string>
                 <key>result_output_var_name</key>
                 <string>version</string>
                 <key>re_pattern</key>
