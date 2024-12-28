@@ -3,7 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads latest version of Cloudya </string>
+	<string>Downloads latest version of Cloudya
+	
+Valid values for OS include:
+- "mac" (default, Cloudya without CRM Connect for macOS)
+- "crm-mac" (Cloudya with CRM Connect for macOS)
+- "win" (Cloudya without CRM Connect for Windows)
+- "crm-win" (Cloudya with CRM Connect for Windows)
+- "win-msi" (MSI for Cloudya without CRM Connect for Windows)
+- "crm-win-msi" (MSI Cloudya with CRM Connect for Windows)
+</string>
 	<key>Identifier</key>
 	<string>com.github.peshay.download.cloudya</string>
 	<key>Input</key>
@@ -11,7 +20,7 @@
 		<key>NAME</key>
 		<string>Cloudya</string>
 		<key>OS</key>
-		<string></string>
+		<string>mac</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
