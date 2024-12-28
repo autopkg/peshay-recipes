@@ -15,7 +15,7 @@
 	"win32" for WINDOWS 32 BIT EXE
 -->
 		<key>os</key>
-		<string></string>
+		<string>macosx</string>
 	</dict>
 	<key>MinimumVersion</key>
     <string>0.6.1</string>
