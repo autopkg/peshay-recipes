@@ -24,6 +24,31 @@
 		<dict>
 			<key>Arguments</key>
 			<dict>
+				<key>pkgdirs</key>
+				<dict>
+					<key>Applications</key>
+					<string>0775</string>
+				</dict>
+				<key>pkgroot</key>
+				<string>%RECIPE_CACHE_DIR%/Applications</string>
+			</dict>
+			<key>Processor</key>
+			<string>PkgRootCreator</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>destination_path</key>
+				<string>%pkgroot%/X-Mirage.app</string>
+				<key>source_path</key>
+				<string>%pathname%/X-Mirage.app</string>
+			</dict>
+			<key>Processor</key>
+			<string>Copier</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
                 <key>fw_app_bundle_id</key>
 				<string>%fw_app_bundle_id%</string>
 				<key>fw_app_version</key>

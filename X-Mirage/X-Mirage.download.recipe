@@ -11,7 +11,7 @@
 		<key>NAME</key>
 		<string>X-Mirage</string>
 		<key>DOWNLOAD_URL</key>
-		<string>https://dl.x-mirage.com/x-mirage.dmg</string>
+		<string>https://x-mirage.com/download/x-mirage.dmg</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
@@ -31,39 +31,25 @@
 			<string>EndOfCheckPhase</string>
 		</dict>
 		<dict>
-			<key>Arguments</key>
-			<dict>
-				<key>pkgdirs</key>
-				<dict>
-					<key>Applications</key>
-					<string>0775</string>
-				</dict>
-				<key>pkgroot</key>
-				<string>%RECIPE_CACHE_DIR%/Applications</string>
-			</dict>
 			<key>Processor</key>
-			<string>PkgRootCreator</string>
-		</dict>
-		<dict>
+			<string>CodeSignatureVerifier</string>
 			<key>Arguments</key>
 			<dict>
-				<key>destination_path</key>
-				<string>%pkgroot%/X-Mirage.app</string>
-				<key>source_path</key>
+				<key>input_path</key>
 				<string>%pathname%/X-Mirage.app</string>
+				<key>requirement</key>
+				<string>identifier "com.xidasoft.X-Mirage" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = Z4MR8KD2PQ</string>
 			</dict>
-			<key>Processor</key>
-			<string>Copier</string>
 		</dict>
 		<dict>
-            <key>Processor</key>
-            <string>Versioner</string>
-            <key>Arguments</key>
-            <dict>
-                <key>input_plist_path</key>
-                <string>%pkgroot%/X-Mirage.app/Contents/Info.plist</string>
-            </dict>
-        </dict>
+			<key>Processor</key>
+			<string>Versioner</string>
+			<key>Arguments</key>
+			<dict>
+				<key>input_plist_path</key>
+				<string>%pkgroot%/X-Mirage.app/Contents/Info.plist</string>
+			</dict>
+		</dict>
 	</array>
 </dict>
 </plist>
