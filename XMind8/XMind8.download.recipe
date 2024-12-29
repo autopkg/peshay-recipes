@@ -17,7 +17,7 @@
      For MAC OX use macosx
      For LINUX use linux -->
 		<key>OS</key>
-		<string></string>
+		<string>macosx</string>
 	</dict>
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
