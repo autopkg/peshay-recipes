@@ -10,12 +10,12 @@
 	<dict>
 		<key>NAME</key>
 		<string>miro</string>
-		<!-- VALID os FOR THIS RECIPE ARE: darwin (OS X), win32 (Windows 64bit), win32-x86 (Windows 32bit) -->
+		<!-- VALID os FOR THIS RECIPE ARE: darwin (Intel Mac), darwin-arm64 (Apple Silicon Mac), win32 (Windows 64bit), win32-x86 (Windows 32bit) -->
 		<key>os</key>
-		<string></string>
+		<string>darwin</string>
 		<!-- VALID ext FOR THIS RECIPE ARE: dmg (OS X), exe (Windows) -->
 		<key>ext</key>
-		<string></string>
+		<string>dmg</string>
 	</dict>
 	<key>MinimumVersion</key>
     <string>0.6.1</string>
