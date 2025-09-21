@@ -42,7 +42,7 @@
 			<key>Arguments</key>
 			<dict>
                 <key>url</key>
-                <string>http://www.bennewitz.com/bluefish/stable/binaries/%os%/%match%</string>
+                <string>https://www.bennewitz.com/bluefish/stable/binaries/%os%/%match%</string>
 			</dict>
 		</dict>
 		<dict>
