@@ -9,7 +9,7 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.tallfunnyjew.download.MusicBrainzPicard</string>
+	<string>com.github.dataJAR-recipes.download.MusicBrainz Picard</string>
     <key>Input</key>
 	<dict>
 		<key>NAME</key>
