@@ -23,7 +23,7 @@
             <key>Arguments</key>
             <dict>
                 <key>warning_message</key>
-                <string>Consider switching to the Telegram recipes in the bnpl-recipes repo. This recipe is deprecated and will be removed in the future.</string>
+                <string>Consider switching to the Telegram recipes in the moofit-recipes repo. This recipe is deprecated and will be removed in the future.</string>
             </dict>
         </dict>
         <dict>
