@@ -44,6 +44,10 @@
                 <string>%NAME%-%version%.%os%</string>
 			</dict>
 		</dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
+        </dict>
 		<dict>
 			<key>Arguments</key>
 			<dict>
@@ -69,10 +73,6 @@
 			<key>Processor</key>
 			<string>Copier</string>
 		</dict>
-        <dict>
-            <key>Processor</key>
-            <string>EndOfCheckPhase</string>
-        </dict>
     </array>
 </dict>
 </plist>
