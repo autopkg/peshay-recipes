@@ -3,43 +3,46 @@
 <plist version="1.0">
 <dict>
 	<key>Description</key>
-	<string>Downloads the latest version of Mattermost.</string> 
+	<string>Downloads the latest version of Mattermost.
+
+Input options:
+
+- latest_only: Whether to only fetch the release marked as "latest" in GitHub. Mattermost often patches older major releases in a way that causes this recipe to potentially miss latest version builds, so this is set to true by default to avoid this issue. Set to false in an override to disable this behavior.
+- os: The Mattermost build for a specific operating system. Set to one of the following in an override:
+	- "mac-universal" for macOS Universal (default)
+	- "mac-x64" for macOS 64-Bit Intel
+	- "mac-m1" for macOS 64-Bit Apple Silicon
+	- "win-x64" for WINDOWS 64-Bit Intel
+	- "win-arm64" for WINDOWS 64-Bit ARM
+	- "linux-arm64" for LINUX 64-Bit ARM
+	- "linux-x64" for LINUX 64-Bit Intel
+</string>
 	<key>Identifier</key>
 	<string>com.github.peshay.download.Mattermost</string>
 	<key>Input</key>
 	<dict>
 		<key>NAME</key>
 		<string>Mattermost</string>
-		
-<!--SELECT YOUR OS VERSION AND INPUT BELOW
-	"mac-universal" for macOS Universal
-	"mac-arm64" for macOS 64-Bit ARM
-	"mac-m1" for macOS Apple Silicon
-	"win" for WINDOWS EXE
-	"x64" for WINDOWS 64 BIT MSI
-	"x86" for WINDOWS 32 BIT MSI
-	"linux-ia32" for LINUX 32 BIT
-	"linux-x64" for LINUX 64 BIT
--->
-
-	<key>os</key>
-	<string>mac-universal</string><!-- <<<<<< INPUT HERE <<<<<< -->
+		<key>latest_only</key>
+		<true/>
+		<key>os</key>
+		<string>mac-universal</string>
 	</dict>
 	<key>MinimumVersion</key>
-    	<string>0.6.1</string>
+	<string>0.6.1</string>
 	<key>Process</key>
 	<array>
-        <dict>
-                <key>Arguments</key>
-                <dict>
-                        <key>github_repo</key>
-                        <string>mattermost/desktop</string>
-                        <key>asset_regex</key>
-                        <string>(mattermost-desktop-[^"]*-%os%\.[^"]*)</string>
-                </dict>
-                        <key>Processor</key>
-                        <string>GitHubReleasesInfoProvider</string>
-        </dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>asset_regex</key>
+				<string>(mattermost-desktop-[^"]*-%os%\.[^"]*)</string>
+				<key>github_repo</key>
+				<string>mattermost/desktop</string>
+			</dict>
+			<key>Processor</key>
+			<string>GitHubReleasesInfoProvider</string>
+		</dict>
 		<dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
@@ -49,8 +52,6 @@
 			<string>EndOfCheckPhase</string>
 		</dict>
 		<dict>
-			<key>Processor</key>
-			<string>CodeSignatureVerifier</string>
 			<key>Arguments</key>
 			<dict>
 				<key>input_path</key>
@@ -58,6 +59,8 @@
 				<key>requirement</key>
 				<string>identifier "Mattermost.Desktop" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = UQ8HT4Q2XM</string>
 			</dict>
+			<key>Processor</key>
+			<string>CodeSignatureVerifier</string>
 		</dict>
 	</array>
 </dict>
