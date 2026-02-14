@@ -18,7 +18,7 @@
 	<key>MinimumVersion</key>
 	<string>0.6.1</string>
 	<key>ParentRecipe</key>
-	<string>com.github.autopkg.recipes-dankeller.download.google-drive</string>
+	<string>com.github.nstrauss.download.BackupandSync</string>
 	<key>Process</key>
 	<array>
 		<dict>
